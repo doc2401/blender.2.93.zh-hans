@@ -1,0 +1,542 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>节点组 &mdash; Blender Manual</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/version_switch.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/interface/controls/nodes/groups.html" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/js/version_switch.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+    <link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+    <link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+    <link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../../copyright.html" />
+    <link rel="next" title="节点框" href="frame.html" />
+    <link rel="prev" title="侧栏" href="sidebar.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.93 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">用户界面</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#window-system">窗口系统</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#keymap">键位映射</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#interface-controls">界面控件</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../index.html#buttons-and-controls">按钮与控件</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html#extended-controls">扩展控件</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../templates/data_block.html">数据块菜单</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../templates/list_presets.html">List Views &amp; Presets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../templates/color_picker.html">拾色器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../templates/color_ramp.html">颜色渐变部件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../templates/color_palette.html">调色板</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../templates/curve.html">曲线部件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../templates/operator_search.html">查找</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">节点</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l5"><a class="reference internal" href="parts.html">节点部件</a></li>
+<li class="toctree-l5"><a class="reference internal" href="selecting.html">选择</a></li>
+<li class="toctree-l5"><a class="reference internal" href="arranging.html">排列节点</a></li>
+<li class="toctree-l5"><a class="reference internal" href="editing.html">编辑</a></li>
+<li class="toctree-l5"><a class="reference internal" href="sidebar.html">侧栏</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">节点组</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#interface">界面</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#panel">面板</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="#edit-group">编辑节点组</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#make-group">制作节点组</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#ungroup">拆散</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#group-insert">插入节点组</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#appending-node-groups">Appending Node Groups</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="frame.html">节点框</a></li>
+<li class="toctree-l5"><a class="reference internal" href="reroute.html">转接点</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#tools">工具</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景&amp;物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻&amp;绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">运动跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">Files &amp; Data System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">贡献文档</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.93 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">用户界面</a> &raquo;</li>
+        
+          <li><a href="index.html">节点</a> &raquo;</li>
+        
+      <li>节点组</li>
+    
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="node-groups">
+<span id="bpy-types-nodegroup"></span><h1>节点组<a class="headerlink" href="#node-groups" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-right" id="id1">
+<img alt="../../../_images/interface_controls_nodes_groups_example.png" src="../../../_images/interface_controls_nodes_groups_example.png" />
+<p class="caption"><span class="caption-text">节点组示例。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>Grouping nodes can simplify a node tree by allowing instancing and hiding parts of the tree.</p>
+<p>Conceptually, grouping nodes allows you to specify a <em>set</em> of nodes that you can treat as
+though it were &quot;just one node&quot;. Node groups are similar to functions in programming,
+they can be reused in many places in a node tree and
+can be customized by changing the &quot;parameters&quot; of the node group.</p>
+<p>As an example: If you have created a material that you would like to use with different inputs
+e.g. diffuse color: red plastic, green plastic. You could create different materials with <em>Make Single User</em>
+for each different color with a copy of the tree part describing the plastic material.
+If you like to edit the material you would need to redo the edit on all materials.
+A better method of reuse is to create node groups, exposing only the variable inputs (e.g. diffuse color).</p>
+<p>Also nested node groups are supported. I.e. a node group can be inserted or created inside another node group.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>所有节点系统都禁止递归节点组以防止无限递归。节点组永远不能包含自身。</p>
+</div>
+<div class="section" id="interface">
+<h2>界面<a class="headerlink" href="#interface" title="Permalink to this headline">¶</a></h2>
+<p>当一个节点组被创建时，新的 <em>组输入</em> 和 <em>组输出</em> 节点被生成，以表示进入和离开该组的数据流。此外，来自未选择的节点的输入套接字的连接将被连接到 <em>组输入</em> 节点上的新套接字。同样地，来自未被选中的节点的输入套接字的出站连接将被连接到新的 <em>组输出</em> 节点。</p>
+<p>If you want to pass an additional parameter into the group,
+a socket must be added to the <em>Group Input</em> node.
+Therefore drag a connection from the hollow socket on the right side of the <em>Group Input</em> node
+to the desired input socket on the node requiring an input.
+The process is similar for the <em>Group Output</em> regarding data
+you want to be made available outside the group.</p>
+<div class="section" id="panel">
+<span id="bpy-ops-node-tree-socket-move"></span><span id="bpy-ops-node-tree-socket-remove"></span><span id="bpy-ops-node-tree-socket-add"></span><h3>面板<a class="headerlink" href="#panel" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>所有模式</p>
+</dd>
+<dt class="field-even">面板</dt>
+<dd class="field-even"><p><span class="menuselection">Sidebar ‣ Group ‣ Interface</span></p>
+</dd>
+</dl>
+</div>
+<div class="figure align-right" id="id2">
+<img alt="../../../_images/interface_controls_nodes_groups_interface-panel.png" src="../../../_images/interface_controls_nodes_groups_interface-panel.png" />
+<p class="caption"><span class="caption-text">用于编辑节点组的界面。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>Sockets can be added, re-ordered, or removed, descriptive names can be added and
+the details of the input data value defined here.</p>
+<p>If you have multiple inputs or outputs, they can be re-ordered by selecting the socket in the list.
+And then moving them up or down with the arrow buttons on the right side of the panel.
+The plus button will add an unconnected socket of the same type
+as the selected socket or a value socket if there is no selection.
+The minus button will remove the selected socket.
+The triangle at the bottom of the list has filtering functions to help finding nodes
+if the group has a large number of sockets.</p>
+<dl class="simple" id="bpy-types-nodesocketinterface-name">
+<dt>名称</dt><dd><p>要在节点的界面上显示的套接字的名称。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-nodesocketinterface-description">
+<dt>提示</dt><dd><p>The message displayed when hovering over socket properties.
+Currently only supported for <a class="reference internal" href="../../../editors/geometry_node.html"><span class="doc">Geometry Node Editor</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-nodesocketinterface-default-value">
+<dt>默认</dt><dd><p>The value to use when nothing is connected to the node socket.
+Note, this will not affect the current node but will affect instances of the node.</p>
+</dd>
+</dl>
+<span id="bpy-types-nodesocketinterface-min-value"></span><dl class="simple" id="bpy-types-nodesocketinterface-max-value">
+<dt>最小值，最大值</dt><dd><p>The minimum and maximum value for the UI button shown in the node interface.
+Note, this is not a minimum or maximum for the data that can pass through the node.
+If a socket passes a higher value than the maximum it will still pass into the node unchanged.</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-nodesocketinterface-hide-value">
+<dt>隐藏值</dt><dd><p>即使插口没有连接，也会隐藏插口的值。</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="edit-group">
+<span id="bpy-ops-node-tree-path-parent"></span><h2>编辑节点组<a class="headerlink" href="#edit-group" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>所有模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">节点 ‣ 编辑组</span></p>
+</dd>
+<dt class="field-odd">标题栏</dt>
+<dd class="field-odd"><p><span class="menuselection">进入父级节点树</span></p>
+</dd>
+<dt class="field-even">快捷键</dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">Tab</kbd>, <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Tab</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>With a node group selected, <kbd class="kbd docutils literal notranslate">Tab</kbd> expands the node to a frame, and the individual nodes within
+it are shown. You can move them around, play with their individual controls, re-thread them internally, etc.
+just like you can if they were a normal part of the editor view. You will not be able, though,
+to thread them to a node outside the group; you have to use the external sockets on the side of the node group.
+While <kbd class="kbd docutils literal notranslate">Tab</kbd> can be used to both enter and exit a group, <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Tab</kbd></kbd> only exits.</p>
+<div class="figure align-default" id="id3">
+<a class="reference internal image-reference" href="../../../_images/render_cycles_optimizations_reducing-noise_glass-group.png"><img alt="../../../_images/render_cycles_optimizations_reducing-noise_glass-group.png" src="../../../_images/render_cycles_optimizations_reducing-noise_glass-group.png" style="width: 620px;" /></a>
+<p class="caption"><span class="caption-text">展开后的节点组示例。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="make-group">
+<span id="bpy-ops-node-group-make"></span><h2>制作节点组<a class="headerlink" href="#make-group" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>所有模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">节点 ‣ 创建组</span></p>
+</dd>
+<dt class="field-odd">快捷键</dt>
+<dd class="field-odd"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">G</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>To create a node group, select the nodes you want to include, then
+press <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">G</kbd></kbd>, <span class="menuselection">Group ‣ Make Group</span>.
+A node group will have a green title bar. All selected nodes will now be contained within the node group.
+Default naming for the node group is &quot;NodeGroup&quot;, &quot;NodeGroup.001&quot; etc.
+There is a name field in the node group you can click into to change the name of the group.
+Change the name of the node group to something meaningful.</p>
+<p>创建节点组的方法如下：选择要包含的节点，然后按 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">G</kbd></kbd>， <span class="menuselection">组 ‣ 创建组</span> 。节点组将具有绿色标题栏。而所有选定的节点都将包含在该节点组中。节点组的默认名称为 <code class="docutils literal notranslate"><span class="pre">NodeGroup</span></code> , <code class="docutils literal notranslate"><span class="pre">NodeGroup.001</span></code> 等。节点组的名称可以通过点击进行更改。尽量将节点组的名称更改为有意义的名称。将节点组从一个blender文件附加到另一个blender文件时，blender不会区分材料节点组或复合节点组，因此建议使用一些命名约定，以便可以轻松区分这两种类型。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>What <strong>not</strong> to include in node groups:</p>
+<p>Remember that the essential idea is that a group should be a reusable,
+self-contained software component. Material node groups should <strong>not</strong> include:</p>
+<dl class="simple">
+<dt>Input nodes</dt><dd><p>If you include a source node in your group,
+you will end up having the source node appearing <em>twice</em>: once inside the group,
+and once outside the group in the new material node tree.</p>
+</dd>
+<dt>Output node</dt><dd><p>If you include an output node in the group, there will not be an output socket available <em>from</em> the group!</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="ungroup">
+<span id="bpy-ops-node-group-ungroup"></span><h2>拆散<a class="headerlink" href="#ungroup" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>所有模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">节点 ‣ 取消编组</span></p>
+</dd>
+<dt class="field-odd">快捷键</dt>
+<dd class="field-odd"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">G</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>The <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">G</kbd></kbd> tool removes the group and places the individual nodes into your editor workspace.
+No internal connections are lost, and now you can link internal nodes to other nodes in your workspace.</p>
+<dl>
+<dt>分离 <kbd class="kbd docutils literal notranslate">P</kbd></dt><dd><p>将所选节点与节点组分开。</p>
+<dl class="simple">
+<dt>复制</dt><dd><p>复制到父级节点树，并保持节点组完好。</p>
+</dd>
+<dt>移动</dt><dd><p>从组中删除，移动至父级节点树。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="group-insert">
+<span id="bpy-ops-node-group-insert"></span><h2>插入节点组<a class="headerlink" href="#group-insert" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式</dt>
+<dd class="field-odd"><p>所有模式</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">节点 ‣ 插入节点组</span></p>
+</dd>
+</dl>
+</div>
+<p>选择一组节点，以目标组节点为结尾，按 <span class="menuselection">节点 ‣ 插入组</span> 将把这些节点移入该组。被移动的节点被收集到他们自己的组中，以保留他们的连接环境，有他们自己的组输入和输出节点。该组现有的输入和输出节点被更新为新的插座，如果有的话，来自新的节点。节点组必须被编辑为包含一个 <em>组输入</em> 和一个 <em>组输出</em> 节点。</p>
+</div>
+<div class="section" id="appending-node-groups">
+<h2>Appending Node Groups<a class="headerlink" href="#appending-node-groups" title="Permalink to this headline">¶</a></h2>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">编辑器</dt>
+<dd class="field-odd"><p>顶部标题栏</p>
+</dd>
+<dt class="field-even">模式</dt>
+<dd class="field-even"><p>所有模式</p>
+</dd>
+<dt class="field-odd">菜单</dt>
+<dd class="field-odd"><p><span class="menuselection">File ‣ Link/Append</span></p>
+</dd>
+</dl>
+</div>
+<p>Once you have appended a Node Tree to your blend-file, you can make use of it in a node editor by
+pressing <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">A</kbd></kbd>, <span class="menuselection">Add ‣ Group</span>, then selecting the appended group.
+The &quot;control panel&quot; of the Group include the individual controls for the grouped nodes.
+You can change them by working with the Group node like any other node.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="frame.html" class="btn btn-neutral float-right" title="节点框" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="sidebar.html" class="btn btn-neutral float-left" title="侧栏" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; <a href="../../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">
+        Last updated on 06/19/2023.
+      </span>
+
+    </p>
+  </div>
+      <div class="footer-contribute">
+         <ul>
+            <li>
+               <a href="https://developer.blender.org/diffusion/BM/browse/trunk/blender_docs/manual/interface/controls/nodes/groups.rst" class="fa fa-edit"> Edit Page</a>
+            </li>
+            <li>
+               <a href="https://developer.blender.org/maniphest/task/edit/form/default/?description=Pagename%3A%20%60interface/controls/nodes/groups%60%0ABlender%20Version%3A%20%602.93%60%0ADocumentation%20Language%3A%20%60zh-hans%60%0A%5B%5B%20https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F2.93%2Finterface/controls/nodes/groups.html%20%7C%20Permanent%20link%20%5D%5D%0A%0A%2A%2AShort%20description%20of%20error%2A%2A%0A%5BPlease%20fill%20out%20a%20short%20description%20of%20the%20error%20here%5D&project=PHID-PROJ-c4nvvrxuczix2326vlti" class="fa fa-bug"> Report Bug</a>
+            </li>
+         <ul>
+      </div>
+
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.93 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async='async' src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

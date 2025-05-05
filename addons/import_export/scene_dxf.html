@@ -1,0 +1,528 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>AutoCAD DXF &mdash; Blender Manual</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/version_switch.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/addons/import_export/scene_dxf.html" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/js/version_switch.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+    <link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+    <link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+    <link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="next" title="摄像机动画" href="anim_camera.html" />
+    <link rel="prev" title="BioVision Motion Capture (BVH)" href="anim_bvh.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blender 2.93 Manual
+          
+
+          
+            
+            <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景&amp;物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻&amp;绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">运动跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">Files &amp; Data System</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">插件</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#add-ons-category-listings">插件类别列表</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../3d_view/index.html">3D 视图</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../add_curve/index.html">添加曲线</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../add_mesh/index.html">添加网格</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../camera/index.html">相机</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../development/index.html">开发</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">导入 - 导出</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="node_shaders_info.html">节点着色器的导入与导出</a></li>
+<li class="toctree-l4"><a class="reference internal" href="coat3D.html">3D-Coat 应用链接</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mesh_atomic.html">Atomic Blender (PDB/XYZ)插件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="anim_bvh.html">BioVision Motion Capture (BVH)</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">AutoCAD DXF</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#import">导入</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#dxf-type-mapping">DXF类型映射</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#dxf-to-curves">DXF 到曲线</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#dxf-to-meshes">DXF到网格</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#missing-dxf-types">丢失 DXF 类型</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="#properties">属性</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#merge-options">合并选项</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#line-thickness-and-width">线条厚度和宽度</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#optional-objects">可选对象</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#view-options">查看选项</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#georeferencing">地理参考</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#export">导出</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#supported-data">支持数据</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#unsupported-data">不支持的数据</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="anim_camera.html">摄像机动画</a></li>
+<li class="toctree-l4"><a class="reference internal" href="paper_model.html">图纸模型</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pc2.html">点缓存（Pointcache（pc2））</a></li>
+<li class="toctree-l4"><a class="reference internal" href="scene_fbx.html">FBX</a></li>
+<li class="toctree-l4"><a class="reference internal" href="images_as_planes.html">图像为平面</a></li>
+<li class="toctree-l4"><a class="reference internal" href="palettes.html">导入调色板</a></li>
+<li class="toctree-l4"><a class="reference internal" href="shape_mdd.html">NewTek MDD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="anim_nuke_chan.html">纽克动画 (chan)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mesh_stl.html">STL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="curve_svg.html">可缩放矢量图形 (SVG)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mesh_ply.html">Stanford PLY</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mesh_uv_layout.html">UV布局</a></li>
+<li class="toctree-l4"><a class="reference internal" href="scene_obj.html">波峰 物体</a></li>
+<li class="toctree-l4"><a class="reference internal" href="scene_x3d.html">Web3D X3D/VRML2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="scene_gltf2.html">glTF 2.0</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../interface/index.html">界面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lighting/index.html">光照</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../materials/index.html">材质</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/index.html">网格</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../node/index.html">节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../object/index.html">物体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../paint/index.html">绘制</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rigging/index.html">绑定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sequencer/index.html">序列容器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../system/index.html">系统</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../uv/index.html">UV</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../video_tools/index.html">视频工具</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">贡献文档</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 2.93 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">插件</a> &raquo;</li>
+        
+          <li><a href="index.html">导入 - 导出</a> &raquo;</li>
+        
+      <li>AutoCAD DXF</li>
+    
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="autocad-dxf">
+<h1>AutoCAD DXF<a class="headerlink" href="#autocad-dxf" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">类别</dt>
+<dd class="field-odd"><p>导入 - 导出</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">文件 ‣ 导入/导出 ‣ AutoCAD DXF</span></p>
+</dd>
+</dl>
+</div>
+<div class="section" id="import">
+<span id="dxf-import"></span><h2>导入<a class="headerlink" href="#import" title="Permalink to this headline">¶</a></h2>
+<p>DXF层被反映为Blender组。这个导入器使用一个通用的DXF库，叫做 &quot;dxfgrabber&quot;。</p>
+<div class="section" id="dxf-type-mapping">
+<h3>DXF类型映射<a class="headerlink" href="#dxf-type-mapping" title="Permalink to this headline">¶</a></h3>
+<p>为了尽可能做到无损，导入器旨在将尽可能多的DXF类型映射到Blender的曲线上。</p>
+<div class="section" id="dxf-to-curves">
+<h4>DXF 到曲线<a class="headerlink" href="#dxf-to-curves" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">LINE</span></code> 作为 <code class="docutils literal notranslate"><span class="pre">POLYLINE</span></code> 曲线（可选择合并连接线）。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(LW)POLYLINE</span></code>, <code class="docutils literal notranslate"><span class="pre">(LW)POLYGON</span></code> as <code class="docutils literal notranslate"><span class="pre">POLYLINE</span></code> curve if they have no bulges else as <code class="docutils literal notranslate"><span class="pre">BEZIER</span></code> curve.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ARC</span></code>s, <code class="docutils literal notranslate"><span class="pre">CIRCLE</span></code>s 和 <code class="docutils literal notranslate"><span class="pre">ELLIPSE</span></code>s 作为 <code class="docutils literal notranslate"><span class="pre">BEZIER</span></code> 曲线。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">HELIX</span></code>es (3D) 为 <code class="docutils literal notranslate"><span class="pre">BEZIER</span></code> 曲线。</p></li>
+</ul>
+</div>
+<div class="section" id="dxf-to-meshes">
+<h4>DXF到网格<a class="headerlink" href="#dxf-to-meshes" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">MESH</span></code> 被映射到一个带有细分曲面修改器的网格对象，包括边缘折痕。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">POLYFACE</span></code>s 和 <code class="docutils literal notranslate"><span class="pre">POLYMESH</span></code>es 被导入到网格对象。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3DFACE</span></code> s, <code class="docutils literal notranslate"><span class="pre">SOLID</span></code> s, <code class="docutils literal notranslate"><span class="pre">POINT</span></code> s被导入到每个层的一个组合网格对象中，称为`layername_3Dfaces'。</p></li>
+</ul>
+</div>
+<div class="section" id="missing-dxf-types">
+<h4>丢失 DXF 类型<a class="headerlink" href="#missing-dxf-types" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>孵化器</p></li>
+<li><p>引线</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="properties">
+<h3>属性<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="merge-options">
+<h4>合并选项<a class="headerlink" href="#merge-options" title="Permalink to this headline">¶</a></h4>
+<dl>
+<dt>块作为</dt><dd><p>DXF块可以作为链接对象或组实例被导入。链接对象对DXF子块（块中的块）使用亲子关系。</p>
+</dd>
+<dt>父块到边界框</dt><dd><p>在区块周围画一个边界框。</p>
+</dd>
+<dt>合并对象</dt><dd><p>由于Blender（v2.71）在添加对象方面相当缓慢，用户可能想把类似的DXF几何图形合并到一个对象上。</p>
+<dl class="simple">
+<dt>按层</dt><dd><p>每层产生一个对象；如果一层上有网格、曲线、灯管、文本数据，则每层和每个Blender对象产生一个对象。</p>
+</dd>
+<dt>按图层和DXF类型</dt><dd><p>第二个不仅区分Blender的数据类型，也区分DXF类型，如 <code class="docutils literal notranslate"><span class="pre">LWPOLYLINE</span></code> 和 <code class="docutils literal notranslate"><span class="pre">POLYLINE</span></code> 。</p>
+</dd>
+<dt>按图层和封闭的无漏洞多边形计算</dt><dd><p>没有凸起的封闭多线，也就是没有弯曲的边缘，可以合并为一个单一的网格。当DXF折线有一个挤压和/或仰角属性时，这是有意义的，这基本上描述了一个位置/旋转/比例转换。如果选择这个合并选项，线的厚度设置将被忽略/禁用。</p>
+</dd>
+<dt>按图层和DXF-类型和区块分类</dt><dd><p>对于DXF文件中的一个块被多次引用，这个选项允许用一个实例面的对象多次插入同一个块，而不是在每次需要插入块的时候用一个对象。不幸的是，这只适用于统一比例的图块插入。非统一比例的块插入是按照 <em>Blocks As</em> 中的定义导入的。</p>
+</dd>
+</dl>
+</dd>
+<dt>将 <code class="docutils literal notranslate"><span class="pre">线</span></code> 的实体合并为多边形</dt><dd><p>DXF中的分离线可能会被合并到一个连续的Blender多边形曲线。类似于 <em>移除双线</em> ，但用于曲线。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="line-thickness-and-width">
+<h4>线条厚度和宽度<a class="headerlink" href="#line-thickness-and-width" title="Permalink to this headline">¶</a></h4>
+<dl class="simple">
+<dt>代表线的 厚度/宽度</dt><dd><p>DXF线条属性 <em>厚度</em> 和 <em>宽度</em> 分别对Z和X/Y方向的线条有影响。例如，一条直线可以通过其属性变成一个立方体。因此，在Blender中，这些属性用曲线挤压、斜面和锥度对象来表示。</p>
+</dd>
+<dt>按属性合并</dt><dd><p>如果同时激活了 <em>合并对象</em> 和 <em>代表线条厚度/宽度</em> ，则需要扩展对象合并，以分离所有不同厚度和宽度的线条。通过 <em>按属性合并</em> ，这种分离选项也是可用的，而不需要实际表示线的厚度和宽度。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="optional-objects">
+<h4>可选对象<a class="headerlink" href="#optional-objects" title="Permalink to this headline">¶</a></h4>
+<dl class="simple">
+<dt>导入 <code class="docutils literal notranslate"><span class="pre">文本</span></code></dt><dd><p>(<code class="docutils literal notranslate"><span class="pre">TEXT</span></code>, <code class="docutils literal notranslate"><span class="pre">MTEXT</span></code>)</p>
+</dd>
+<dt>导入 <code class="docutils literal notranslate"><span class="pre">灯光</span></code></dt><dd><p>包括对AutoCAD颜色的支持。</p>
+</dd>
+<dt>出口  <code class="docutils literal notranslate"><span class="pre">ACIS</span></code> 实体</dt><dd><p>导出NURBS三维几何（ <code class="docutils literal notranslate"><span class="pre">BODY</span></code> , <code class="docutils literal notranslate"><span class="pre">REGION</span></code> , <code class="docutils literal notranslate"><span class="pre">PLANESURFACE</span></code> , <code class="docutils literal notranslate"><span class="pre">SURFACE</span></code> , <code class="docutils literal notranslate"><span class="pre">3DSOLID</span></code> ）到ACIS-Sat文件，因为这是AutoCAD存储NURBS到DXF的格式。你将会收到关于存储的 <code class="docutils literal notranslate"><span class="pre">.sat</span> <span class="pre">``/</span></code> .sab`` 文件数量的通知。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="view-options">
+<h4>查看选项<a class="headerlink" href="#view-options" title="Permalink to this headline">¶</a></h4>
+<dl class="simple">
+<dt>Display Groups in Outliner(s)</dt><dd><p>将大纲显示模式切换到 <code class="docutils literal notranslate"><span class="pre">GROUPS</span></code> （DXF图层被映射到组）。</p>
+</dd>
+<dt>将DXF文件导入新场景</dt><dd><p>待补充。</p>
+</dd>
+<dt>将几何图形放到场景中央</dt><dd><p>将导入的几何体集中到场景的中心；偏移信息作为一个自定义属性存储到场景中。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="georeferencing">
+<h4>地理参考<a class="headerlink" href="#georeferencing" title="Permalink to this headline">¶</a></h4>
+<p>重要的是。DXF文件不存储任何关于其坐标系统/球面投影的信息。最好的做法是知道你的特定DXF文件的坐标系，并在DXF导入器界面中输入这些信息，如下所示。</p>
+<dl>
+<dt>Pyproj</dt><dd><p>Installation: Download (<a class="reference external" href="https://github.com/pyproj4/pyproj">Windows</a>,
+<a class="reference external" href="http://www.ia.arch.ethz.ch/wp-content/uploads/2013/11/pyproj.zip">macOS</a>) Pyproj and copy it to your</p>
+<pre class="literal-block">AppData/ApplicationSupport Folder/Blender/2.93/scripts/modules/.</pre>
+<p>In case you need to compile your own binary refer to
+<a class="reference external" href="https://blenderartists.org/forum/showthread.php?323358-DXF-Importer&amp;p=2664492&amp;viewfull=1#post2664492">this post</a>
+on Blender Artists.</p>
+<p>Pyproj is a Python wrapper to the PROJ library, a well known C library used to
+convert coordinates between different coordinate systems.
+Open source GIS libraries such as PROJ are used directly or indirectly by many authorities and
+therefore can be considered well maintained.</p>
+<p>如果Pyproj可用，DXF导入器会显示一个局部坐标系的选择，但让用户也可以输入一个自定义的EPSG/SRID代码。它还将SRID作为一个自定义属性存储到Blender场景中。如果一个场景已经有了这样的SRID属性，那么坐标将从你的DXF文件转换到目标坐标系，因此你 <strong>必须</strong> 为DXF文件指定一个SRID。如果没有SRID自定义属性，场景的SRID默认与DXF的SRID相同。</p>
+</dd>
+<dt>没有Pyproj</dt><dd><p>在Pyproj不可用的情况下，DXF导入器将只使用其内置的纬度/伦度到X/Y转换器。对于转换， &quot;横向墨卡托&quot; 投影被应用，输入一个纬/伦坐标作为投影的中心。纬/伦坐标被作为一个自定义属性添加到你的场景中。随后的导入将把任何纬度/伦度坐标转换为相同的地理参考。</p>
+<p>重要提示：到目前为止，只支持 纬度/长度 到 X/Y 的转换。如果你有一个DXF文件，其欧几里得坐标指向另一个纬度/伦中心，则不支持转换。</p>
+</dd>
+<dt>选择SRID的经验法则</dt><dd><p>如果你的数据来自OpenStreetMap或一些类似的GIS服务网站，并通过QGIS或ArcGIS导出，那么坐标很可能是纬度/伦度，然后使用WGS84作为Pyproj的SRID，如果Pyproj不可用，则使用 &quot;球面&quot; 。对于其他DXF矢量地图，它们很可能使用 当地/局部 坐标系统。</p>
+<p>用文本编辑器打开DXF（它有好几千行），看着一些坐标做一个有根据的猜测。DXF是用 &quot;组代码&quot; 工作的，这是Autodesk公司为 &quot;键&quot; 发明的一个名称，就像 键/值 对一样。X有组代码10，Y有20，Z有30。如果你发现一个模式，比如：</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>10, newline, whitespace, whitespace, NUMBER, newline,
+20, newline, whitespace, whitespace, NUMBER, newline,
+30, newline, whitespace, whitespace, NUMBER
+</pre></div>
+</div>
+<p>那么 <code class="docutils literal notranslate"><span class="pre">NUMBER</span></code> 就很可能是你的坐标。你也许可以从坐标的格式和/或范围中看出它应该是哪个坐标系。</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="section" id="export">
+<span id="dxf-export"></span><h2>导出<a class="headerlink" href="#export" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="supported-data">
+<h3>支持数据<a class="headerlink" href="#supported-data" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>网格面: <code class="docutils literal notranslate"><span class="pre">POLYFACE</span></code> 或 <code class="docutils literal notranslate"><span class="pre">3DFACE</span></code></p></li>
+<li><p>风格边: <code class="docutils literal notranslate"><span class="pre">线</span></code></p></li>
+<li><p>修改器（设选）</p></li>
+</ul>
+</div>
+<div class="section" id="unsupported-data">
+<h3>不支持的数据<a class="headerlink" href="#unsupported-data" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>网格点: <code class="docutils literal notranslate"><span class="pre">POINT</span></code></p></li>
+<li><p>曲线: <code class="docutils literal notranslate"><span class="pre">LINE</span></code>s or <code class="docutils literal notranslate"><span class="pre">POLYLINE</span></code></p></li>
+<li><p>曲线 NURBS: <code class="docutils literal notranslate"><span class="pre">curved-POLYLINE</span></code></p></li>
+<li><p>文本: <code class="docutils literal notranslate"><span class="pre">TEXT</span></code> 或 (wip: <code class="docutils literal notranslate"><span class="pre">MTEXT</span></code>)</p></li>
+<li><p>Camera: <code class="docutils literal notranslate"><span class="pre">POINT</span></code> or <code class="docutils literal notranslate"><span class="pre">VIEW</span></code> or <code class="docutils literal notranslate"><span class="pre">VPORT</span></code> or (wip: <code class="docutils literal notranslate"><span class="pre">INSERT(ATTRIB+XDATA)</span></code>)</p></li>
+<li><p>Light: <code class="docutils literal notranslate"><span class="pre">POINT</span></code> or (wip: <code class="docutils literal notranslate"><span class="pre">INSERT(ATTRIB+XDATA)</span></code>)</p></li>
+<li><p>空物体: <code class="docutils literal notranslate"><span class="pre">POINT</span></code> 或 (wip: <code class="docutils literal notranslate"><span class="pre">INSERT</span></code>)</p></li>
+<li><p>对象矩阵：挤压（ <code class="docutils literal notranslate"><span class="pre">210-组</span></code> ）、旋转、仰角</p></li>
+<li><p>三维视口: (wip: <cite>VIEW`</cite>, <cite>VPORT`</cite>)</p></li>
+<li><p>实例化点：auto-instanced or (wip: <code class="docutils literal notranslate"><span class="pre">INSERT</span></code>)</p></li>
+<li><p>实例化框架：auto-instanced or (wip: <code class="docutils literal notranslate"><span class="pre">INSERT</span></code>)</p></li>
+<li><p>实例化组：auto-instanced or (wip: <code class="docutils literal notranslate"><span class="pre">INSERT</span></code>)</p></li>
+<li><p>材质: <code class="docutils literal notranslate"><span class="pre">LAYER</span></code>, <code class="docutils literal notranslate"><span class="pre">COLOR</span></code> 和 <code class="docutils literal notranslate"><span class="pre">STYLE</span></code> 属性</p></li>
+<li><p>组：<code class="docutils literal notranslate"><span class="pre">BLOCK</span></code> 和 <code class="docutils literal notranslate"><span class="pre">INSERT</span></code> 。</p></li>
+<li><p>养育孩子。 <code class="docutils literal notranslate"><span class="pre">BLOCK</span></code> 和 <code class="docutils literal notranslate"><span class="pre">INSERT</span></code> 。</p></li>
+<li><p>可见性 status: <code class="docutils literal notranslate"><span class="pre">LAYER_on</span></code></p></li>
+<li><p>冻结状态： <code class="docutils literal notranslate"><span class="pre">LAYER_frozen</span></code> 。</p></li>
+<li><p>锁定的状态。 <code class="docutils literal notranslate"><span class="pre">LAYER_locked</span></code> 。</p></li>
+<li><p>曲面</p></li>
+<li><p>融球</p></li>
+<li><p>骨架</p></li>
+<li><p>晶格</p></li>
+<li><p><abbr title="InterPOlated">IPO</abbr> / 动画</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="anim_camera.html" class="btn btn-neutral float-right" title="摄像机动画" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="anim_bvh.html" class="btn btn-neutral float-left" title="BioVision Motion Capture (BVH)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; <a href="../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">
+        Last updated on 06/19/2023.
+      </span>
+
+    </p>
+  </div>
+      <div class="footer-contribute">
+         <ul>
+            <li>
+               <a href="https://developer.blender.org/diffusion/BM/browse/trunk/blender_docs/manual/addons/import_export/scene_dxf.rst" class="fa fa-edit"> Edit Page</a>
+            </li>
+            <li>
+               <a href="https://developer.blender.org/maniphest/task/edit/form/default/?description=Pagename%3A%20%60addons/import_export/scene_dxf%60%0ABlender%20Version%3A%20%602.93%60%0ADocumentation%20Language%3A%20%60zh-hans%60%0A%5B%5B%20https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F2.93%2Faddons/import_export/scene_dxf.html%20%7C%20Permanent%20link%20%5D%5D%0A%0A%2A%2AShort%20description%20of%20error%2A%2A%0A%5BPlease%20fill%20out%20a%20short%20description%20of%20the%20error%20here%5D&project=PHID-PROJ-c4nvvrxuczix2326vlti" class="fa fa-bug"> Report Bug</a>
+            </li>
+         <ul>
+      </div>
+
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.93 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async='async' src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

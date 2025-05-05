@@ -1,0 +1,436 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>运动路径 &mdash; Blender Manual</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/version_switch.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/animation/motion_paths.html" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/js/version_switch.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../_static/opensearch.xml"/>
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+    <link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+    <link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+    <link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="copyright" title="Copyright" href="../copyright.html" />
+    <link rel="next" title="物理" href="../physics/index.html" />
+    <link rel="prev" title="工作流程" href="shape_keys/workflow.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Blender 2.93 Manual
+          
+
+          
+            
+            <img src="../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scene_layout/index.html">场景&amp;物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">雕刻&amp;绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">动画 &amp; 绑定</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keyframes/index.html">关键帧</a></li>
+<li class="toctree-l2"><a class="reference internal" href="armatures/index.html">骨架</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lattice.html">晶格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraints/index.html">约束</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions.html">动作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drivers/index.html">驱动程序</a></li>
+<li class="toctree-l2"><a class="reference internal" href="markers.html">标记</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shape_keys/index.html">形态键</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">运动路径</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#options">选项</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#show">显示</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#example">例子</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../movie_clip/index.html">运动跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../files/index.html">Files &amp; Data System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">贡献文档</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Blender 2.93 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">动画 &amp; 绑定</a> &raquo;</li>
+        
+      <li>运动路径</li>
+    
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="motion-paths">
+<span id="bpy-ops-object-paths-calculate"></span><span id="bpy-types-animviz"></span><h1>运动路径<a class="headerlink" href="#motion-paths" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">编辑器</dt>
+<dd class="field-odd"><p>3D 视图，属性</p>
+</dd>
+<dt class="field-even">模式</dt>
+<dd class="field-even"><p>物体模式</p>
+</dd>
+<dt class="field-odd">面板</dt>
+<dd class="field-odd"><p><span class="menuselection">属性 ‣ 物体属性  ‣ 运动路径</span> 。</p>
+</dd>
+</dl>
+</div>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">编辑器</dt>
+<dd class="field-odd"><p>3D 视图，属性</p>
+</dd>
+<dt class="field-even">模式</dt>
+<dd class="field-even"><p>姿态模式</p>
+</dd>
+<dt class="field-odd">面板</dt>
+<dd class="field-odd"><p><span class="menuselection">属性 ‣ 骨架 ‣ 运动路径</span> 。</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">姿态 ‣ 运动路径</span></p>
+</dd>
+</dl>
+</div>
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/animation_motion-paths_example-object.png"><img alt="../_images/animation_motion-paths_example-object.png" src="../_images/animation_motion-paths_example-object.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">一个动画化的立方体的运动路线。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>运动路径工具允许您将点的运动可视化为一系列帧上的路径。 这些点可以是物体原点和骨骼关节。</p>
+<p>要创建或删除运动路径，首先必须选择骨骼。 然后：</p>
+<ol class="arabic simple">
+<li><p>要显示路径（或根据需要更新它们），请单击 <em>计算路径</em> 按钮。</p></li>
+<li><p>要隐藏路径，点击 <em>清除路径</em> 按钮。</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>请记住，只有选定的骨骼及其路径会受到这些操作的影响！</p>
+</div>
+<p>未选择的点的路径显示为浅灰色，而选择的点则显示为略带蓝色的灰色。在当前帧的周围，有一个发光体表示移动的方向：蓝色指向未来帧，绿色指向过去。每一帧都由路径上的一个小白点显示。</p>
+<p>在编辑姿态/关键帧时路径会自动更新，并且在动画播放期间它们也处于活动状态。 仅当启用了 <em>当前帧附近</em> 选项时，播放动画才会影响路径。</p>
+<div class="section" id="options">
+<h2>选项<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default" id="id2">
+<img alt="../_images/animation_motion-paths_panel.png" src="../_images/animation_motion-paths_panel.png" />
+<p class="caption"><span class="caption-text">在骨架选项卡中的运动路径面板。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<dl>
+<dt>类型</dt><dd><dl>
+<dt>附近帧</dt><dd><p>Display paths of points within a fixed number of frames around the current frame.
+When you enable this button, you get paths for a given number of frames before and after the current one
+(again, as with ghosts).</p>
+</dd>
+<dt>帧区间内</dt><dd><p>在指定范围内显示路径点。</p>
+<dl class="simple">
+<dt>Clock Button</dt><dd><p>Updates the display frame range from the scene frame range.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt>帧范围</dt><dd><dl class="simple">
+<dt>Before, After</dt><dd><p>Number of frames to show before and after the current frame
+(only for <em>Around Current Frame</em> Onion-skinning method).</p>
+</dd>
+<dt>开始，结束</dt><dd><p>Starting and Ending frame of range of paths to display/calculate
+(not for <em>Around Current Frame</em> Onion-skinning method).</p>
+</dd>
+<dt>步长</dt><dd><p>允许在路径上每 <em>n</em> 帧显示一个点。当你启用帧数显示（见下文）时，这一点非常有用，可以避免在3D视窗中出现混乱。</p>
+</dd>
+</dl>
+</dd>
+<dt>Cache/Bone Cache</dt><dd><dl class="simple">
+<dt>调离</dt><dd><p>这些是显示运动路径的范围的开始/结束帧。 如果不先删除运动路径，则无法修改此范围。</p>
+</dd>
+</dl>
+</dd>
+<dt>Calculate/Update Paths</dt><dd><p>If no paths have been calculated, Calculate Paths will create a new motion path in cache based on
+the options specified in the pop-up menu or the <a class="reference internal" href="../interface/undo_redo.html#bpy-ops-screen-redo-last"><span class="std std-ref">调整上一步操作</span></a> panel.
+If a path has already been calculated, Update Paths will update the path shape to the current animation.
+To change the frame range of the calculated path, you need to delete the path and calculate it again.</p>
+<dl class="simple">
+<dt>开始，结束</dt><dd><p>These are the start/end frames of the range in which motion paths are shown.
+You have to <em>Calculate Paths</em> again if you modify this setting, to update the paths in the 3D Viewport.
+The start frame is <em>inclusive</em>
+(i.e. if you set <em>Start</em> to 1, you will really see the frame 1 as starting point of the paths...).</p>
+</dd>
+<dt>烘焙位置</dt><dd><p>Bones only -- By default, you get the tips' paths.
+By changing this setting to Tails, you will get the paths of the bone's roots
+(remember that in Blender UI, bones' roots are called &quot;heads&quot;...).
+You have to <em>Calculate Paths</em> again if you modify this setting,
+to update the paths in the 3D Viewport.</p>
+</dd>
+</dl>
+</dd>
+<dt>清除路径 <code class="docutils literal notranslate"><span class="pre">X</span></code></dt><dd><p>清除所有物体/骨骼上的路径，或者在按住 <kbd class="kbd docutils literal notranslate">Shift</kbd> 时仅清除所选对象的路径。</p>
+</dd>
+</dl>
+<div class="section" id="show">
+<h3>显示<a class="headerlink" href="#show" title="Permalink to this headline">¶</a></h3>
+<dl>
+<dt>帧序号</dt><dd><p>启用后，路径上每个帧点旁边会显示一个小数字，这当然是相应帧的编号。</p>
+</dd>
+<dt>关键帧</dt><dd><p>启用时，在运动路径上显示黄色大菱形点，显示其骨骼的关键帧（即，只有给定帧处的键控骨骼的路径在此帧处获得黄点）。</p>
+</dd>
+<dt>扩展至非群组关键帧</dt><dd><p>对于骨骼运动路径，它将搜索整个动作中的关键帧，而不是仅使用匹配名称的组（较慢）。</p>
+</dd>
+<dt>关键帧序号</dt><dd><p>启用后，你将看到所显示的关键帧序号，因此此选项显然仅当 <em>显示关键帧</em> 启用时有效。</p>
+</dd>
+<dt>行数（线）</dt><dd><p>切换是否显示点之间的线。</p>
+<dl class="simple">
+<dt>Thickness, Custom Color</dt><dd><p>Customizable thickness and color for the lines.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="example">
+<h2>例子<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default" id="id3">
+<img alt="../_images/animation_motion-paths_example-armature.png" src="../_images/animation_motion-paths_example-armature.png" />
+<p class="caption"><span class="caption-text">骨架运动路径的例子。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../physics/index.html" class="btn btn-neutral float-right" title="物理" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="shape_keys/workflow.html" class="btn btn-neutral float-left" title="工作流程" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; <a href="../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">
+        Last updated on 06/19/2023.
+      </span>
+
+    </p>
+  </div>
+      <div class="footer-contribute">
+         <ul>
+            <li>
+               <a href="https://developer.blender.org/diffusion/BM/browse/trunk/blender_docs/manual/animation/motion_paths.rst" class="fa fa-edit"> Edit Page</a>
+            </li>
+            <li>
+               <a href="https://developer.blender.org/maniphest/task/edit/form/default/?description=Pagename%3A%20%60animation/motion_paths%60%0ABlender%20Version%3A%20%602.93%60%0ADocumentation%20Language%3A%20%60zh-hans%60%0A%5B%5B%20https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F2.93%2Fanimation/motion_paths.html%20%7C%20Permanent%20link%20%5D%5D%0A%0A%2A%2AShort%20description%20of%20error%2A%2A%0A%5BPlease%20fill%20out%20a%20short%20description%20of%20the%20error%20here%5D&project=PHID-PROJ-c4nvvrxuczix2326vlti" class="fa fa-bug"> Report Bug</a>
+            </li>
+         <ul>
+      </div>
+
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.93 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async='async' src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

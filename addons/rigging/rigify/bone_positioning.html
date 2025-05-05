@@ -1,0 +1,433 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>骨骼定位指南 &mdash; Blender Manual</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/version_switch.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/addons/rigging/rigify/bone_positioning.html" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/js/version_switch.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+    <link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+    <link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+    <link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../../copyright.html" />
+    <link rel="next" title="生成的装配器特征" href="rig_features.html" />
+    <link rel="prev" title="基础用法" href="basics.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.93 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景&amp;物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻&amp;绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">运动跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">Files &amp; Data System</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">插件</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#add-ons-category-listings">插件类别列表</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../3d_view/index.html">3D 视图</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../add_curve/index.html">添加曲线</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../add_mesh/index.html">添加网格</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../camera/index.html">相机</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../development/index.html">开发</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../import_export/index.html">导入 - 导出</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../interface/index.html">界面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lighting/index.html">光照</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../materials/index.html">材质</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../mesh/index.html">网格</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../node/index.html">节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../object/index.html">物体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../paint/index.html">绘制</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">绑定</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Rigify</a><ul class="current">
+<li class="toctree-l5 current"><a class="reference internal" href="index.html#basics">基础</a><ul class="current">
+<li class="toctree-l6"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l6"><a class="reference internal" href="basics.html">基础用法</a></li>
+<li class="toctree-l6 current"><a class="current reference internal" href="#">骨骼定位指南</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#face-bones">面部骨骼</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#torso-bones">躯干骨骼</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#limbs-bones">四肢</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#fingers-bones">手指骨</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="rig_features.html">生成的装配器特征</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="index.html#customization">个性化定制</a></li>
+<li class="toctree-l5"><a class="reference internal" href="index.html#extensions">扩展（名）</a></li>
+<li class="toctree-l5"><a class="reference internal" href="index.html#development">开发</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../sequencer/index.html">序列容器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../system/index.html">系统</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../uv/index.html">UV</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../video_tools/index.html">视频工具</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">贡献文档</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.93 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">插件</a> &raquo;</li>
+        
+          <li><a href="../index.html">绑定</a> &raquo;</li>
+        
+          <li><a href="index.html">Rigify</a> &raquo;</li>
+        
+      <li>骨骼定位指南</li>
+    
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="bone-positioning-guide">
+<h1>骨骼定位指南<a class="headerlink" href="#bone-positioning-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="face-bones">
+<h2>面部骨骼<a class="headerlink" href="#face-bones" title="Permalink to this headline">¶</a></h2>
+<p>首先确定基本面部标记，作为放置骨骼的指南。</p>
+<ul class="simple">
+<li><p>橙色线条表示应放置在闭环中的骨骼。</p></li>
+<li><p>黄线表示其位置取决于周围骨环的骨骼。</p></li>
+<li><p>红线表示外边缘骨骼。</p></li>
+<li><p>紫色线条表示用于覆盖变形的肉体的桥接骨骼。</p></li>
+</ul>
+<p>眼鼻环区分为不同的部分，由骨骼名称识别。按照图像放置骨骼。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>眉毛放置</p>
+<p>保持&quot;brow&quot;、&quot;brow.b&quot;、&quot;lid.t&quot;、&quot;lid.t&quot;和脸颊的中间骨对齐将在装配器生成后产生更好的结果。</p>
+</div>
+<p>下颌耳部位也被分割成不同的部分，由骨骼名称识别。按照图像放置骨骼。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>下巴放置</p>
+<p>尝试放置覆盖下颌骨（下颌）的耳朵部分的 &quot;耳L&quot;骨。对于试图覆盖您不希望与下巴一起移动的部件的寺庙骨骼，也会这样做，这样您也可以确定下巴枢转位置。</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>While placing the lip bones you should keep the opposite bone chains merged in the middle.
+Tearing the merge point apart may result in a misalignment of controls in the final rig.</p>
+</div>
+<p>主要面部骨头放置完毕后，用颊骨将眼鼻部位与下巴口部位相连。然后对眉毛区域做同样的操作。此过程将自动定义面部肌肉压迫区域。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Merge Points</p>
+<p>The rig will generically work as its best if you keep the bone connected at their merge points.</p>
+</div>
+<p>Position the eye bones in the eye pivot point facing right <strong>toward</strong> the face on the Y axis.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>眼轴</p>
+<p>如果您的眼睛具有球形形状，则可以通过进入 &quot;编辑&quot; 模式来定义其枢轴。在中心子午线上选择两个相反的顶点（或相反的极点） ，然后按下: <span class="menuselection">吸附 ‣ 游标到所选</span> 。如果你的眼睛是一个完整的球体，它的位置没有被应用，那么你可以使用它的质量中心。</p>
+</div>
+<p>最后，将牙齿骨骼定位在牙齿几何形状和舌骨链上，如图所示。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>舌头</p>
+<p>如果骨骼在对称线上对齐，舌头将更好地工作。</p>
+</div>
+<p>在生成装配器之前，确保面部主骨朝上。</p>
+</div>
+<div class="section" id="torso-bones">
+<h2>躯干骨骼<a class="headerlink" href="#torso-bones" title="Permalink to this headline">¶</a></h2>
+<p>首先在角色的基本躯干区域上识别，以此作为放置骨骼的指南。</p>
+<p>头部、胸部和骨盆是刚性区，因此需要的骨骼较少。在模型上的区域边界周围有良好的边缘环路放置将有助于在骨架绑定后具有正确的变形。</p>
+<p>从侧视图开始，将主脊柱骨骼放置，尝试使用一块骨骼用于刚性部位，两块用于柔性部位。除了主脊柱外，躯干还提供额外的骨盆骨骼（以对抗腿部弯曲）、两个乳房装配器和两个肩部骨骼。</p>
+<p>即使骨盆骨骼不会作为对照出现在最终的装配器中，它们也会导致变形。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>放置</p>
+<p>尽量保持脊柱在网格边界体积内居中，只需稍微向后偏移即可。以类似的方式，将肩部骨骼视为一般变形者；将肩部骨骼过于向前放置-- --颈部骨骼应位于何处-- --可能会导致不必要的变形。</p>
+</div>
+</div>
+<div class="section" id="limbs-bones">
+<h2>四肢<a class="headerlink" href="#limbs-bones" title="Permalink to this headline">¶</a></h2>
+<p>放置手臂骨骼时，尝试在前视图和顶视图中从肩部到手的直线开始。完成后，只需在肘部稍微弯曲。通过进入顶视图，进入骨架编辑模式，并将前臂和上臂之间的骨骼结朝向世界Y轴稍微滑动，可以轻松完成此操作。</p>
+<p>对于腿部，您可以遵循类似的过程。首先对齐腿部骨骼，形成从臀部到脚踝的直线，然后相应地放置脚和脚趾。记住膝盖稍微弯曲。通过进入侧视图，进入骨架编辑模式，并向世界Y轴轻轻滑动大腿和小腿之间的骨骼连接点，可以轻松完成此操作。</p>
+<p>Finally align the heel bone by going in the front view and placing the head and tail to
+fill the foot size from side to side then, in the side view,
+align the bone at the point where the heel just touches the ground floor.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>从0.5版及更高版本开始，不再需要手动骨辊对齐。生成功能将通过从弯曲轴上评估来解决这个问题；只需在四肢中插入一个轻微的弯曲即可！如果您需要更多地控制方向，请遵循 &quot;高级用法&quot; 中描述的指南。</p>
+</div>
+</div>
+<div class="section" id="fingers-bones">
+<h2>手指骨<a class="headerlink" href="#fingers-bones" title="Permalink to this headline">¶</a></h2>
+<p>先把手指指关节放到位</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>手指放置</p>
+<p>执行此操作的一个简单而有效的方法是在 &quot;编辑&quot; 模式的网格上选择相应的边缘循环，并使用 <em>光标到选择</em> 捕捉。然后，您可以使用 <em>选择光标</em> 捕捉骨骼到相应的循环。</p>
+</div>
+<p>通过处理骨骼卷（ X轴设置为弯曲轴）来完成定位。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>骨骼扭转</p>
+<p>通过选择所有手指骨骼并重新计算骨骼卷： menuselection ： '重新计算滚动全局-Z轴` ，可以轻松地使手指轴对齐一致--&gt;。</p>
+<p>缩略图可能需要根据角色的网格拓扑进行更多调整，通常: <span class="menuselection">重新计算滚动 ‣ 全局 + Y轴</span> 是一个很好的起点。</p>
+<p>一旦您的骨骼卷保持一致，请尝试生成装配器并缩放手指主控件。这会导致手指弯曲。如果他们在错误的轴上旋转，请在 &quot;矫正类型&quot; 下更改第一根手指参数上的 &quot;弯曲旋转轴&quot; 参数。</p>
+</div>
+<p>手指就位后，继续放置手掌骨。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><code class="docutils literal notranslate"><span class="pre">limbs.super_palm</span></code></p>
+<p>尽量保持手掌骨头之间的距离。Rigify定义手掌控件层次结构需要此距离。通过选择所有手掌骨骼并重新计算骨骼卷： menuselection ： '重新计算滚动全局-Z轴` ，可以轻松完成手掌轴对齐--&gt;。</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>有关骨骼和骨骼卷的更多详细信息，请参阅 <a class="reference internal" href="../../../animation/armatures/bones/structure.html"><span class="doc">骨骼结构</span></a> 和 <a class="reference internal" href="../../../animation/armatures/bones/editing/bone_roll.html#armature-bone-roll"><span class="std std-ref">骨骼扭转</span></a> 。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="rig_features.html" class="btn btn-neutral float-right" title="生成的装配器特征" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="basics.html" class="btn btn-neutral float-left" title="基础用法" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; <a href="../../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">
+        Last updated on 06/19/2023.
+      </span>
+
+    </p>
+  </div>
+      <div class="footer-contribute">
+         <ul>
+            <li>
+               <a href="https://developer.blender.org/diffusion/BM/browse/trunk/blender_docs/manual/addons/rigging/rigify/bone_positioning.rst" class="fa fa-edit"> Edit Page</a>
+            </li>
+            <li>
+               <a href="https://developer.blender.org/maniphest/task/edit/form/default/?description=Pagename%3A%20%60addons/rigging/rigify/bone_positioning%60%0ABlender%20Version%3A%20%602.93%60%0ADocumentation%20Language%3A%20%60zh-hans%60%0A%5B%5B%20https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F2.93%2Faddons/rigging/rigify/bone_positioning.html%20%7C%20Permanent%20link%20%5D%5D%0A%0A%2A%2AShort%20description%20of%20error%2A%2A%0A%5BPlease%20fill%20out%20a%20short%20description%20of%20the%20error%20here%5D&project=PHID-PROJ-c4nvvrxuczix2326vlti" class="fa fa-bug"> Report Bug</a>
+            </li>
+         <ul>
+      </div>
+
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.93 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async='async' src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

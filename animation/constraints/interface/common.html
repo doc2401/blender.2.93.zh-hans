@@ -1,0 +1,388 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>通用选项 &mdash; Blender Manual</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/version_switch.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/animation/constraints/interface/common.html" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/js/version_switch.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+    <link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+    <link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+    <link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../../copyright.html" />
+    <link rel="next" title="堆栈" href="stack.html" />
+    <link rel="prev" title="标题栏" href="header.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.93 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景&amp;物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻&amp;绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">动画 &amp; 绑定</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../keyframes/index.html">关键帧</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../armatures/index.html">骨架</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lattice.html">晶格</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">约束</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html#interface">界面</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="adding_removing.html">添加/移除约束</a></li>
+<li class="toctree-l4"><a class="reference internal" href="header.html">标题栏</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">通用选项</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#target">Target 目标</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#space">空间</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#target-space-owner-space">Target Space &amp; Owner Space 目标空间 &amp;自身空间</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#space-types">Space Types空间类型</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#influence">影响</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="stack.html">堆栈</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#motion-tracking">运动追踪</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#transform">变换</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#tracking">跟踪</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#relationship">关系</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../actions.html">动作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../drivers/index.html">驱动程序</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../markers.html">标记</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../shape_keys/index.html">形态键</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_paths.html">运动路径</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">运动跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">Files &amp; Data System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">贡献文档</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.93 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">动画 &amp; 绑定</a> &raquo;</li>
+        
+          <li><a href="../index.html">约束</a> &raquo;</li>
+        
+      <li>通用选项</li>
+    
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="common">
+<h1>通用选项<a class="headerlink" href="#common" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="target">
+<span id="rigging-constraints-interface-common-target"></span><h2>Target 目标<a class="headerlink" href="#target" title="Permalink to this headline">¶</a></h2>
+<p>Target(目标) <a class="reference internal" href="../../../interface/controls/templates/data_block.html#ui-data-id"><span class="std std-ref">数据ID</span></a> 字段允许您链接约束到您选择的目标对象。此链接提供数据给约束，以便它可以开始起作用。例如，复制位置约束需要位置数据才能运行。在 &quot;目标&quot; 输入框里指定好目标， &quot;复制位置&quot; 约束将开始使用目标对象中的位置数据。</p>
+<div class="figure align-default" id="id1">
+<img alt="../../../_images/animation_constraints_interface_common_target.png" src="../../../_images/animation_constraints_interface_common_target.png" />
+<p class="caption"><span class="caption-text">目标必须指定好，该约束才会起作用.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>默认情况下，目标将使用物体原点（ <a class="reference internal" href="../../../glossary/index.html#term-Object-Origin"><span class="xref std std-term">Object Origin</span></a> ）作为目标点。</p>
+<p>如果 &quot;目标&quot; 字段链接到 <a class="reference internal" href="../../../glossary/index.html#term-Mesh"><span class="xref std std-term">网格</span></a> 或 <a class="reference internal" href="../../../glossary/index.html#term-Lattice"><span class="xref std std-term">晶格</span></a> 对象，则会出现一个 <a class="reference internal" href="../../../glossary/index.html#term-Vertex-Group"><span class="xref std std-term">顶点组</span></a> 字段。输入顶点组的名称，约束将以该顶点组的中点为目标，而不是对象的原点。</p>
+<div class="figure align-default">
+<img alt="../../../_images/animation_constraints_interface_common_target-vertex-group.png" src="../../../_images/animation_constraints_interface_common_target-vertex-group.png" />
+</div>
+<p>如果目标链接到的是 <a class="reference internal" href="../../../glossary/index.html#term-Armature"><span class="xref std std-term">骨架</span></a> ，下面则会同时出现 <a class="reference internal" href="../../../glossary/index.html#term-Bone"><span class="xref std std-term">骨骼</span></a> 的输入框和 <em>头/尾</em> 滑动框。输入骨骼的名称，约束将以该骨骼为目标，而不是整个骨架的原心。</p>
+<div class="figure align-default">
+<img alt="../../../_images/animation_constraints_interface_common_target-bone.png" src="../../../_images/animation_constraints_interface_common_target-bone.png" />
+</div>
+<p>滑块在骨骼的 <a class="reference internal" href="../../../glossary/index.html#term-Head"><span class="xref std std-term">头部</span></a> 和 <a class="reference internal" href="../../../glossary/index.html#term-Tail"><span class="xref std std-term">尾端</span></a> 之间移动目标的精确位置。某些约束在滑块旁边有一个按钮，可以使用 <a class="reference internal" href="../../armatures/bones/properties/bendy_bones.html#bendy-bones"><span class="std std-ref">Bendy骨头</span></a> 的弯曲形状。</p>
+</div>
+<div class="section" id="space">
+<span id="bpy-types-constraint-target-space"></span><span id="bpy-types-constraint-owner-space"></span><span id="rigging-constraints-interface-common-space"></span><h2>空间<a class="headerlink" href="#space" title="Permalink to this headline">¶</a></h2>
+<p>约束需要参考框架起作用。此参考框架称为约束的 <code class="docutils literal notranslate"><span class="pre">空间</span></code> 。选择一个空间相对于另一个空间将改变这个参照系，并明显影响到约束的结果。</p>
+<p>若要了解为何更改空间会改变约束的行为，请尝试考虑用两个空物体。请确保他们显示为箭头，以便您可以看到每个空物体的局部坐标轴。请确保一个空物体稍大于另一个空物体，以便他们两个总是可见的甚至一个直接在另一个顶部都彼此可见。然后将一个约束添加另一个空物体作为目标和用许多不同的方式彻底通过移动、 旋转和缩放的目标进行试验。</p>
+<div class="figure align-default" id="id2">
+<img alt="../../../_images/animation_constraints_interface_common_space.png" src="../../../_images/animation_constraints_interface_common_space.png" />
+<p class="caption"><span class="caption-text">This constraint is set to use World Space as the frame of reference for both
+its Target Space and its Owner Space.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="target-space-owner-space">
+<h3>Target Space &amp; Owner Space 目标空间 &amp;自身空间<a class="headerlink" href="#target-space-owner-space" title="Permalink to this headline">¶</a></h3>
+<p>The space used to evaluate the target of the constraint is called the Target Space.
+The space used to evaluate the constrained object (the object that owns the constraint) is called the Owner Space.
+Hover over the space select menu(s) to learn whether it affects the space of the target
+or the space of the owner.</p>
+<p>When the constraints use a Target and/or/nor an Owner space there will be no, one or two selector(s).
+The Copy Location constraint in example use both Target <strong>and</strong> Owner space.</p>
+<p>When a constraint uses both Target and Owner space,
+the Target and Owner can be any combination of space types.</p>
+</div>
+<div class="section" id="space-types">
+<span id="rigging-constraints-interface-common-space-types"></span><h3>Space Types空间类型<a class="headerlink" href="#space-types" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>世界空间</dt><dd><p>在这个空间类型世界是物体的（或骨）参照系。位置是相对于世界的原点。旋转和缩放是面向世界的轴。变换物体，对象的父级和约束堆栈中的任何其他约束都被考虑在内。</p>
+</dd>
+<dt>局部空间</dt><dd><p>此空间不包括父对象或骨骼的所有影响，以及骨骼本身的休息位置和方向。仅考虑应用于对象或骨骼本身的变换。</p>
+</dd>
+<dt>Local with Parent (bones only)</dt><dd><p>骨骼的位置和方向是相对于其静止姿势位置和方向来评估的，从而包括其自身的转换和由可能的父关系引起的转换（即链在骨骼上方的转换）。</p>
+</dd>
+<dt>Pose Space (bones only)</dt><dd><p>骨骼位置和方向在骨架对象局部空间中进行评估（即独立于 <em>对象模式</em> 中的骨架变换）。因此，如果骨架对象具有空变换，则 <em>姿势空间</em> 将具有与 <em>世界空间</em> 相同的效果。</p>
+</dd>
+<dt>自定义空间</dt><dd><p>相对于通过选择此选项时出现的其他输入字段指定的任意对象或骨骼的当前位置和方向来评估位置和方向。这可用于使用任意坐标系来评估约束。</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="influence">
+<span id="bpy-types-constraint-influence"></span><h2>影响<a class="headerlink" href="#influence" title="Permalink to this headline">¶</a></h2>
+<p>影响滑块确定约束对受约束对象（目标）的影响程度。</p>
+<div class="figure align-default">
+<img alt="../../../_images/animation_constraints_interface_common_influence.png" src="../../../_images/animation_constraints_interface_common_influence.png" />
+</div>
+<p>Influence（影响）为0.0将没有任何效果。Influence（影响）为1.0产生完全的影响。</p>
+<p>值 在0.0 和 1.0之间，会产生部分影响，但要小心。这些局部的效果是很难控制，特别是 <a class="reference internal" href="stack.html"><span class="doc">约束堆栈</span></a> 变得复杂时。</p>
+<p>影响值是可以动画的，允许约束被关闭，或打开部分所需的影响。</p>
+<p id="bpy-ops-constraint-disable-keep-transform">影响滑块之后的 &quot;X&quot; 按钮可用于在尝试保留当前对象位置时禁用约束。 如果其他约束仍然有效，这可能无法正常工作。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="stack.html" class="btn btn-neutral float-right" title="堆栈" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="header.html" class="btn btn-neutral float-left" title="标题栏" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; <a href="../../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">
+        Last updated on 06/19/2023.
+      </span>
+
+    </p>
+  </div>
+      <div class="footer-contribute">
+         <ul>
+            <li>
+               <a href="https://developer.blender.org/diffusion/BM/browse/trunk/blender_docs/manual/animation/constraints/interface/common.rst" class="fa fa-edit"> Edit Page</a>
+            </li>
+            <li>
+               <a href="https://developer.blender.org/maniphest/task/edit/form/default/?description=Pagename%3A%20%60animation/constraints/interface/common%60%0ABlender%20Version%3A%20%602.93%60%0ADocumentation%20Language%3A%20%60zh-hans%60%0A%5B%5B%20https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F2.93%2Fanimation/constraints/interface/common.html%20%7C%20Permanent%20link%20%5D%5D%0A%0A%2A%2AShort%20description%20of%20error%2A%2A%0A%5BPlease%20fill%20out%20a%20short%20description%20of%20the%20error%20here%5D&project=PHID-PROJ-c4nvvrxuczix2326vlti" class="fa fa-bug"> Report Bug</a>
+            </li>
+         <ul>
+      </div>
+
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.93 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async='async' src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

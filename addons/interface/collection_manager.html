@@ -1,0 +1,747 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>集合管理器 &mdash; Blender Manual</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/version_switch.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/addons/interface/collection_manager.html" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/js/version_switch.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+    <link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+    <link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+    <link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="next" title="光照" href="../lighting/index.html" />
+    <link rel="prev" title="3D视口Pie菜单" href="viewport_pies.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blender 2.93 Manual
+          
+
+          
+            
+            <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景&amp;物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻&amp;绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">运动跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">Files &amp; Data System</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">插件</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#add-ons-category-listings">插件类别列表</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../3d_view/index.html">3D 视图</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../add_curve/index.html">添加曲线</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../add_mesh/index.html">添加网格</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../camera/index.html">相机</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../development/index.html">开发</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../import_export/index.html">导入 - 导出</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">界面</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="brush_menus.html">动态笔刷菜单</a></li>
+<li class="toctree-l4"><a class="reference internal" href="context_menu.html">动态情境菜单</a></li>
+<li class="toctree-l4"><a class="reference internal" href="copy_attributes.html">复制属性菜单</a></li>
+<li class="toctree-l4"><a class="reference internal" href="modifier_tools.html">修改器工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="viewport_pies.html">3D视口Pie菜单</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">集合管理器</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#activation">激活</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#description">描述:</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#pop-up">弹窗</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#qcd">QCD</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#d-viewport-header-widget">3D视口页眉小工具</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#move-widget">移动小部件</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="#d-viewport-hotkeys">3D 视图 快捷键</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#preferences">偏好设置</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#known-issues">已知问题</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#glossary">词汇表</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../lighting/index.html">光照</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../materials/index.html">材质</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/index.html">网格</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../node/index.html">节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../object/index.html">物体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../paint/index.html">绘制</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rigging/index.html">绑定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sequencer/index.html">序列容器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../system/index.html">系统</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../uv/index.html">UV</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../video_tools/index.html">视频工具</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">贡献文档</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 2.93 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">插件</a> &raquo;</li>
+        
+          <li><a href="index.html">界面</a> &raquo;</li>
+        
+      <li>集合管理器</li>
+    
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="collection-manager">
+<h1>集合管理器<a class="headerlink" href="#collection-manager" title="Permalink to this headline">¶</a></h1>
+<p>该插件通过3D视窗中的弹出窗口和 QCD （快速内容显示）系统增加了管理集合的新功能。它还提供简单的显示和修改对象与集合的关系。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-default">
+<img alt="../../_images/addons_interface_collection-manager_popup.png" src="../../_images/addons_interface_collection-manager_popup.png" />
+</div>
+</td>
+<td><div class="figure align-default">
+<img alt="../../_images/addons_interface_collection-manager_qcd.png" src="../../_images/addons_interface_collection-manager_qcd.png" />
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="activation">
+<h2>激活<a class="headerlink" href="#activation" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>打开Blender并转到 &quot;首选项&quot; ，然后转到 &quot;附加组件&quot; 选项卡。</p></li>
+<li><p>单击 <code class="docutils literal notranslate"><span class="pre">界面</span></code> ，然后单击 <code class="docutils literal notranslate"><span class="pre">Collection</span> <span class="pre">Manager</span></code> 前钩上启用脚本。</p></li>
+</ul>
+</div>
+<div class="section" id="description">
+<h2>描述:<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="pop-up">
+<h3>弹窗<a class="headerlink" href="#pop-up" title="Permalink to this headline">¶</a></h3>
+<p>在对象模式下，使用 <kbd class="kbd docutils literal notranslate">M</kbd> 在3D视窗中调出主收集管理器弹出窗口。它也可以在 <span class="menuselection">对象 ‣ 集合</span> 菜单中找到。</p>
+<dl>
+<dt>视图层</dt><dd><dl class="simple">
+<dt>渲染</dt><dd><p>用这个复选框启用/禁用该视图层的渲染。</p>
+</dd>
+<dt>视图层</dt><dd><p>当前视图层的 <a class="reference internal" href="../../interface/controls/templates/data_block.html#ui-data-block"><span class="std std-ref">数据块菜单</span></a> 。</p>
+</dd>
+</dl>
+</dd>
+<dt>展开所有项目</dt><dd><p>切换所有集合的展开或折叠。只有当你有子集合时才启用。</p>
+</dd>
+<dt>重新编号QCD槽</dt><dd><p>只有在偏好中启用了 QCD 时才会显示。</p>
+<ul class="simple">
+<li><p><kbd class="kbd docutils literal notranslate">LMB</kbd> -- 对QCD槽进行重新编号，从根槽（指定为1的槽）往下，对每个深度层进行编号（<a class="reference external" href="https://en.wikipedia.org/wiki/Breadth-first_search">广度第一的搜索</a> ）。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">LMB</kbd></kbd> --  在 <a class="reference external" href="https://en.wikipedia.org/wiki/Breadth-first_search">宽度第一搜索</a> 模式中，从第一个顶层集合开始重新编号。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">LMB</kbd></kbd> -- 将重新编号模式切换为线性。这种模式将直接在列表中重新编号，而不考虑层次问题。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">LMB</kbd></kbd> -- 将重新编号限制在根槽下的分支。</p></li>
+</ul>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>所有选项都可以相互结合。</p>
+</div>
+</dd>
+<dt>撤销</dt><dd><p>撤销之前的操作。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>清除任何正在进行的复制或交换操作。</p>
+</div>
+</dd>
+<dt>重做</dt><dd><p>重做以前未做的动作。</p>
+</dd>
+<dt>其他菜单</dt><dd><dl class="simple">
+<dt>移除空的集合</dt><dd><p>删除所有没有子集合或对象的集合。</p>
+</dd>
+<dt>清除所有没有对象的集合</dt><dd><p>删除所有没有对象的集合，不管它们是否有子集合。</p>
+</dd>
+</dl>
+</dd>
+<dt>显示选项（漏斗图标）</dt><dd><p>选择在界面中显示哪些限制性切换，以及限制性切换是否在树状视图中向右对齐。</p>
+</dd>
+<dt>场景集合</dt><dd><dl>
+<dt>设置主动收集</dt><dd><p>将活动集合设置为场景集合。</p>
+</dd>
+<dt>名称</dt><dd><p>这是静态的，不能被编辑。</p>
+</dd>
+<dt>选择集合下的所有物体（多个图标）</dt><dd><ul class="simple">
+<li><p><kbd class="kbd docutils literal notranslate">LMB</kbd> -- 选择集合中的所有对象（取消选择所有其他对象）。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">LMB</kbd></kbd> -- 将集合中的所有对象 加入/移出 选择。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">LMB</kbd></kbd> -- 选择所有物体和集合和子集（弃选其他物体）。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">LMB</kbd></kbd> -- 向集合中添加对象或从集合中删除对象。</p></li>
+</ul>
+<p>使用图标和按钮高亮显示选择状态：</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">no</span> <span class="pre">icon</span></code> -- 在这个集合中没有可选择的对象。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">no</span> <span class="pre">highlight</span></code> -- 在这个集合中没有选择任何对象。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">钻石大纲</span></code> -- 在集合中展示的物体。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">高光</span></code> -- 一个或多个对象在这个集合中被选中。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">实心钻石</span></code> -- 所有的对象都在这个集合中被选中。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">small</span> <span class="pre">dot</span> <span class="pre">and</span> <span class="pre">greyed</span> <span class="pre">out</span></code> -- No objects can be selected in this collection
+(the collection is hidden or marked as not selectable or all objects are marked as not selectable, etc.).
+<em>Note</em>: The button isn't disabled to allow selecting subcollections; however, if you <kbd class="kbd docutils literal notranslate">LMB</kbd> click on
+it it will deselect all objects.</p></li>
+</ul>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>如果你试图选择集合中的所有对象，但钻石没有填满，这意味着你在集合中有一个或多个不可选择的对象。</p>
+</div>
+</dd>
+<dt>Set Object (multiple icons)</dt><dd><ul class="simple">
+<li><p><kbd class="kbd docutils literal notranslate">LMB</kbd> -- 将选定的对象移至集合。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">LMB</kbd></kbd> -- 从集体里 添加/移除 选中的物体。</p></li>
+</ul>
+<p>图标 用来显示 物体/选择 状态：</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Grid</span></code> -- No objects are present in this collection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">方块大纲</span></code> -- 对象存在，但在这个集合中没有被选中。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3个带虚线的方框</span></code> -- 该集合包含被选中的对象，但不包含选择中的活动对象。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">实心方框</span></code> -- 集合中包含选择中的活动对象。</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>活动物体也必须被选中才能被 指示/移动。</p>
+<p>如果没有物体被选中，这个按键将被禁用。</p>
+</div>
+</dd>
+<dt>全局限制（复选框，光标，眼睛，屏幕，相机，屏蔽，仅间接图标）</dt><dd><p>有关 <a class="reference internal" href="../../editors/outliner/interface.html#editors-outliner-interface-restriction-columns"><span class="std std-ref">限制</span></a> 的信息，请参阅大纲页。</p>
+<ul class="simple">
+<li><p><kbd class="kbd docutils literal notranslate">LMB</kbd> -对所有集合启用限制。再次单击以还原以前的状态。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">LMB</kbd></kbd> --反转所有集合的限制状态。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">LMB</kbd></kbd> -- 隔离具有选定对象的集合。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">LMB</kbd></kbd> -- 禁用具有选定对象的集合。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">LMB</kbd></kbd> - 复制/粘贴 所有集合的限制状态。点击一个 RTO 来复制限制状态，然后点击另一个 RTO 来粘贴它。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">LMB</kbd></kbd> -- 将所有集合的限制状态与另一个限制的状态互换。点击一个RTO来复制限制状态，然后点击另一个RTO来调换两者。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">LMB</kbd></kbd> -- 丢弃以前的状态，以及为复制/粘贴或交换而储存的任何东西。</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt>树视图</dt><dd><p>在当前选定的场景中显示集合。</p>
+<dl>
+<dt>披露（小三角图标）</dt><dd><ul class="simple">
+<li><p><kbd class="kbd docutils literal notranslate">LMB</kbd> -- 扩展/折叠子集。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">LMB</kbd></kbd> -- 隔离树。除了当前项目和它的 父项/子项 ，其他的都会被折叠。再次点击以恢复之前的状态。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">LMB</kbd></kbd> -- 展开/折叠子集和它们的子集。</p></li>
+</ul>
+</dd>
+<dt>设置主动收集</dt><dd><p>单击以将活动集合设置为该集合。</p>
+</dd>
+<dt>QCD槽</dt><dd><p>设置该系列对应的QCD插槽。（仅当QCD在偏好中被启用时显示）。</p>
+</dd>
+<dt>名称</dt><dd><p>双击 <kbd class="kbd docutils literal notranslate">LMB</kbd> -- 以重命名集合。</p>
+</dd>
+<dt>选择集合下的所有物体（多个图标）</dt><dd><ul class="simple">
+<li><p><kbd class="kbd docutils literal notranslate">LMB</kbd> -- 选择集合中的所有对象（取消选择所有其他对象）。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">LMB</kbd></kbd> -- 将集合中的所有对象 加入/移出 选择。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">LMB</kbd></kbd> -- 选择所有物体和集合和子集（弃选其他物体）。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">LMB</kbd></kbd> -- 向集合中添加对象或从集合中删除对象。</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>更多详情查看《场景集合》章节。</p>
+</div>
+</dd>
+<dt>Set Object (multiple icons)</dt><dd><ul class="simple">
+<li><p><kbd class="kbd docutils literal notranslate">LMB</kbd> -- 将选定的对象移至集合。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">LMB</kbd></kbd> -- 从集体里 添加/移除 选中的物体。</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>更多详情查看《场景集合》章节。</p>
+</div>
+</dd>
+<dt>本地限制（复选框、游标、眼睛、屏幕、相机、暂停、仅间接图标）</dt><dd><ul class="simple">
+<li><p><kbd class="kbd docutils literal notranslate">LMB</kbd> -- 切换集合的限制 开/关 。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">LMB</kbd></kbd> -- 隔离集合的限制，如果需要的话，保留父母。再次点击以恢复之前的状态。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">LMB</kbd></kbd> -- 隔离集合和它的后代的限制，如果需要的话，保留父母。再次点击以恢复之前的状态。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">LMB</kbd></kbd> -- 打开/关闭对集合和它的后代的限制。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">LMB</kbd></kbd> -- 丢弃以前的状态。</p></li>
+</ul>
+</dd>
+<dt>删除 <code class="docutils literal notranslate"><span class="pre">X</span></code></dt><dd><p>删除集合。</p>
+</dd>
+<dt>过滤</dt><dd><dl class="simple">
+<dt>按名称</dt><dd><p>用于按名称筛选集合的文本字段。</p>
+</dd>
+<dt>Invert (magnifying glass icon)</dt><dd><p>反转过滤（反转树视图中显示的集合，以便隐藏显示的内容和隐藏显示的内容）。</p>
+</dd>
+<dt>By Selected (box icon)</dt><dd><p>通过选定的对象过滤集合（只显示包含选定对象的集合）。</p>
+</dd>
+<dt>由QCD槽（Q键图标）。</dt><dd><p>按指定为QCD插槽的集合过滤集合（仅显示对应于QCD插槽的集合）。仅在首选项中启用QCD时显示。</p>
+</dd>
+</dl>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>所有选项都可以相互结合。</p>
+</div>
+</dd>
+</dl>
+</dd>
+<dt>添加集合，添加子集合</dt><dd><p>（不言自明）</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>如果添加集合时筛选了树视图，则在筛选更改之前，将显示不符合筛选规则的新集合。</p>
+</div>
+</dd>
+<dt>幻影模式</dt><dd><p>禁用此模式时，在此模式下所做的所有可见性更改都将被放弃。</p>
+<p>启用幻影模式可以保存限制的当前状态，并允许您编辑它们而不必担心丢失它们的当前状态。完成后，禁用幻影模式将恢复保存的状态。</p>
+<p>注意：在幻影模式下，您将无法编辑限制以外的任何内容。</p>
+</dd>
+<dt>应用幻影模式（勾选标记图标）</dt><dd><p>在幻影模式下应用对RTO所做的所有更改并退出模式。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="qcd">
+<h3>QCD<a class="headerlink" href="#qcd" title="Permalink to this headline">¶</a></h3>
+<p>通过快速内容显示系统，您可以指定多达20个集合为QCD插槽，从而提供一种快速与集合交互的方式。然后，您可以使用热键或小部件查看或移动对象来与这些插槽进行交互。</p>
+<div class="section" id="d-viewport-header-widget">
+<h4>3D视口页眉小工具<a class="headerlink" href="#d-viewport-header-widget" title="Permalink to this headline">¶</a></h4>
+<p>页眉小工具由快速视图切换按钮和20个QCD插槽组成。</p>
+<dl>
+<dt>快速视图切换（眼睛图标）</dt><dd><ul class="simple">
+<li><p>启用所有QCD插槽。</p></li>
+<li><p>启用所有隔离的QCD插槽。（启用所有QCD插槽并禁用任何非QCD插槽）</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">=</kbd> -- 隔离选定的对象集合.</p></li>
+<li><p>禁用所选对象集合。</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">LMB</kbd> -- 激活所有 QCD 槽。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">=</kbd></kbd> -- 取消所有连接。</p></li>
+<li><p>选择所有QCD对象。（选择所有属于启用的QCD插槽的对象）</p></li>
+<li><p>丢弃QCD历史记录。（丢弃以前的QCD插槽状态）</p></li>
+</ul>
+<p class="rubric">快捷键</p>
+<ul class="simple">
+<li><p><kbd class="kbd docutils literal notranslate">LMB</kbd> -- 激活所有 QCD 槽。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">LMB</kbd></kbd> -- 选择所有QCD对象。</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">LMB</kbd> 按住 -- 打开一个包含所有快速查看切换的菜单。</p></li>
+</ul>
+</dd>
+<dt>由QCD槽（Q键图标）。</dt><dd><p>五组中的两行中的20个按钮，其中第一行以槽1开始，第二行以槽11开始。</p>
+<p>每个时隙的状态显示为以下指标的组合：</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">x</span></code> -- 未分配的槽.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">未高亮</span></code> -不可见插槽。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">highlighted</span></code> -- 可见槽.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">no</span> <span class="pre">icon</span></code> -- 槽内无物体。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">水平线图标</span></code> --对象存在于此插槽中。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">圆形图标</span></code> --选择此时隙中的一个或多个对象。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">点图标</span></code> --活动对象位于此槽中。</p></li>
+</ul>
+<p class="rubric">快捷键</p>
+<ul class="simple">
+<li><p><kbd class="kbd docutils literal notranslate">LMB</kbd> -- 查看单一槽位，不包括所有其他槽位。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">LMB</kbd></kbd> -- 添加/删除 插槽 到/从 视图中。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">LMB</kbd></kbd> -- 将选定的对象移到槽中。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">LMB</kbd></kbd> --将所选对象添加到插槽或从插槽中删除。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">LMB</kbd></kbd> -- 用此槽中的对象替换选择。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">LMB</kbd></kbd> -- 向/从所选内容中添加/删除插槽对象。</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="move-widget">
+<h4>移动小部件<a class="headerlink" href="#move-widget" title="Permalink to this headline">¶</a></h4>
+<p>使用 <kbd class="kbd docutils literal notranslate">V</kbd> 在对象模式下调用3D视口中的移动小部件。它也可以在: <span class="menuselection">对象 ‣ 集合</span> 菜单中找到。</p>
+<p>移动小部件与3D视口标题小部件共享其布局和指示器。</p>
+<p class="rubric">快捷键</p>
+<ul class="simple">
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">LMB</kbd></kbd> -- 将选定的对象移到槽中。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">LMB</kbd></kbd> --将所选对象添加到插槽或从插槽中删除。</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">0</kbd> - <kbd class="kbd docutils literal notranslate">9</kbd> -- 将选定的对象移动到1-10槽（0是10槽）。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">0</kbd></kbd> - <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">9</kbd></kbd> -- 移动物体到11-20槽（0代表20槽）。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">0</kbd></kbd> - <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">9</kbd></kbd> -添加/删除选定对象到插槽1-10 (0是插槽10)。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">0</kbd></kbd> - <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">9</kbd></kbd> -添加/删除选定对象到插槽11-20 (0是插槽20)。</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="d-viewport-hotkeys">
+<h3>3D 视图 快捷键<a class="headerlink" href="#d-viewport-hotkeys" title="Permalink to this headline">¶</a></h3>
+<p class="rubric">物体模式</p>
+<dl class="simple">
+<dt>QCD</dt><dd><ul class="simple">
+<li><p><kbd class="kbd docutils literal notranslate">0</kbd> - <kbd class="kbd docutils literal notranslate">9</kbd> -- 查看插槽1-10（0为插槽10）。不包括所有其他的。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">0</kbd></kbd> - <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">9</kbd></kbd> -- 查看11-20槽（0代表20槽）。不包括其他所有。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">0</kbd></kbd> - <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">9</kbd></kbd> -将插槽1-10 (0是插槽10)添加到视图/从视图中删除。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">0</kbd></kbd> - <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">9</kbd></kbd> - 添加/删除插槽11-20 (0是插槽20)到视图/从视图中。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">=</kbd></kbd> --启用所有QCD插槽。</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">=</kbd> -- 隔离选定的对象集合.</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">Minus</kbd> -- 禁用所选对象集合。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">=</kbd></kbd> -- 禁用所有非QCD插槽。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">=</kbd></kbd> -- 取消所有连接。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">=</kbd></kbd> -- 选择所有QCD物体.</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">=</kbd></kbd> -- 丢弃QCD历史记录。</p></li>
+</ul>
+</dd>
+<dt>禁用对象（只有在首选项中启用时才可用。）</dt><dd><ul class="simple">
+<li><p><kbd class="kbd docutils literal notranslate">H</kbd> -- 禁用选择。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">H</kbd></kbd> -- 禁用选择。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">H</kbd></kbd> -- 恢复已禁用的对象。</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">编辑模式</p>
+<p>所有对象模式的热键，除了 &quot;选择所有QCD对象&quot; 和 &quot;禁用对象&quot; 热键。（只有在偏好设置中启用时才可用）。</p>
+<ul class="simple">
+<li><p><kbd class="kbd docutils literal notranslate">AccentGrave</kbd> -- 网络选择模式菜单。</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>不能排除具有非对象模式的对象的插槽。</p>
+</div>
+</div>
+</div>
+<div class="section" id="preferences">
+<h2>偏好设置<a class="headerlink" href="#preferences" title="Permalink to this headline">¶</a></h2>
+<dl>
+<dt>禁用对象而不是隐藏</dt><dd><p>将隐藏热键的对象替换为热键以禁用对象，并将这些选项添加到 <span class="menuselection">对象‣显示/隐藏</span> 菜单中。</p>
+<p>禁用对象可以防止在关闭和打开集合的排除复选框时再次显示对象，因此在切换QCD插槽时将保持对象的可见性。</p>
+</dd>
+<dt>QCD</dt><dd><p>启用QCD系统。</p>
+</dd>
+<dt>QCD热键</dt><dd><p>启用或禁用选择 (使3D 视图中的物体 <code class="docutils literal notranslate"><span class="pre">不可选择</span></code> )。</p>
+</dd>
+<dt>QCD编辑模式快捷键</dt><dd><p><span class="menuselection">3D视图（3D Viewport) ‣ 视图叠加层(Viewport Overlays）‣ 曲线编辑模式（Curve Edit Mode）</span></p>
+</dd>
+<dt>移动构件 ：</dt><dd><dl>
+<dt>工具主题覆盖</dt><dd><p>启用本节中的覆盖以更改QCD移动小部件中单个元素的颜色（颜色默认为当前主题）。</p>
+<dl>
+<dt>图标 Alpha</dt><dd><p>所选（但不是活动）对象和未选对象的图标的不透明度。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>图标alpha的值不会被覆盖，并始终影响QCD移动小部件。</p>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="known-issues">
+<h2>已知问题<a class="headerlink" href="#known-issues" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>不支持链接的集合。</p></li>
+<li><p>两个QCD插槽可以交换集合，如果集合在同一个父级下，并且使用另一个名称重命名一个集合，然后撤消重命名并重做重命名。</p></li>
+</ul>
+</div>
+<div class="section" id="glossary">
+<h2>词汇表<a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>通用</dt><dd><dl class="field-list simple">
+<dt class="field-odd">链形</dt>
+<dd class="field-odd"><p>取决于RTO是否可以处于活动状态的父级。</p>
+</dd>
+<dt class="field-even">QCD</dt>
+<dd class="field-even"><p>快速内容显示。</p>
+</dd>
+<dt class="field-odd">QVT</dt>
+<dd class="field-odd"><p>快速查看切换。</p>
+</dd>
+<dt class="field-even">kbd:<cite>Ctrl-Alt-LMB</cite> -- 将所有集合的限制状态与另一个限制的状态互换。点击一个RTO来复制限制状态，然后点击另一个RTO来调换两者。</dt>
+<dd class="field-even"><p>限制切换选项。</p>
+</dd>
+</dl>
+</dd>
+<dt>简短介绍</dt><dd><dl class="field-list simple">
+<dt class="field-odd">EC</dt>
+<dd class="field-odd"><p>排除复选框。（从当前视图层中排除集合--同时影响3D视口和渲染--非链。）</p>
+</dd>
+<dt class="field-even">SS</dt>
+<dd class="field-even"><p>可选择性。（禁用所有视图图层中的集合的选择--影响3D视口--链条。）</p>
+</dd>
+<dt class="field-odd">VV</dt>
+<dd class="field-odd"><p>可见性。（从当前视图层隐藏集合--影响3D视口--链接。）</p>
+</dd>
+<dt class="field-even">DV</dt>
+<dd class="field-even"><p>禁用视口。（禁用所有视图层中的集合-- --影响3D视口-- --链。）</p>
+</dd>
+<dt class="field-odd">RR</dt>
+<dd class="field-odd"><p>可渲染性。（禁止在所有视图层中渲染集合-- --影响渲染-- --链。）</p>
+</dd>
+<dt class="field-even">包含当前事件及渲染帧： <code class="docutils literal notranslate"><span class="pre">时:分:秒:帧</span></code> 。</dt>
+<dd class="field-even"><p>屏蔽。（从视图层屏蔽集合--影响渲染--非链。）</p>
+</dd>
+<dt class="field-odd">IO</dt>
+<dd class="field-odd"><p>仅间接。（使集合仅间接（阴影/反射）为当前视图层的渲染贡献--影响渲染--非链-- <em>仅 Cycles</em>。）</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">类别</dt>
+<dd class="field-odd"><p>界面</p>
+</dd>
+<dt class="field-even">描述:</dt>
+<dd class="field-even"><p>集合管理系统。</p>
+</dd>
+<dt class="field-odd">位置</dt>
+<dd class="field-odd"><p>3D 视图</p>
+</dd>
+<dt class="field-even">文档</dt>
+<dd class="field-even"><p>集合管理器</p>
+</dd>
+<dt class="field-odd">作者</dt>
+<dd class="field-odd"><p>Imaginer (Ryan Inch)</p>
+</dd>
+<dt class="field-even">保持</dt>
+<dd class="field-even"><p>imaginer</p>
+</dd>
+<dt class="field-odd">许可证</dt>
+<dd class="field-odd"><p>通用公共图书馆</p>
+</dd>
+<dt class="field-even">支持级别</dt>
+<dd class="field-even"><p>社区</p>
+</dd>
+<dt class="field-odd">注意</dt>
+<dd class="field-odd"><p>此附加组件与Blender捆绑在一起。</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../lighting/index.html" class="btn btn-neutral float-right" title="光照" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="viewport_pies.html" class="btn btn-neutral float-left" title="3D视口Pie菜单" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; <a href="../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">
+        Last updated on 06/19/2023.
+      </span>
+
+    </p>
+  </div>
+      <div class="footer-contribute">
+         <ul>
+            <li>
+               <a href="https://developer.blender.org/diffusion/BM/browse/trunk/blender_docs/manual/addons/interface/collection_manager.rst" class="fa fa-edit"> Edit Page</a>
+            </li>
+            <li>
+               <a href="https://developer.blender.org/maniphest/task/edit/form/default/?description=Pagename%3A%20%60addons/interface/collection_manager%60%0ABlender%20Version%3A%20%602.93%60%0ADocumentation%20Language%3A%20%60zh-hans%60%0A%5B%5B%20https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F2.93%2Faddons/interface/collection_manager.html%20%7C%20Permanent%20link%20%5D%5D%0A%0A%2A%2AShort%20description%20of%20error%2A%2A%0A%5BPlease%20fill%20out%20a%20short%20description%20of%20the%20error%20here%5D&project=PHID-PROJ-c4nvvrxuczix2326vlti" class="fa fa-bug"> Report Bug</a>
+            </li>
+         <ul>
+      </div>
+
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.93 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async='async' src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

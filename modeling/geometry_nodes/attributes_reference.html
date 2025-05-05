@@ -1,0 +1,466 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>属性 &mdash; Blender Manual</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/version_switch.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/geometry_nodes/attributes_reference.html" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/js/version_switch.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+    <link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+    <link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+    <link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="next" title="属性节点" href="attribute/index.html" />
+    <link rel="prev" title="简介" href="introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blender 2.93 Manual
+          
+
+          
+            
+            <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景&amp;物体</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">建模</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../meshes/index.html">网格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curves/index.html">曲线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../surfaces/index.html">面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metas/index.html">融球</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../texts/index.html">文字</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../volumes/index.html">体积（卷标）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../empties.html">空物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html">修改器</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">几何节点</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">属性</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#attribute-sockets">Attribute Sockets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#attribute-domains">属性域</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#built-in-attributes">内置属性</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#naming-conventions">Naming Conventions 命名习惯</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#custom-attributes">自定义属性</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#node-types">节点类型</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻&amp;绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">运动跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">Files &amp; Data System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">贡献文档</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 2.93 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">建模</a> &raquo;</li>
+        
+          <li><a href="index.html">几何节点</a> &raquo;</li>
+        
+      <li>属性</li>
+    
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="attributes">
+<span id="index-0"></span><h1>属性<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h1>
+<p>An <em>attribute</em> is a generic term to describe data stored per-element in a geometry data-block.
+For example, every vertex can have an associated number or vector.
+Attributes can be altered by the nodes in the <em>Attribute</em> category, but also some other nodes can
+change the values of specific attributes.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Attribute data types are converted implicitly where possible, just like node sockets.</p>
+</div>
+<div class="section" id="attribute-sockets">
+<h2>Attribute Sockets<a class="headerlink" href="#attribute-sockets" title="Permalink to this headline">¶</a></h2>
+<p>The blue attribute sockets are just string sockets, used to define which attribute in the geometry to use.
+When a node part of the evaluated node tree (connected to the root group input and output),
+the string input allows you to search and choose existing attributes.</p>
+<div class="figure align-center" id="id1">
+<img alt="../../_images/modeling_geometry-nodes_attribute-reference_search.png" src="../../_images/modeling_geometry-nodes_attribute-reference_search.png" />
+<p class="caption"><span class="caption-text">属性查找。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>属性搜索为每个属性提供了一些上下文。菜单左侧显示属性域，然后显示属性名称。菜单右侧显示属性数据类型。</p>
+</div>
+<div class="section" id="attribute-domains">
+<h2>属性域<a class="headerlink" href="#attribute-domains" title="Permalink to this headline">¶</a></h2>
+<p>All attributes have a domain and type associated with them. Knowing the domain of an attribute is important
+because it defines which parts of the geometry the attribute can affect.
+You can use the <a class="reference internal" href="../../editors/spreadsheet.html"><span class="doc">Spreadsheet Editor</span></a> to determine the domains of attributes.</p>
+<ul class="simple">
+<li><p>Point domain attributes are associated with the vertices of the mesh or the points in a point cloud.</p></li>
+<li><p>Edge domain attributes are associated with the edges of the mesh.</p></li>
+<li><p>Face domain attributes are associated with the faces of the mesh.</p></li>
+<li><p>Face Corner domain attributes are associated with the corners of the faces of the mesh.
+An example is the <em>UVMap</em> attribute.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For point cloud objects, every attribute has the <em>point</em> domain.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Use the <a class="reference internal" href="attribute/attribute_convert.html"><span class="doc">Attribute Convert</span></a> node to change
+the domain and type of attributes.</p>
+</div>
+</div>
+<div class="section" id="built-in-attributes">
+<span id="geometry-nodes-builtin-attributes"></span><h2>内置属性<a class="headerlink" href="#built-in-attributes" title="Permalink to this headline">¶</a></h2>
+<p>Built-in attributes always exist, and cannot be removed. Their data type and domain can not be changed.</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 63%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>类型</p></th>
+<th class="head"><p>领域</p></th>
+<th class="head"><p>注意</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>position</strong></p></td>
+<td><p><em>矢量</em></p></td>
+<td><p><em>点光</em></p></td>
+<td><p>Built-in attribute describing vertex or point locations, in the modifier
+object's transform space. Any node that changes the location of points will adjust
+this attribute, like the <a class="reference internal" href="geometry/transform.html"><span class="doc">Transform</span></a>
+and <a class="reference internal" href="point/point_translate.html"><span class="doc">Point Translate</span></a> nodes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>radius</strong></p></td>
+<td><p><em>浮点数</em></p></td>
+<td><p><em>点光</em></p></td>
+<td><p>A built-in attribute on point cloud data created by
+the <a class="reference internal" href="point/point_distribute.html"><span class="doc">Point Distribute Node</span></a>
+Used to set the size for the points in the viewport.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>material_index</strong></p></td>
+<td><p><em>整数（Integer）</em></p></td>
+<td><p><em>面</em></p></td>
+<td><p>用于为网格中的每个面指定材质槽。</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>crease</strong></p></td>
+<td><p><em>浮点数</em></p></td>
+<td><p><em>边</em></p></td>
+<td><p>Edge attribute used by the Subdivision Surface node and modifier.
+The values are limited to a range of 0 and 1.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>normal</strong></p></td>
+<td><p><em>矢量</em></p></td>
+<td><p><em>面</em></p></td>
+<td><p>Normal of a face. This is a bit different from the other builtin attributes in that
+it cannot be modified. It is automatically derived from the mesh. If this attribute is
+accessed on non-point domains, it might not be normalized, because it is interpolated
+from normals of neighboring faces.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>shade_smooth</strong></p></td>
+<td><p><em>布尔</em></p></td>
+<td><p><em>面</em></p></td>
+<td><p>Attribute determining if a face should have smooth shading enabled.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="naming-conventions">
+<h2>Naming Conventions 命名习惯<a class="headerlink" href="#naming-conventions" title="Permalink to this headline">¶</a></h2>
+<p>These attributes do not exist by default, but are used implicitly by certain nodes. The data type of
+these attributes can be changed, just like any attribute besides the built-in attributes.</p>
+<p>If the attributes don't exist yet, a default value is used, which can depend on the situation.
+For example, in the <a class="reference internal" href="point/point_instance.html"><span class="doc">Point Instance Node</span></a>,
+the default value for <em>scale</em> is a unit scale of (1, 1, 1), but the default value for new attributes
+in the &quot;attribute&quot; nodes is zero.</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 71%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>类型</p></th>
+<th class="head"><p>注意</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>rotation</strong></p></td>
+<td><p><em>矢量</em></p></td>
+<td><p>Used in the <a class="reference internal" href="point/point_instance.html"><span class="doc">Point Instance Node</span></a> to
+control the rotation of instanced objects or collections. Adjusted by
+the <a class="reference internal" href="point/point_rotate.html"><span class="doc">Point Rotate Node</span></a> and
+the <a class="reference internal" href="point/align_rotation_to_vector.html"><span class="doc">Align Rotation to Vector Node</span></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>scale</strong></p></td>
+<td><p><em>矢量</em></p></td>
+<td><p>Used in the <a class="reference internal" href="point/point_distribute.html"><span class="doc">Point Distribute Node</span></a> to control
+the scale of instances. Adjusted by the <a class="reference internal" href="point/point_rotate.html"><span class="doc">Point Scale Node</span></a>
+or other attribute nodes.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>id</strong></p></td>
+<td><p><em>整数（Integer）</em></p></td>
+<td><p>Created by the <a class="reference internal" href="point/point_distribute.html"><span class="doc">Point Distribute Node</span></a> to
+provide stability when the shape of the input mesh changes. The values are large,
+with no order. The attribute values are used by nodes that generate randomness, like
+the <a class="reference internal" href="attribute/attribute_randomize.html"><span class="doc">Attribute Randomize Node</span></a>.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="custom-attributes">
+<h2>自定义属性<a class="headerlink" href="#custom-attributes" title="Permalink to this headline">¶</a></h2>
+<p>Vertex groups, UV maps and vertex colors are available as attributes in geometry nodes.
+They are referred to by their name.
+Naming collisions (e.g. a vertex group and a UV map with the same name) should be avoided.
+If there is a naming collision, only one of the attributes is accessible in geometry nodes.</p>
+<p>首次使用名称时，节点也可以创建具有任何其他名称的属性。</p>
+<p>请注意，如果使用像 <a class="reference internal" href="geometry/join_geometry.html"><span class="doc">加入几何学</span></a>  这样的节点，几何节点并不总是产生例如顶点组。同样，如果顶点组属性的数据类型从最初的 &quot;Float &quot;类型改变，该属性将不再是一个顶点组。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="attribute/index.html" class="btn btn-neutral float-right" title="属性节点" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="introduction.html" class="btn btn-neutral float-left" title="简介" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; <a href="../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">
+        Last updated on 06/19/2023.
+      </span>
+
+    </p>
+  </div>
+      <div class="footer-contribute">
+         <ul>
+            <li>
+               <a href="https://developer.blender.org/diffusion/BM/browse/trunk/blender_docs/manual/modeling/geometry_nodes/attributes_reference.rst" class="fa fa-edit"> Edit Page</a>
+            </li>
+            <li>
+               <a href="https://developer.blender.org/maniphest/task/edit/form/default/?description=Pagename%3A%20%60modeling/geometry_nodes/attributes_reference%60%0ABlender%20Version%3A%20%602.93%60%0ADocumentation%20Language%3A%20%60zh-hans%60%0A%5B%5B%20https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F2.93%2Fmodeling/geometry_nodes/attributes_reference.html%20%7C%20Permanent%20link%20%5D%5D%0A%0A%2A%2AShort%20description%20of%20error%2A%2A%0A%5BPlease%20fill%20out%20a%20short%20description%20of%20the%20error%20here%5D&project=PHID-PROJ-c4nvvrxuczix2326vlti" class="fa fa-bug"> Report Bug</a>
+            </li>
+         <ul>
+      </div>
+
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.93 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async='async' src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

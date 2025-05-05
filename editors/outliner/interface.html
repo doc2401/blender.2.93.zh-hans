@@ -1,0 +1,497 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>界面 &mdash; Blender Manual</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/version_switch.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/editors/outliner/interface.html" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/js/version_switch.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+    <link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+    <link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+    <link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="next" title="选择和激活" href="selecting.html" />
+    <link rel="prev" title="简介" href="introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blender 2.93 Manual
+          
+
+          
+            
+            <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../3dview/index.html">3D 视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../image/index.html">图像编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../uv/index.html">UV编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shader_editor.html">着色器编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../compositor.html">合成器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../geometry_node.html">几何节点编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../texture_node/index.html">纹理节点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sequencer.html">视频序列编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../clip/index.html">影片剪辑编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dope_sheet/index.html">动画摄影表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../timeline.html">时间线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../graph_editor/index.html">曲线编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../drivers_editor.html">驱动器编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../nla/index.html">非线性动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../text_editor.html">文本编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python_console.html">Python 控制台</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../info_editor.html">信息编辑器</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">大纲视图</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">界面</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#header">标题栏</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#display-mode">显示模式</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#display-filter">显示过滤</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#filter">过滤</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#miscellaneous">杂项</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#main-region">主要区域</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#object-mode">物体模式</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#restriction-columns">限制列</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selecting.html">选择和激活</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editing.html">编辑</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html">用法</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../properties_editor.html">属性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../file_browser.html">文件浏览器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/index.html">偏好设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../spreadsheet.html">电子表格</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景&amp;物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻&amp;绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">运动跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">Files &amp; Data System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">贡献文档</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 2.93 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">编辑器</a> &raquo;</li>
+        
+          <li><a href="index.html">大纲视图</a> &raquo;</li>
+        
+      <li>界面</li>
+    
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="interface">
+<h1>界面<a class="headerlink" href="#interface" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="header">
+<h2>标题栏<a class="headerlink" href="#header" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="display-mode">
+<span id="bpy-types-spaceoutliner-display-mode"></span><h3>显示模式<a class="headerlink" href="#display-mode" title="Permalink to this headline">¶</a></h3>
+<p>编辑器标题具有一个选择菜单，可让你过滤大纲视图应显示的内容。它有助于缩小物体列表的范围，以便你可以快速轻松地找到所需的东西。</p>
+<dl class="simple">
+<dt>场景</dt><dd><p>显示 <em>大纲视图</em> 可以显示的 <em>所有的内容</em> (在所有场景，所有层等)。</p>
+</dd>
+<dt>视图层</dt><dd><p>显示当前视图图层中的所有集合和物体。</p>
+</dd>
+<dt>视频序列编辑器</dt><dd><p>列出 <a class="reference internal" href="../../video_editing/index.html"><span class="doc">视频序列器</span></a> 使用的数据、图像和视频。</p>
+</dd>
+<dt>Blender 文件</dt><dd><p>列出当前blend文件中的所有数据。</p>
+</dd>
+<dt>数据API</dt><dd><p>列出每个 <a class="reference internal" href="../../files/data_blocks.html"><span class="doc">数据块</span></a> 以及它们可能具有的任何属性。</p>
+</dd>
+<dt>库覆盖</dt><dd><p>Display data-blocks with library overrides and list their overridden properties.</p>
+</dd>
+<dt>孤立的数据</dt><dd><p>列出未被使用的 及/或在重新载文件后会丢失的 <a class="reference internal" href="../../files/data_blocks.html"><span class="doc">数据块</span></a>，包括仅有一个伪用户的数据块。通过单击大纲编辑器右侧的复选框添加/移除伪用户。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="display-filter">
+<span id="bpy-types-spaceoutliner-filter-text"></span><h3>显示过滤<a class="headerlink" href="#display-filter" title="Permalink to this headline">¶</a></h3>
+<p>您可以使用 <em>Outliner</em> 标题中的搜索字段在视图中搜索数据块，</p>
+</div>
+<div class="section" id="filter">
+<span id="editors-outliner-interface-filter"></span><h3>过滤<a class="headerlink" href="#filter" title="Permalink to this headline">¶</a></h3>
+<dl class="simple" id="bpy-types-spaceoutliner-show-restrict-column">
+<dt>限制切换</dt><dd><p>设置哪些 <a class="reference internal" href="#restriction-columns">限制列</a> 应该是可见的。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-spaceoutliner-use-sort-alpha">
+<dt>按首字母排序</dt><dd><p>按字母顺序排序输入。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-spaceoutliner-use-sync-select">
+<dt>选区同步</dt><dd><p>从 <a class="reference internal" href="../3dview/index.html"><span class="doc">3D视图</span></a> 及 <a class="reference internal" href="../../video_editing/index.html"><span class="doc">序列编辑器</span></a> 与大纲视图之间同步选中项。禁用后，可在不改变现有选中状态的情况下管理集合、物体关系和场景数据。选区同步仅在场景、视图层、和视频序列器显示模式可用。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-spaceoutliner-show-mode-column">
+<dt>显示模式列</dt><dd><p>在视图层和场景显示模式中，显示物体模式切换列。</p>
+</dd>
+</dl>
+<p class="rubric">查找</p>
+<dl class="simple" id="bpy-types-spaceoutliner-use-filter-complete">
+<dt>完全匹配</dt><dd><p><a class="reference internal" href="#bpy-types-spaceoutliner-filter-text"><span class="std std-ref">显示过滤</span></a> 的结果必须与全文匹配，而不仅仅是其中的一部分。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-spaceoutliner-use-filter-case-sensitive">
+<dt>区分大小写</dt><dd><p><a class="reference internal" href="#bpy-types-spaceoutliner-filter-text"><span class="std std-ref">显示过滤</span></a> 的结果区分大小写。</p>
+</dd>
+</dl>
+<p class="rubric">过滤</p>
+<dl class="simple" id="bpy-types-spaceoutliner-use-filter-collection">
+<dt>集合</dt><dd><p>列出场景的 <a class="reference internal" href="../../scene_layout/collections/index.html"><span class="doc">集合层级</span></a> 下的物体和集合。 物体可能出现在多个集合中。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-spaceoutliner-use-filter-object">
+<dt>物体</dt><dd><p>根据其他筛选器选项列出所有物体。仅当您需要不包含物体的集合的概览时才禁用。</p>
+</dd>
+</dl>
+<span id="bpy-types-spaceoutliner-filter-invert"></span><dl id="bpy-types-spaceoutliner-filter-state">
+<dt>物体状态</dt><dd><p>List the objects based on there state or restrictions.
+The results can be inverted using the <em>Invert</em> button.</p>
+<dl class="simple">
+<dt>全部</dt><dd><p>默认选项，无限制。</p>
+</dd>
+<dt>可见</dt><dd><p>只列出视图中的可见物体。全局和临时可见性设置都会被考虑在内。</p>
+</dd>
+<dt>不可见</dt><dd><p>仅列出视图中不可见的物体。</p>
+</dd>
+<dt>选中项</dt><dd><p>列出3D视图中当前选定的物体。请参阅 <a class="reference internal" href="../../scene_layout/object/selecting.html"><span class="doc">在3D视图中选择</span></a> 以获取更多信息。</p>
+</dd>
+<dt>活动</dt><dd><p>仅列出活动（通常是最后选定的）物体。</p>
+</dd>
+<dt>可选</dt><dd><p>列出 <a class="reference internal" href="#bpy-types-collection-hide-select"><span class="std std-ref">可选性</span></a> 选项被启用的所有物体。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-spaceoutliner-use-filter-object-content">
+<dt>物体内容</dt><dd><p>列出材质、修改器、网格数据、...</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-spaceoutliner-use-filter-children">
+<dt>物体子级</dt><dd><p>列出对象子项。如果启用了 <em>集合</em> 选项，您将看到对象子项，即使子项不在集合中也是如此。然而，大纲显示将它们显示为虚线。</p>
+</dd>
+</dl>
+<span id="bpy-types-spaceoutliner-use-filter-object-empty"></span><span id="bpy-types-spaceoutliner-use-filter-object-camera"></span><span id="bpy-types-spaceoutliner-use-filter-object-light"></span><span id="bpy-types-spaceoutliner-use-filter-object-mesh"></span><dl class="simple" id="bpy-types-spaceoutliner-use-filter-object-others">
+<dt>数据块</dt><dd><p>允许您过滤当前场景中的某些数据块。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-spaceoutliner-use-filter-lib-override">
+<dt>库覆盖</dt><dd><p>Shows the data-block properties have been overridden.</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-spaceoutliner-use-filter-lib-override-system">
+<dt>系统覆写</dt><dd><p>Shows the data-block properties that are defined/controlled automatically
+(e.g. to make users of an overridden data-block point to the override data, not the original linked data).</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="miscellaneous">
+<span id="bpy-ops-outliner-orphans-purge"></span><h3>杂项<a class="headerlink" href="#miscellaneous" title="Permalink to this headline">¶</a></h3>
+<p>标题栏的某些选项仅在与活动 <a class="reference internal" href="#display-mode">显示模式</a> 兼容时显示。</p>
+<dl class="simple">
+<dt>新集合（视图层）</dt><dd><p>在所选集合中添加新集合。</p>
+</dd>
+<dt>按类型过滤（孤立的数据，Blender文件）</dt><dd><p>限制大纲视图中显示的数据块的类型。</p>
+</dd>
+<dt>键控集（数据API）</dt><dd><p>将所选数据添加/删除到活动的 <a class="reference internal" href="../../animation/keyframes/keying_sets.html"><span class="doc">键控集</span></a>。</p>
+</dd>
+<dt>驱动程序</dt><dd><p>添加/删除所选项目的 <a class="reference internal" href="../../animation/drivers/index.html"><span class="doc">驱动器</span></a> 。</p>
+</dd>
+<dt>清除（孤立的数据）</dt><dd><p>Remove all unused data-blocks from the file (cannot be undone).</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="main-region">
+<h2>主要区域<a class="headerlink" href="#main-region" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="object-mode">
+<h3>物体模式<a class="headerlink" href="#object-mode" title="Permalink to this headline">¶</a></h3>
+<p>大纲视图的最左边包含一个区块用于切换当前 <a class="reference internal" href="../3dview/modes.html"><span class="doc">物体模式</span></a>。当物体不在物体模式下时，模式图标将显示在该区块。其他任何能够有效添加或交换到当前模式的物体，将显示一个小点符号。点击点图标将交换该物体余当前活动物体。对于支持 <a class="reference internal" href="../3dview/modes.html#dview-multi-object-mode"><span class="std std-ref">多物体编辑</span></a> 的模式，在点图标上使用 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">LMB</kbd></kbd> 将添加该物体到当前模式。点击活动物体旁边的模式图标，将根据多个物体是否在同一模式，来移除活动物体或所有其他物体。</p>
+</div>
+<div class="section" id="restriction-columns">
+<span id="editors-outliner-interface-restriction-columns"></span><h3>限制列<a class="headerlink" href="#restriction-columns" title="Permalink to this headline">¶</a></h3>
+<p><em>大纲视图</em> 编辑器的右侧，有以下切换选项，可用于集合、物体、骨骼、修改器和约束。</p>
+<p>默认情况下，仅启用临时视图可见性。其他选项可以在大纲视图 <a class="reference internal" href="#filter">筛选</a> 弹窗中的 <em>限制切换</em> 选项中启用。</p>
+<ul class="simple">
+<li><p>按住 <kbd class="kbd docutils literal notranslate">Shift</kbd> 设置或取消其所有子集合或物体的值。</p></li>
+<li><p>按住 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 将物体或集合隔离开来，因此它们是唯一具有其值集的物体。</p></li>
+</ul>
+<dl class="simple" id="bpy-types-layercollection-exclude">
+<dt>启用集合（勾选图标，仅集合）</dt><dd><p>在视图层排除集合。</p>
+</dd>
+<dt>可见性（ 眼睛图标）</dt><dd><p>切换在3D视图中的物体或集合的可见性。这是一个文件局部设置，当该数据块链接到另一blend文件时，不会导入该设置。这种方式隐藏的物体仍然是 <a class="reference internal" href="../../scene_layout/view_layers/index.html"><span class="doc">视图层</span></a> 的一部分，并被解算，所以它们仍将影响播放表现。</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>以下选项默认情况下是隐藏的，并且需要在大纲视图过滤器中启用后才能使用。</p>
+</div>
+<dl class="simple" id="bpy-types-collection-hide-select">
+<dt>可选性 (鼠标光标图标)</dt><dd><p>切换从 3D 视口中选择对象的功能。如果您已在场景中放置了某些内容，并且不想在处理其他内容时意外选择它，这将非常有用。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-layercollection-hide-viewport">
+<dt>全局视图可见性 ( 屏幕图标)</dt><dd><p>仍将渲染物体/集合，但将被所有视图忽略。经常用于需要在其他文件中实例化的高模物体集合。这种方式隐藏的物体，不再是 <a class="reference internal" href="../../scene_layout/view_layers/index.html"><span class="doc">视图层</span></a> 的一部分，不会被解算，因此不会削弱播放性能。</p>
+</dd>
+<dt>渲染（相机图标）</dt><dd><p>这仍然会使物体在场景中可见，但渲染器将忽略它。 通常由支持物体使用，这些物体有助于建模和动画，但不属于最终图像。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-layercollection-holdout">
+<dt>阻隔（仅限集合）</dt><dd><p>在视图层屏蔽集合中的物体。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-layercollection-indirect-only">
+<dt>仅间接（仅限集合）</dt><dd><p>这些集合中的物体仅对间接光有贡献 -- <em>仅限 Cycles</em> 。</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="selecting.html" class="btn btn-neutral float-right" title="选择和激活" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="introduction.html" class="btn btn-neutral float-left" title="简介" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; <a href="../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">
+        Last updated on 06/19/2023.
+      </span>
+
+    </p>
+  </div>
+      <div class="footer-contribute">
+         <ul>
+            <li>
+               <a href="https://developer.blender.org/diffusion/BM/browse/trunk/blender_docs/manual/editors/outliner/interface.rst" class="fa fa-edit"> Edit Page</a>
+            </li>
+            <li>
+               <a href="https://developer.blender.org/maniphest/task/edit/form/default/?description=Pagename%3A%20%60editors/outliner/interface%60%0ABlender%20Version%3A%20%602.93%60%0ADocumentation%20Language%3A%20%60zh-hans%60%0A%5B%5B%20https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F2.93%2Feditors/outliner/interface.html%20%7C%20Permanent%20link%20%5D%5D%0A%0A%2A%2AShort%20description%20of%20error%2A%2A%0A%5BPlease%20fill%20out%20a%20short%20description%20of%20the%20error%20here%5D&project=PHID-PROJ-c4nvvrxuczix2326vlti" class="fa fa-bug"> Report Bug</a>
+            </li>
+         <ul>
+      </div>
+
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.93 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async='async' src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

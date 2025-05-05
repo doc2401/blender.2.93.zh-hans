@@ -1,0 +1,439 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>节点部件 &mdash; Blender Manual</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/version_switch.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/interface/controls/nodes/parts.html" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/js/version_switch.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+    <link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+    <link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+    <link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../../copyright.html" />
+    <link rel="next" title="选择" href="selecting.html" />
+    <link rel="prev" title="简介" href="introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.93 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">用户界面</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#window-system">窗口系统</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#keymap">键位映射</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#interface-controls">界面控件</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../index.html#buttons-and-controls">按钮与控件</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html#extended-controls">扩展控件</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../templates/data_block.html">数据块菜单</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../templates/list_presets.html">List Views &amp; Presets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../templates/color_picker.html">拾色器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../templates/color_ramp.html">颜色渐变部件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../templates/color_palette.html">调色板</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../templates/curve.html">曲线部件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../templates/operator_search.html">查找</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">节点</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">节点部件</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#title">标题</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#sockets">插口</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#inputs">输入</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#outputs">输出</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#conversion">转换</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="#properties">属性</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#preview">预览</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="selecting.html">选择</a></li>
+<li class="toctree-l5"><a class="reference internal" href="arranging.html">排列节点</a></li>
+<li class="toctree-l5"><a class="reference internal" href="editing.html">编辑</a></li>
+<li class="toctree-l5"><a class="reference internal" href="sidebar.html">侧栏</a></li>
+<li class="toctree-l5"><a class="reference internal" href="groups.html">节点组</a></li>
+<li class="toctree-l5"><a class="reference internal" href="frame.html">节点框</a></li>
+<li class="toctree-l5"><a class="reference internal" href="reroute.html">转接点</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#tools">工具</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景&amp;物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻&amp;绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">运动跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">Files &amp; Data System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">贡献文档</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.93 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">用户界面</a> &raquo;</li>
+        
+          <li><a href="index.html">节点</a> &raquo;</li>
+        
+      <li>节点部件</li>
+    
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="node-parts">
+<span id="bpy-types-nodetree"></span><span id="bpy-types-nodesocket"></span><h1>节点部件<a class="headerlink" href="#node-parts" title="Permalink to this headline">¶</a></h1>
+<p>Blender中的所有节点都有相似的结构。这适用于 <a class="reference internal" href="introduction.html#tab-node-tree-types"><span class="std std-ref">任意节点类型</span></a> 。这些部分包括标题栏，接口，预览和更多的其它东西。</p>
+<div class="figure align-default">
+<img alt="../../../_images/interface_controls_nodes_parts_overview.png" src="../../../_images/interface_controls_nodes_parts_overview.png" />
+</div>
+<div class="section" id="title">
+<h2>标题<a class="headerlink" href="#title" title="Permalink to this headline">¶</a></h2>
+<p>标题显示了节点的 名称/类型；它可以通过改变节点的 <a class="reference internal" href="sidebar.html#bpy-types-node-label"><span class="std std-ref">标签</span></a> 来覆盖。在标题的左边是 <em>塌缩</em> 切换键，可以用来折叠节点。这也可以用 <kbd class="kbd docutils literal notranslate">H</kbd> 来完成。</p>
+<div class="figure align-default" id="id1">
+<img alt="../../../_images/interface_controls_nodes_parts_collapsed.png" src="../../../_images/interface_controls_nodes_parts_collapsed.png" />
+<p class="caption"><span class="caption-text">显示折叠时的节点。</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="sockets">
+<span id="bpy-types-nodelink"></span><h2>插口<a class="headerlink" href="#sockets" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right">
+<img alt="../../../_images/interface_controls_nodes_parts_sockets.png" src="../../../_images/interface_controls_nodes_parts_sockets.png" />
+</div>
+<p>The sockets input and output values from the node.
+They appear as little colored circles on either side of the node.
+Unused sockets can be hidden with <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">H</kbd></kbd>.
+There are two kinds of sockets: <a class="reference internal" href="#inputs">inputs</a> and <a class="reference internal" href="#outputs">outputs</a>.</p>
+<p>每插口都根据其处理的数据类型不同而显示的颜色不同。</p>
+<dl class="simple">
+<dt>浮点数（灰色）</dt><dd><p>Indicates numeric value's information.
+It can either be a single numerical value or a so-called &quot;value map&quot;.
+(You can think of a value map as a gray-scale map where the different amount of
+bright/dark reflects the value for each point.)
+If a single value is used as an input for a &quot;value map&quot; socket, all points of the map are set to this same value.
+Common use: Alpha maps and value options for a node.</p>
+</dd>
+<dt>整数（石灰绿色）</dt><dd><p>用于传递整数值（无小数的数字）。</p>
+</dd>
+<dt>布尔值（粉色）</dt><dd><p>用于传递一个正确或错误的值。</p>
+</dd>
+<dt>字符串（浅蓝色）</dt><dd><p>用于传递文本值。</p>
+</dd>
+<dt>矢量（深蓝色）</dt><dd><p>表示向量、坐标和法线信息。</p>
+</dd>
+<dt>颜色（黄色）</dt><dd><p>Indicates that color information needs to be input or will be output from the node.
+Depending on the node tree type, the color has an alpha channel or not.</p>
+</dd>
+<dt>着色器（鲜绿色）</dt><dd><p>用于 <a class="reference internal" href="../../../render/cycles/index.html"><span class="doc">Cycles</span></a>  和 <a class="reference internal" href="../../../render/eevee/index.html"><span class="doc">Eevee</span></a> 的着色节点。</p>
+</dd>
+<dt>几何信息（绿松石）</dt><dd><p>用在 <a class="reference internal" href="../../../modeling/geometry_nodes/index.html"><span class="doc">几何节点</span></a>。</p>
+</dd>
+<dt>物体（橙色）</dt><dd><p>用于传递一个物体数据块。</p>
+</dd>
+<dt>集合（白色）</dt><dd><p>用于传递一个集合数据块。</p>
+</dd>
+<dt>图像（杏色）</dt><dd><p>用于传递一个图像数据块。</p>
+</dd>
+</dl>
+<div class="section" id="inputs">
+<h3>输入<a class="headerlink" href="#inputs" title="Permalink to this headline">¶</a></h3>
+<p>The inputs are located on bottom left side of the node,
+and provide the data the node needs to perform its function.
+Each input socket, except for the green shader input, when disconnected,
+has a default value which can be edited via a color, numeric, or vector interface input.
+In the screenshot of the node above, the second color option is set by a color interface input.</p>
+<p>Some nodes have special sockets that can accept multiple inputs into a single socket.
+These sockets will have an ellipsis shape rather than a circle to indicate its special behavior.</p>
+</div>
+<div class="section" id="outputs">
+<h3>输出<a class="headerlink" href="#outputs" title="Permalink to this headline">¶</a></h3>
+<p>输出位于节点的右上方，可以连接到节点树下更多的节点的输入。</p>
+</div>
+<div class="section" id="conversion">
+<h3>转换<a class="headerlink" href="#conversion" title="Permalink to this headline">¶</a></h3>
+<p>Some socket types can be converted to other socket types either implicitly or explicitly.
+Implicit conversion can happen automatically without the need of a conversion node.</p>
+<p>For example, color and float sockets can both be placed into one another.
+Once a socket conversion is made data may be lost and cannot be retrieved later down the node tree.
+Implicit socket conversion can sometimes change the data units as well.
+When plugging a <em>Value</em> input node into an angle socket will default to use radians
+regardless of the scene <a class="reference internal" href="../../../scene_layout/scene/properties.html#bpy-types-unitsettings"><span class="std std-ref">单位</span></a>.
+This happens because the value node has no unit while the angle input does.</p>
+<p>有效转换：</p>
+<ul class="simple">
+<li><p>Between color and vector -- in this case the using individual color channels to store the vector.</p></li>
+<li><p>Between color and float -- the color data is converted to its gray scale equivalent.</p></li>
+<li><p>Color/float/vector to Shader -- implicitly converts to color and gives the result of using an emission node.</p></li>
+</ul>
+<p>Explicit conversion requires the use of a conversion node for example
+the <a class="reference internal" href="../../../render/shader_nodes/converter/shader_to_rgb.html"><span class="doc">Shader --&gt; RGB着色器节点</span></a> node
+or the <a class="reference internal" href="../../../render/shader_nodes/converter/rgb_to_bw.html"><span class="doc">RGB -&gt; BW节点</span></a> node.
+The <a class="reference internal" href="../../../render/shader_nodes/converter/math.html"><span class="doc">数学（Math）节点</span></a> node also contains
+some functions to convert between degrees and radians.</p>
+</div>
+</div>
+<div class="section" id="properties">
+<span id="bpy-types-nodesetting"></span><h2>属性<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<p>许多节点的设置会影响它们与输入和输出交互的方式。节点设置位于输出之下和任何输入之上。</p>
+<div class="figure align-default" id="id2">
+<img alt="../../../_images/interface_controls_nodes_parts_controls.png" src="../../../_images/interface_controls_nodes_parts_controls.png" />
+<p class="caption"><span class="caption-text">色度键节点上的控制实例。</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="preview">
+<h3>预览<a class="headerlink" href="#preview" title="Permalink to this headline">¶</a></h3>
+<p>On some nodes this shows a preview image of how the output data for a certain channel will appear.
+Usually it shows color data.</p>
+<p>The preview can be toggled using the icon on the very top right-hand corner of the node, next to the title.</p>
+<div class="figure align-default" id="id3">
+<img alt="../../../_images/interface_controls_nodes_parts_previewless.png" src="../../../_images/interface_controls_nodes_parts_previewless.png" />
+<p class="caption"><span class="caption-text">没有预览的节点的显示方式。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="selecting.html" class="btn btn-neutral float-right" title="选择" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="introduction.html" class="btn btn-neutral float-left" title="简介" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; <a href="../../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">
+        Last updated on 06/19/2023.
+      </span>
+
+    </p>
+  </div>
+      <div class="footer-contribute">
+         <ul>
+            <li>
+               <a href="https://developer.blender.org/diffusion/BM/browse/trunk/blender_docs/manual/interface/controls/nodes/parts.rst" class="fa fa-edit"> Edit Page</a>
+            </li>
+            <li>
+               <a href="https://developer.blender.org/maniphest/task/edit/form/default/?description=Pagename%3A%20%60interface/controls/nodes/parts%60%0ABlender%20Version%3A%20%602.93%60%0ADocumentation%20Language%3A%20%60zh-hans%60%0A%5B%5B%20https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F2.93%2Finterface/controls/nodes/parts.html%20%7C%20Permanent%20link%20%5D%5D%0A%0A%2A%2AShort%20description%20of%20error%2A%2A%0A%5BPlease%20fill%20out%20a%20short%20description%20of%20the%20error%20here%5D&project=PHID-PROJ-c4nvvrxuczix2326vlti" class="fa fa-bug"> Report Bug</a>
+            </li>
+         <ul>
+      </div>
+
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.93 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async='async' src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

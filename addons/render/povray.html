@@ -1,0 +1,1189 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>POV-Ray 3.7 &mdash; Blender Manual</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/version_switch.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/addons/render/povray.html" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/js/version_switch.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+    <link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+    <link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+    <link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="next" title="Freestyle SVG导出器" href="render_freestyle_svg.html" />
+    <link rel="prev" title="复制渲染设置" href="copy_settings.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blender 2.93 Manual
+          
+
+          
+            
+            <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景&amp;物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻&amp;绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">运动跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">Files &amp; Data System</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">插件</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#add-ons-category-listings">插件类别列表</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../3d_view/index.html">3D 视图</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../add_curve/index.html">添加曲线</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../add_mesh/index.html">添加网格</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../camera/index.html">相机</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../development/index.html">开发</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../import_export/index.html">导入 - 导出</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../interface/index.html">界面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lighting/index.html">光照</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../materials/index.html">材质</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/index.html">网格</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../node/index.html">节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../object/index.html">物体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../paint/index.html">绘制</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">渲染</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="auto_tile_size.html">Auto Tile Size</a></li>
+<li class="toctree-l4"><a class="reference internal" href="copy_settings.html">复制渲染设置</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">POV-Ray 3.7</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#features">特性</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#activation">激活</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#usage">用法</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#quick-start">快速入门</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#pov-ray-branches">POV-Ray 分支</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#exported-ui-properties">可以导出的属性（未应用修改器）包括：</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#render-properties">渲染属性</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#radiosity">辐射</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#anti-aliasing">抗锯齿</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="#sampling-depth">采样</a></li>
+<li class="toctree-l8"><a class="reference internal" href="#anti-alias-threshold">反锯齿阈值</a></li>
+</ul>
+</li>
+<li class="toctree-l7"><a class="reference internal" href="#bounding-method">边界框</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#command-line-switches">命令行开关</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#formatting">格式设置</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="#scene-properties">场景属性</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#color-management">色彩管理</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="#world-properties">世界属性</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#background">背景</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#atmospheric-media">大气浑浊度。</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="#object-properties">物体属性</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#importance-sampling">重要性采样</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="#data-properties">每个物体与其关联的 <span class="xref std std-ref">物体数据</span> 都有联系，多个物体可能会共享单个物体数据。</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#camera">相机</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="#depth-of-field">景深</a></li>
+<li class="toctree-l8"><a class="reference internal" href="#aperture">光圈</a></li>
+<li class="toctree-l8"><a class="reference internal" href="#perturbation">摄 动</a></li>
+</ul>
+</li>
+<li class="toctree-l7"><a class="reference internal" href="#lights">灯光</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#smoke">烟雾材质</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#hair">毛发</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="#material-properties">材料属性</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#emission">自发光（发射）</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#sss-sslt">SSS</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#translucency">半透明</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#ior-mirror">IOR</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#iridescence">彩虹色</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#caustics">焦散</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#shaders">着色器</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="#texture-properties">纹理属性</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#uv-coordinates">UV 坐标</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#texture-channels">当使用材质节点定义材质时，可以使用这些命名输出。在这个例子中，可能不会使用纹理通道。而是使用 <span class="menuselection">添加 ‣ 输入 ‣ 纹理</span> ，将纹理节点插入材质节点树中。在刚添加的纹理节点内，可以选择要使用的输出（如，漫反射或法向）。</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#custom-gamma">Gamma</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#custom-pov-code">自定义代码POV</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#video-tutorial">Video Tutorial</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#step-by-step">一步一步的介绍。</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#adding-pov-code-directly">从包含文件中添加POV代码</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#adding-pov-code-from-include-files">从包含文件中添加POV代码</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="#pov-ray-primitives">POV-Ray</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#infinite-plane">无限平面</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#box">方框</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#sphere">球形</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#cylinder">柱体</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#cone">锥形</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#torus">环体</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#parametric">参数</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#rainbow">彩虹</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#lathe">车床（Lathe）</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#prism">棱镜</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#superquadric-ellipsoid">超二次椭球</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#height-field">高度场地（Height Field）</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#sphere-sweep">球面扫描</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#blob-sphere">球团</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#isosurfaces">等值面</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#macro-based-primitives">基本体</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#importing-pov-ray-files">导入 &amp; 导出文件</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="render_freestyle_svg.html">Freestyle SVG导出器</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../rigging/index.html">绑定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sequencer/index.html">序列容器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../system/index.html">系统</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../uv/index.html">UV</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../video_tools/index.html">视频工具</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">贡献文档</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 2.93 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">插件</a> &raquo;</li>
+        
+          <li><a href="index.html">渲染</a> &raquo;</li>
+        
+      <li>POV-Ray 3.7</li>
+    
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pov-ray-3-7">
+<h1>POV-Ray 3.7<a class="headerlink" href="#pov-ray-3-7" title="Permalink to this headline">¶</a></h1>
+<p>POV-Ray是一个基于SDL （场景描述语言）的渲染引擎，具有悠久的历史，使其非常稳定和功能丰富。POV-Ray 3.7的最新版本可在 <a class="reference external" href="http://www.povray.org/download/">项目网址</a> 中找到。</p>
+<div class="section" id="features">
+<h2>特性<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
+<p>出口商的一些主要特点包括：</p>
+<ul class="simple">
+<li><p>几何导入和导出及其修改器、键控和物理动画</p></li>
+<li><p>添加POV-Ray特定的非网格基元（从不显示tessellation）</p></li>
+<li><p>实例项</p></li>
+<li><p>毛发粒子</p></li>
+<li><p>烟雾模拟</p></li>
+<li><p>大气介质（体积雾）</p></li>
+<li><p>HDRI环境</p></li>
+<li><p>光圈景深</p></li>
+<li><p>材质属性如过滤、发射、半透明、表面下散射、玻璃雾（着色吸收）、模糊/光泽反射...</p></li>
+<li><p>程序纹理（从Blender和POV-Ray本机仿真）</p></li>
+<li><p>图像纹理</p></li>
+<li><p>纹理影响通道： Alpha、漫反射、凹凸、镜面、镜面（使用与镜面相同的通道）</p></li>
+<li><p>全局照明：辐射度（间接照明）、光子苛性（反射/折射）、网格灯</p></li>
+<li><p>自定义POV-Ray代码输入，可访问导出器不支持的任何POV-Ray功能。</p></li>
+</ul>
+<p class="rubric">POV-Ray 3.7</p>
+<p>容积计和介质（散射/吸收）、模糊反射（ uberPOV ）、运动模糊（ uberPOV ）、微多角形位移（ HGPOV ）等。</p>
+</div>
+<div class="section" id="activation">
+<h2>激活<a class="headerlink" href="#activation" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>当然，不要忘记 <a class="reference external" href="http://www.povray.org/download/">下载</a> 并安装POV-Ray本身！</p></li>
+<li><p>打开Blender并转到 &quot;首选项&quot; ，然后转到 &quot;附加组件&quot; 选项卡。</p></li>
+<li><p>单击渲染，然后复制渲染设置以启用脚本。</p></li>
+</ul>
+</div>
+<div class="section" id="usage">
+<h2>用法<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="quick-start">
+<h3>快速入门<a class="headerlink" href="#quick-start" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>从渲染引擎选择器中选择 POV-Ray 3.7。然后，您可以使用 <em>Render</em> 按钮照常渲染。</p></li>
+<li><p>将根据 &quot;属性&quot; 中设置的参数渲染图像。</p></li>
+</ol>
+<p>例如，可以在 &quot;渲染&quot; 选项卡中更改主要全局渲染设置。但也有环境、材质（纹理）、对象等的属性，所有这些属性都可以在其他选项卡中访问，具体取决于所选对象（几何形状、相机、光线... ）。</p>
+</div>
+<div class="section" id="pov-ray-branches">
+<h3>POV-Ray 分支<a class="headerlink" href="#pov-ray-branches" title="Permalink to this headline">¶</a></h3>
+<p>以下是该出口商可用的两个发动机的一些特点的比较：</p>
+<table class="colwidths-given valign docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>特征/引擎/支持</p></th>
+<th class="head"><p>POV-Ray</p></th>
+<th class="head"><p>容积计和介质（散射/吸收）、模糊反射（ uberPOV ）、运动模糊（ uberPOV ）、微多角形位移（ HGPOV ）等。</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>全部</p></td>
+<td><p>✗</p></td>
+<td><p>✓ (under development)</p></td>
+</tr>
+<tr class="row-odd"><td><p>超采样</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-even"><td><p>Alpha映射</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-odd"><td><p>凹凸贴图</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-even"><td><p>法线贴图</p></td>
+<td><p>✗</p></td>
+<td><p>✗</p></td>
+</tr>
+<tr class="row-odd"><td><p>转换贴图</p></td>
+<td><p>✗</p></td>
+<td><p>✗</p></td>
+</tr>
+<tr class="row-even"><td><p>运动模糊</p></td>
+<td><p>✗</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-odd"><td><p>次表面散射 (SSS)</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-even"><td><p>体积光照明</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-odd"><td><p>模糊阴影。</p></td>
+<td><p>✓ (very tricky)</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-even"><td><p>黏塑</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-odd"><td><p>景深</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-even"><td><p><em>混合着色器</em> 节点用于将两个着色器的效果混合在一起。混合可用于材料分层，例如，<em>系数</em> 输入接口可以连接到 <em>混合权重</em> 节点。</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-odd"><td><p>薄膜涂层</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-even"><td><p>色散</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-odd"><td><p>各向异性</p></td>
+<td><p>✗</p></td>
+<td><p>✗</p></td>
+</tr>
+<tr class="row-even"><td><p>幻彩纹理用得不多。它可以用于 <code class="docutils literal notranslate"><span class="pre">薄膜干涉</span></code>，如果你设置 <em>映射</em> 为 <em>反射</em> 并使用相关的高数值 <em>紊流</em>，RGB组件将以正弦公式形式独立生成。</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-odd"><td><p>复杂模式</p></td>
+<td><p>✗</p></td>
+<td><p>✗</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">absorption()</span></code></p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-odd"><td><p>自定义反射率 90</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-even"><td><p>自定义曲线</p></td>
+<td><p>✓ (tricky)</p></td>
+<td><p>✓ (tricky)</p></td>
+</tr>
+<tr class="row-odd"><td><p>西格玛</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-even"><td><p>焦散</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-odd"><td><p>环境光遮蔽</p></td>
+<td><p>✗ (tricky)</p></td>
+<td><p>✓ (under development)</p></td>
+</tr>
+<tr class="row-even"><td><p>镜头平移</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-odd"><td><p>膜片 圆形/多角形</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-even"><td><p>使用对象坐标的渐变纹理效果。</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-odd"><td><p>纹理投影模式</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-even"><td><p>前/侧/顶/摄影机视图</p></td>
+<td><p>✓ (tricky)</p></td>
+<td><p>✓ (tricky)</p></td>
+</tr>
+<tr class="row-odd"><td><p>多UV贴图</p></td>
+<td><p>✗</p></td>
+<td><p>✗</p></td>
+</tr>
+<tr class="row-even"><td><p>卡通 <span class="guilabel">仅合成器</span></p></td>
+<td><p>✓ (tricky)</p></td>
+<td><p>✓ (tricky)</p></td>
+</tr>
+<tr class="row-odd"><td><p>程序纹理</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-even"><td><p>合成纹理分层</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-odd"><td><p>合成纹理分层</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-even"><td><p>为选定或活动对象添加三点照明。</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-odd"><td><p>光照</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-even"><td><p>基于图像照明</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-odd"><td><p>物理太阳/天空</p></td>
+<td><p>✓ (tricky)</p></td>
+<td><p>✓ (tricky)</p></td>
+</tr>
+<tr class="row-even"><td><p>HDRI（高动态范围图像）</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-odd"><td><p>IES纹理支持</p></td>
+<td><p>✗</p></td>
+<td><p>✗</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.blender.org/support/user-community/">支持</a></p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-odd"><td><p>合并</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-even"><td><p>Eevee的目标是成为交互式渲染引擎。在不影响性能的前提下，一些功能还没有加入或不可能整合进Eevee的架构中。</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-odd"><td><p>晕眩/开花/眩光（帖子）</p></td>
+<td><p>✓ (tricky)</p></td>
+<td><p>✓ (tricky)</p></td>
+</tr>
+<tr class="row-even"><td><p>相机响应功能（后置）</p></td>
+<td><p>✗</p></td>
+<td><p>✗</p></td>
+</tr>
+<tr class="row-odd"><td><p>色彩校正节点。</p></td>
+<td><p>✗</p></td>
+<td><p>✗</p></td>
+</tr>
+<tr class="row-even"><td><p>多线程</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-odd"><td><p>区域渲染</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-even"><td><p>被动</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-odd"><td><p>发射体</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-even"><td><p>请注意，骨骼的隐藏取决于某种模式的，即你可以在 <em>编辑模式</em> 中隐藏某些骨骼，但它们仍将在 <em>姿态模式</em> 中可见，反之亦然。 <em>姿势模式</em> 中的隐藏骨骼在 <em>物体模式</em> 中也是不可见的。在 <em>编辑模式</em> 中，要隐藏的骨骼必须被完全选择，而不仅仅是他的根部或尾端。</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-odd"><td><p>目标物体</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-even"><td><p>精确光源（点光，聚光和定向光源）</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">rendering/</span></code></p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="exported-ui-properties">
+<h2>可以导出的属性（未应用修改器）包括：<a class="headerlink" href="#exported-ui-properties" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="render-properties">
+<h3>渲染属性<a class="headerlink" href="#render-properties" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="radiosity">
+<h4>辐射<a class="headerlink" href="#radiosity" title="Permalink to this headline">¶</a></h4>
+<p>在POV-Ray中， &quot;辐射度&quot; 是漫反射，与基于顶点颜色的辐射无关。实际上，它更类似于辐照度样品的最终收集并且提供无噪声间接光。</p>
+<p>包括一些无线电性的预设值，它们的名称和设置是 <code class="docutils literal notranslate"><span class="pre">rad_def</span></code> 包括随POV-Ray附带的文件，它们设置了属性，因此您不需要在导出的POV文件中包含 <code class="docutils literal notranslate"><span class="pre">rad_def.inc</span></code> ，这是像Blender这样的界面可以为所有不习惯使用POV-Ray的用户带来的众多示例之一。</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>More details on <a class="reference external" href="http://wiki.povray.org/content/HowTo:Use_radiosity">POV-Ray Wiki</a>.</p>
+</div>
+</div>
+<div class="section" id="anti-aliasing">
+<h4>抗锯齿<a class="headerlink" href="#anti-aliasing" title="Permalink to this headline">¶</a></h4>
+<p>支持三种抽样方法：</p>
+<ul class="simple">
+<li><p>在简单、非递归的方法中， POV-Ray最初会跟踪每个像素的一个射线。如果像素的颜色与其邻居（向左或向上）至少不同设定阈值，那么通过投射给定的固定数量的额外光线对像素进行超采样。默认阈值为0.3 ，但可以使用此 <code class="docutils literal notranslate"><span class="pre">Antialias_Threshold</span> <span class="pre">=</span> <span class="pre">n.n</span></code> 选项进行更改。</p></li>
+<li><p>级联</p></li>
+<li><p>随机（蒙特卡洛）仅适用于UberPOV。</p></li>
+</ul>
+<div class="section" id="sampling-depth">
+<h5>采样<a class="headerlink" href="#sampling-depth" title="Permalink to this headline">¶</a></h5>
+<p>值必须包含在1和9之间。值越高，渲染时间越长，甚至可能会引入一些不希望的模糊。</p>
+</div>
+<div class="section" id="anti-alias-threshold">
+<h5>反锯齿阈值<a class="headerlink" href="#anti-alias-threshold" title="Permalink to this headline">¶</a></h5>
+<p>在简单、非递归的方法中， POV-Ray最初会跟踪每个像素的一个射线。如果像素的颜色与其邻居（向左或向上）至少不同设定阈值，那么通过投射给定的固定数量的额外光线对像素进行超采样。默认阈值为0.3 ，但可以使用此 <code class="docutils literal notranslate"><span class="pre">Antialias_Threshold</span> <span class="pre">=</span> <span class="pre">n.n</span></code> 选项进行更改。</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>More details on <a class="reference external" href="http://wiki.povray.org/content/Reference:Tracing_Options#Anti-Aliasing_Options">POV-Ray Wiki</a>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>无抗锯齿的景深</p>
+<p>开启摄像机景深时不使用抗锯齿功能将加快渲染速度，并经常提供足够的图像。</p>
+</div>
+</div>
+</div>
+<div class="section" id="bounding-method">
+<h4>边界框<a class="headerlink" href="#bounding-method" title="Permalink to this headline">¶</a></h4>
+<p>也称为加速，由导出器设置为自动BSP （二进制空间分区） ，因为它通常是最有效的（仅POV-Ray 3.7 ） ，但POV-Ray中提供了其他加速方法。</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>More details on <a class="reference external" href="http://wiki.povray.org/content/Reference:Tracing_Options#BSP_Bounding">POV-Ray Wiki</a>.</p>
+</div>
+</div>
+<div class="section" id="command-line-switches">
+<h4>命令行开关<a class="headerlink" href="#command-line-switches" title="Permalink to this headline">¶</a></h4>
+<p>某些命令行参数可以传递给POV-Ray。参数用空格分隔。命令行开关由 <code class="docutils literal notranslate"><span class="pre">/</span></code> (斜线)、 <code class="docutils literal notranslate"><span class="pre">+</span></code> (加号)或 <code class="docutils literal notranslate"><span class="pre">-</span></code> (减号)符号组成，后面有一个或多个字母字符，可能还有一个数字值。</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>More details on <a class="reference external" href="http://wiki.povray.org/content/Category:Command-Line_and_INI-File_Options">POV-Ray Wiki</a>.</p>
+</div>
+<p class="rubric">一些常用的命令：</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">-D</span></code>: 渲染时隐藏图片</dt><dd><p>使用此命令行开关可在POV-Ray中不显示渲染的图像（在内存上稍微更快、更轻）。完成后，图像将被发送回Blender （在Linux上，这是一个隐藏的默认开关，以避免操作系统特定的编辑器问题）。</p>
+</dd>
+<dt>&quot;+WT&quot;：限制使用的线程数</dt><dd><p>将POV-Ray限制为仅使用一个渲染线程。（同样， <code class="docutils literal notranslate"><span class="pre">+</span> <span class="pre">WT2</span></code> 将指示POV-Ray使用两个渲染线程。）</p>
+</dd>
+<dt>&quot;+ C&quot;:继续中断的渲染</dt><dd><p>因为 &quot;继续跟踪&quot; 能够恢复上次渲染停止的点并从那里继续（即使您关闭了计算机）。</p>
+</dd>
+<dt>&quot;/退出&quot;：渲染图像后关闭 POV 射线</dt><dd><p>POV-Ray for Windows界面中也有一个同样的选项： &quot;完成时&quot; 选项中的 &quot;退出POV-Ray for Windows&quot; （在 <em>渲染</em> 菜单中）。</p>
+</dd>
+</dl>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>快速预览渲染</p>
+<p>首次设置场景时，若要快速进行预览渲染，请关闭抗锯齿、景深、光子、Radiosity、昂贵的材质功能，并在场景着色面板中关闭阴影。（在导出器的未来版本中，此面板可能会关闭其他功能。）</p>
+<p>Alternatively, use
+the <a class="reference external" href="http://wiki.povray.org/content/Reference:Tracing_Options#Quality_Settings">Quality</a> command line switches
+<code class="docutils literal notranslate"><span class="pre">+q1</span></code> to <code class="docutils literal notranslate"><span class="pre">+q11</span></code>. These allow you to easily disable most of the CPU-intensive features.</p>
+</div>
+</div>
+<div class="section" id="formatting">
+<h4>格式设置<a class="headerlink" href="#formatting" title="Permalink to this headline">¶</a></h4>
+<p>可以自定义导出的 POV-Ray 文档：</p>
+<ul class="simple">
+<li><p>不同缩进字符可供选择。</p></li>
+<li><p>用于向 POV-Ray 文档添加注释的选项。</p></li>
+<li><p>在一行中写入长列表坐标的选项，以便于浏览POV文件（以及由渲染器稍微更快的解析）。</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="scene-properties">
+<h3>场景属性<a class="headerlink" href="#scene-properties" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="color-management">
+<h4>色彩管理<a class="headerlink" href="#color-management" title="Permalink to this headline">¶</a></h4>
+<p>目前应始终使用sRGB。</p>
+</div>
+</div>
+<div class="section" id="world-properties">
+<h3>世界属性<a class="headerlink" href="#world-properties" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="background">
+<h4>背景<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h4>
+<p>Blender <em>世界</em> 出口：</p>
+<ul class="simple">
+<li><p>作为POV-Ray <code class="docutils literal notranslate"><span class="pre">背景{}</span></code> （如果扁平着色）。</p></li>
+<li><p>使用Blender的 <em>Blend Sky</em> 选项可将其导出为POV-Ray <code class="docutils literal notranslate"><span class="pre">sky_sphere</span> <span class="pre">{}</span></code> 。</p></li>
+</ul>
+<p>(Sky texture currently appears a little different because of its mapping).</p>
+</div>
+<div class="section" id="atmospheric-media">
+<h4>大气浑浊度。<a class="headerlink" href="#atmospheric-media" title="Permalink to this headline">¶</a></h4>
+<p>(To create volume lights):</p>
+<ul class="simple">
+<li><p>在最终渲染中使用的样本数。</p></li>
+<li><p>大气介质颜色。</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="object-properties">
+<h3>物体属性<a class="headerlink" href="#object-properties" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="importance-sampling">
+<h4>重要性采样<a class="headerlink" href="#importance-sampling" title="Permalink to this headline">¶</a></h4>
+<p>这是一个介于0和1之间的优先级值，可以在 Radiosity 的 <em>对象</em> 属性选项卡中为每个对象设置，以在最需要的对象上投射更多的光线。在尝试改善渲染时间时，请仔细触摸此图标。</p>
+</div>
+</div>
+<div class="section" id="data-properties">
+<h3>每个物体与其关联的 <a class="reference internal" href="../../editors/properties_editor.html#properties-data-tabs"><span class="std std-ref">物体数据</span></a> 都有联系，多个物体可能会共享单个物体数据。<a class="headerlink" href="#data-properties" title="Permalink to this headline">¶</a></h3>
+<p>脚本导出天空、光源、毛发颗粒、烟雾、液体、网格、斑点（代谢球）。</p>
+<div class="section" id="camera">
+<h4>相机<a class="headerlink" href="#camera" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="depth-of-field">
+<h5>景深<a class="headerlink" href="#depth-of-field" title="Permalink to this headline">¶</a></h5>
+<p>必须启用它才能执行以下属性:</p>
+<p>视野深度的焦点基于Blender UI <em>Distance</em> 字段或 <em>Object</em> 字段。</p>
+</div>
+<div class="section" id="aperture">
+<h5>光圈<a class="headerlink" href="#aperture" title="Permalink to this headline">¶</a></h5>
+<p>设置模糊量（增加以获得更多）。</p>
+</div>
+<div class="section" id="perturbation">
+<h5>摄 动<a class="headerlink" href="#perturbation" title="Permalink to this headline">¶</a></h5>
+<p>相机平面的法线贴图，本机POV程序模式可以与变量一起使用：</p>
+<ul class="simple">
+<li><p>强度</p></li>
+<li><p>紊流</p></li>
+<li><p>比例|缩放</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="lights">
+<h4>灯光<a class="headerlink" href="#lights" title="Permalink to this headline">¶</a></h4>
+<p>任何阴影切换按钮都不能仅用于停用特定光源的阴影跟踪。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>为了实现真实的光线衰减</p>
+<p>使用反向平方衰减，并且具有较高光强度的小衰减距离值将通过POV-Ray实现反向平方定律而产生最佳结果。请参阅此 <a class="reference external" href="http://news.povray.org/povray.general/thread/%3Cweb.4d77b443f36cbfe281c811d20%40news.povray.org%3E/">讨论</a> 。</p>
+</div>
+</div>
+<div class="section" id="smoke">
+<h4>烟雾材质<a class="headerlink" href="#smoke" title="Permalink to this headline">¶</a></h4>
+<p>导出DF3文件（ POV-Ray体素格式）并与具有与Blender烟雾域相同尺寸和分辨率的POV-Ray介质容器一起使用。</p>
+</div>
+<div class="section" id="hair">
+<h4>毛发<a class="headerlink" href="#hair" title="Permalink to this headline">¶</a></h4>
+<p>POV-Ray <code class="docutils literal notranslate"><span class="pre">sphere_sweep</span></code> 的联合导出并用于每个股。它们可以采用应用于发射对象的纹理的颜色，并且球体扫描的形状尝试模拟股线的形状。</p>
+</div>
+</div>
+<div class="section" id="material-properties">
+<h3>材料属性<a class="headerlink" href="#material-properties" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="emission">
+<h4>自发光（发射）<a class="headerlink" href="#emission" title="Permalink to this headline">¶</a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>全局照明：辐射度（间接照明）、光子苛性（反射/折射）、网格灯</p>
+<p>当与Radiosity一起使用时， Emit属性将允许您创建灯泡或任何真正照亮其他物体的发光形式。</p>
+</div>
+</div>
+<div class="section" id="sss-sslt">
+<h4>SSS<a class="headerlink" href="#sss-sslt" title="Permalink to this headline">¶</a></h4>
+<p>请注意， POV-Ray （称为SSLT ）中的SSS非常敏感，如果网格法线是光滑的或平坦的，则会产生不同的结果。</p>
+</div>
+<div class="section" id="translucency">
+<h4>半透明<a class="headerlink" href="#translucency" title="Permalink to this headline">¶</a></h4>
+<p>从曲面到曲线偏移的距离。</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>More details on <a class="reference external" href="http://wiki.povray.org/content/Reference:Finish#Diffuse">POV-Ray Wiki</a>.</p>
+</div>
+</div>
+<div class="section" id="ior-mirror">
+<h4>IOR<a class="headerlink" href="#ior-mirror" title="Permalink to this headline">¶</a></h4>
+<p>此选项用于使用一个一致的IOR进行光线跟踪反射和折射，并且不违反两者之间的能量保存定律。</p>
+</div>
+<div class="section" id="iridescence">
+<h4>彩虹色<a class="headerlink" href="#iridescence" title="Permalink to this headline">¶</a></h4>
+<p>(Newton's thin film coating.)</p>
+</div>
+<div class="section" id="caustics">
+<h4>焦散<a class="headerlink" href="#caustics" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>和反射焦散基本原理相同，但是折射的情况。</p></li>
+<li><p>快速的假苛性（有点像Blender Ray Transparency ）</p></li>
+<li><p>和反射焦散基本原理相同，但是折射的情况。</p></li>
+<li><p>使用光子的反射苛性（高IOR或无镜像IOR ，效果更轻松）。</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>更快的光子</p>
+<p>要设置一些苛责，尝试从最小的光子深度值移动到你开始看到你所追求的效果的最小值。勾选任何不需要的对象的 <em>接收光子</em> 物体属性。(然后你可以平衡其他参数来调整光子分布和平滑（聚集）。不要在场景设置中把全局间距设置得太细，因为这样你仍然可以在每个物体上使用其间距乘数使其更细。如果你的系统有几个线程，它们可以在光子阶段使用：每个灯一个线程，这样你就可以在没有开销的情况下使你的场景照明更加复杂。</p>
+</div>
+</div>
+<div class="section" id="shaders">
+<h4>着色器<a class="headerlink" href="#shaders" title="Permalink to this headline">¶</a></h4>
+<p>贝塞尔曲线制作的Blender logo。</p>
+<ul class="simple">
+<li><p>镜面和漫反射（还没有边缘）</p></li>
+<li><p>Phong和Cook Torrance （相同）</p></li>
+<li><p>布尔（不完全匹配）</p></li>
+<li><p>沃德各向同性</p></li>
+<li><p>Fresnel和Minnaert ，开始但尚未完成</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>类似玻璃的材料</p>
+<p>当尝试获得一些像材料一样的玻璃时，请保持低扩散值，黑色或完全黑色，以避免枯燥的表面，并保持清晰的透明度。</p>
+</div>
+</div>
+</div>
+<div class="section" id="texture-properties">
+<h3>纹理属性<a class="headerlink" href="#texture-properties" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="uv-coordinates">
+<h4>UV 坐标<a class="headerlink" href="#uv-coordinates" title="Permalink to this headline">¶</a></h4>
+<p>目前最适合平面投影。（Silvio Falcinelli）</p>
+</div>
+<div class="section" id="texture-channels">
+<h4>当使用材质节点定义材质时，可以使用这些命名输出。在这个例子中，可能不会使用纹理通道。而是使用 <span class="menuselection">添加 ‣ 输入 ‣ 纹理</span> ，将纹理节点插入材质节点树中。在刚添加的纹理节点内，可以选择要使用的输出（如，漫反射或法向）。<a class="headerlink" href="#texture-channels" title="Permalink to this headline">¶</a></h4>
+<p>当前导出的纹理影响包括： Alpha、Diffuse、Bump、Specular、Mirror （使用与Specular相同的渠道）。（由于他们的POV-Ray不统一语法，没有其他通道。）</p>
+</div>
+<div class="section" id="custom-gamma">
+<h4>Gamma<a class="headerlink" href="#custom-gamma" title="Permalink to this headline">¶</a></h4>
+<p>对于图像纹理（使用前请阅读POV-Ray 3.7文档，因为通常不需要使用）。</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>More details on
+<a class="reference external" href="http://wiki.povray.org/content/Documentation:Tutorial_Section_3.3#Gamma_Handling">POV-Ray Wiki</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="custom-pov-code">
+<h2>自定义代码POV<a class="headerlink" href="#custom-pov-code" title="Permalink to this headline">¶</a></h2>
+<p>POV-Ray文件不仅仅是纯数据文件（与大多数其他渲染器不同）。它们是具有循环、功能等的程序。这意味着，无论该出口商可以支持多少功能， POV-Ray在引擎盖下总是有更多的功能。</p>
+<div class="section" id="video-tutorial">
+<h3>Video Tutorial<a class="headerlink" href="#video-tutorial" title="Permalink to this headline">¶</a></h3>
+<p>Here is a demonstration of the exporter by SMcA.
+This video is currently being worked on and may get replaced in the future.</p>
+<div class="youtube_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/PD4PmGLMyys" style="border: 0; height: 345px; width: 560px">
+</iframe></div></div>
+<div class="section" id="step-by-step">
+<h3><a class="reference external" href="https://www.miikahweb.com/en/articles/blender-dynamicpaint-basics">一步一步的介绍</a>。<a class="headerlink" href="#step-by-step" title="Permalink to this headline">¶</a></h3>
+<p>您可以直接在Blender的文本编辑器中添加自定义POV代码，您只需确保此POV代码直接或间接具有 <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">declare</span></code> 关键字，然后是您选择的名称和您要使用的POV项目。（当前的POV语法比Python更接近C ，因此任何跟随两个斜杠字符（ <code class="docutils literal notranslate"><span class="pre">//</span></code> ）的字符都是注释。）</p>
+<div class="section" id="adding-pov-code-directly">
+<h4>从包含文件中添加POV代码<a class="headerlink" href="#adding-pov-code-directly" title="Permalink to this headline">¶</a></h4>
+<p>POV项目可以是任何东西，但目前只能使用此方法替换等效的Blender材质。在POV-Ray中，它被称为 &quot;纹理&quot; ，不要混淆，它包含所有材料属性。</p>
+<p>虽然您可以在POV-Ray文件中直接指定 &quot;纹理{}&quot;块，但 <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">declare</span></code> 指令允许将其分配给变量并更容易地重复使用。导出器默认使用此功能，因此除非您声明，否则您将无法使用自定义纹理。下面是一个例子：</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="cp">#declare MyTexture =</span>
+<span class="n">texture</span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">pigment</span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">brick</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="n">rgb</span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0.99</span><span class="p">,</span><span class="w"> </span><span class="mf">0.99</span><span class="p">,</span><span class="w"> </span><span class="mf">0.99</span><span class="o">&gt;</span><span class="w">  </span><span class="c1">// color mortar</span>
+<span class="w">        </span><span class="n">color</span><span class="w"> </span><span class="n">rgb</span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0.75</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.30</span><span class="o">&gt;*</span><span class="mf">0.75</span><span class="w">  </span><span class="c1">// color brick</span>
+<span class="w">        </span><span class="n">brick_size</span><span class="w"> </span><span class="o">&lt;</span><span class="mf">0.25</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0525</span><span class="p">,</span><span class="w"> </span><span class="mf">0.125</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">// format in X, Y and Z-direction</span>
+<span class="w">        </span><span class="n">mortar</span><span class="w"> </span><span class="mf">0.01</span><span class="w">                      </span><span class="c1">// size of the mortar</span>
+<span class="w">        </span><span class="n">scale</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="c1">// end of pigment</span>
+<span class="w">    </span><span class="n">normal</span><span class="w"> </span><span class="p">{</span><span class="n">wrinkles</span><span class="w"> </span><span class="mf">0.75</span><span class="w"> </span><span class="n">scale</span><span class="w"> </span><span class="mf">0.01</span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">finish</span><span class="w"> </span><span class="p">{</span><span class="n">ambient</span><span class="w"> </span><span class="mf">0.15</span><span class="w"> </span><span class="n">diffuse</span><span class="w"> </span><span class="mf">0.95</span><span class="w"> </span><span class="n">phong</span><span class="w"> </span><span class="mf">0.2</span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">rotate</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="o">&gt;</span><span class="w">  </span><span class="n">translate</span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0.01</span><span class="p">,</span><span class="w"> </span><span class="mf">0.00</span><span class="p">,</span><span class="w"> </span><span class="mf">0.00</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">}</span><span class="w"> </span><span class="c1">// end of texture</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p><span class="menuselection">文本编辑器 ‣ 侧边栏 ‣ 开发</span> 标签</p></li>
+<li><p>在文本视图属性选项中，您可以选择渲染3D视图和/或文本。启用 <em>两者</em> 。</p></li>
+<li><p>语法高亮检测 <code class="docutils literal notranslate"><span class="pre">pov/inc/mcr/ini</span></code> 扩展。</p></li>
+<li><p>一些完整的POV-Ray场景可用于模板标题菜单。</p></li>
+<li><p>以及插入菜单，只需在光标的位置添加一些POV代码段。</p></li>
+<li><p>然后，您需要进入 <em>自定义POV代码</em> 字段的材质属性，只需键入要使用的声明项目的名称：给出的示例中的 &quot;MyTexture&quot;。然后，您可以正常渲染图像，并将替换材质。</p></li>
+</ol>
+<p>Blender和POV-Ray不具有相同的坐标系统： POV是Y ，而Blender是Z ，因此预期文本生成的内容不会与导出的UI项目相同，因为导出器向所有导出的实体添加变换矩阵。因此，如果您希望通过查看界面更直观地指定方向，则必须在自定义块的末尾指定一些变换，例如：</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="n">scale</span><span class="w"> </span><span class="o">&lt;</span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span><span class="w"></span>
+<span class="n">rotate</span><span class="w"> </span><span class="o">&lt;</span><span class="mi">90</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">-90</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="adding-pov-code-from-include-files">
+<h4>从包含文件中添加POV代码<a class="headerlink" href="#adding-pov-code-from-include-files" title="Permalink to this headline">¶</a></h4>
+<p>在任何POV-Ray场景中，您可以使用`#include`指令来添加来自外部POV-Ray文件的项目。这就像Python中的import函数。要包含的文件以 <code class="docutils literal notranslate"><span class="pre">.inc</span></code> 作为其名字的扩展名。然后在替换字段中，您可以键入包含文件中可用的任何声明名称。&quot;Out of the box&quot;，POV-Ray提供了大量的include文件。因此您可以将它们用于您的纹理，但您也可以将它们用于某些元素。例如，一个非常常用的包含文件是允许用它们的名字而不是数字来调用颜色的，叫做 <code class="docutils literal notranslate"><span class="pre">colors.inc</span></code> ，所以前面的例子也可以写成。</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;colors.inc&quot;</span><span class="cp"></span>
+<span class="cp">#declare MyTexture =</span>
+<span class="n">texture</span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">pigment</span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">brick</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="n">White</span><span class="o">*</span><span class="mf">0.99</span><span class="w">  </span><span class="c1">// color mortar</span>
+<span class="w">        </span><span class="n">color</span><span class="w"> </span><span class="n">rgb</span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0.75</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.30</span><span class="o">&gt;*</span><span class="mf">0.75</span><span class="w">  </span><span class="c1">// color brick</span>
+<span class="w">        </span><span class="n">brick_size</span><span class="w"> </span><span class="o">&lt;</span><span class="mf">0.25</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0525</span><span class="p">,</span><span class="w"> </span><span class="mf">0.125</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">// format in x, y and z- direction</span>
+<span class="w">        </span><span class="n">mortar</span><span class="w"> </span><span class="mf">0.01</span><span class="w">                      </span><span class="c1">// size of the mortar</span>
+<span class="w">        </span><span class="n">scale</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="c1">// end of pigment</span>
+<span class="w">    </span><span class="n">normal</span><span class="w"> </span><span class="p">{</span><span class="n">wrinkles</span><span class="w"> </span><span class="mf">0.75</span><span class="w"> </span><span class="n">scale</span><span class="w"> </span><span class="mf">0.01</span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">finish</span><span class="w"> </span><span class="p">{</span><span class="n">ambient</span><span class="w"> </span><span class="mf">0.15</span><span class="w"> </span><span class="n">diffuse</span><span class="w"> </span><span class="mf">0.95</span><span class="w"> </span><span class="n">phong</span><span class="w"> </span><span class="mf">0.2</span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">rotate</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="o">&gt;</span><span class="w">  </span><span class="n">translate</span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0.01</span><span class="p">,</span><span class="w"> </span><span class="mf">0.00</span><span class="p">,</span><span class="w"> </span><span class="mf">0.00</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">}</span><span class="w"> </span><span class="c1">// end of texture</span>
+</pre></div>
+</div>
+<p>其他一些POV-Ray特定对象也可用：在POV-Ray中，三角形网格只是许多原始对象中的一个。您可以通过修改输出文件来探索POV-Ray语言，使用相同的方法，手动添加这些基元，也可以从 <em>添加</em> 菜单中选择一些。</p>
+</div>
+</div>
+<div class="section" id="pov-ray-primitives">
+<h3>POV-Ray<a class="headerlink" href="#pov-ray-primitives" title="Permalink to this headline">¶</a></h3>
+<p>3D视口中的 &quot;添加&quot; 菜单允许您添加POV-Ray特定对象以及本机Blender对象。</p>
+<p>它们是数学上定义的形状，而不是网格。球体、环形、圆柱体或圆锥体侧面在渲染时始终是圆形光滑的，无论您离它们有多近，也不管它们在3D视口中的外观，这只是代理。</p>
+<p>这些对象是导入POV-Ray文件时创建的对象类型，因此理想情况下，您可以在POV-Ray和Blender之间来回 &quot;交换&quot; 数据。</p>
+<div class="section" id="infinite-plane">
+<h4>无限平面<a class="headerlink" href="#infinite-plane" title="Permalink to this headline">¶</a></h4>
+<p>渲染的平面实际上是无限的，但在3D视口中由代理表示，它只是非常大，但仍然是有限的。如果您希望使用不同的默认量表，请报告。</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>More details on <a class="reference external" href="http://wiki.povray.org/content/Reference:Plane">POV-Ray Wiki</a>.</p>
+</div>
+</div>
+<div class="section" id="box">
+<h4>方框<a class="headerlink" href="#box" title="Permalink to this headline">¶</a></h4>
+<p>基于网格立方体，可以使用移动/旋转/缩放转换对象</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>More details on <a class="reference external" href="http://wiki.povray.org/content/Reference:Box">POV-Ray Wiki</a>.</p>
+</div>
+</div>
+<div class="section" id="sphere">
+<h4>球形<a class="headerlink" href="#sphere" title="Permalink to this headline">¶</a></h4>
+<p>球体具有半径参数、位置和刻度。</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>More details on <a class="reference external" href="http://wiki.povray.org/content/Reference:Sphere">POV-Ray Wiki</a>.</p>
+</div>
+</div>
+<div class="section" id="cylinder">
+<h4>柱体<a class="headerlink" href="#cylinder" title="Permalink to this headline">¶</a></h4>
+<p>在POV-Ray中，圆柱体由半径、基点和终点定义。为方便起见，移动/旋转/缩放也可用于相同的效果。</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>More details on <a class="reference external" href="http://wiki.povray.org/content/Reference:Cylinder">POV-Ray Wiki</a>.</p>
+</div>
+</div>
+<div class="section" id="cone">
+<h4>锥形<a class="headerlink" href="#cone" title="Permalink to this headline">¶</a></h4>
+<p>锥体具有基准半径和末端半径。</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>More details on <a class="reference external" href="http://wiki.povray.org/content/Reference:Cone">POV-Ray Wiki</a>.</p>
+</div>
+</div>
+<div class="section" id="torus">
+<h4>环体<a class="headerlink" href="#torus" title="Permalink to this headline">¶</a></h4>
+<p>环体的横截面半径。</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>More details on <a class="reference external" href="http://wiki.povray.org/content/Reference:Torus">POV-Ray Wiki</a>.</p>
+</div>
+</div>
+<div class="section" id="parametric">
+<h4>参数<a class="headerlink" href="#parametric" title="Permalink to this headline">¶</a></h4>
+<p>这是一个由三个数学方程组合产生的表面。</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>More details on <a class="reference external" href="http://wiki.povray.org/content/Reference:Parametric">POV-Ray Wiki</a>.</p>
+</div>
+</div>
+<div class="section" id="rainbow">
+<h4>彩虹<a class="headerlink" href="#rainbow" title="Permalink to this headline">¶</a></h4>
+<p>彩虹是一种视图相关效果。</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>More details on <a class="reference external" href="http://wiki.povray.org/content/Reference:Rainbow">POV-Ray Wiki</a>.</p>
+</div>
+</div>
+<div class="section" id="lathe">
+<h4>车床（Lathe）<a class="headerlink" href="#lathe" title="Permalink to this headline">¶</a></h4>
+<p>此对象的行为类似于Blender Screw修改器，可通过旋转样条来创建表面，除非它遵循样条的数学曲线，因此无论缩放多近，您都不会看到任何多边形。</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>More details on <a class="reference external" href="http://wiki.povray.org/content/Reference:Lathe">POV-Ray Wiki</a>.</p>
+</div>
+</div>
+<div class="section" id="prism">
+<h4>棱镜<a class="headerlink" href="#prism" title="Permalink to this headline">¶</a></h4>
+<p>这是一款POV光线原始设备，只需挤出形状即可。</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>More details on <a class="reference external" href="http://wiki.povray.org/content/Reference:Prism">POV-Ray Wiki</a>.</p>
+</div>
+</div>
+<div class="section" id="superquadric-ellipsoid">
+<h4>超二次椭球<a class="headerlink" href="#superquadric-ellipsoid" title="Permalink to this headline">¶</a></h4>
+<p>A quite versatile tool that can provide quick models for cushion or star shaped objects.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>More details on <a class="reference external" href="http://wiki.povray.org/content/Reference:Superquadric_Ellipsoid">POV-Ray Wiki</a>.</p>
+</div>
+</div>
+<div class="section" id="height-field">
+<h4>高度场地（Height Field）<a class="headerlink" href="#height-field" title="Permalink to this headline">¶</a></h4>
+<p>这是表面在纹理之后的位移。Tessellation也发生在渲染时间，因此您以前不需要细分任何内容。</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>More details on <a class="reference external" href="http://wiki.povray.org/content/Reference:Height_Field">POV-Ray Wiki</a>.</p>
+</div>
+</div>
+<div class="section" id="sphere-sweep">
+<h4>球面扫描<a class="headerlink" href="#sphere-sweep" title="Permalink to this headline">¶</a></h4>
+<p>这款POV-Ray原始光线扫描球体，其长度与样条一样长，以创建可沿样条具有半径变化的插值形式。它也用于输出发绳。</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>More details on <a class="reference external" href="http://wiki.povray.org/content/Reference:Sphere_Sweep">POV-Ray Wiki</a>.</p>
+</div>
+</div>
+<div class="section" id="blob-sphere">
+<h4>球团<a class="headerlink" href="#blob-sphere" title="Permalink to this headline">¶</a></h4>
+<p>融球</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>More details on <a class="reference external" href="http://wiki.povray.org/content/Reference:Blob">POV-Ray Wiki</a>.</p>
+</div>
+</div>
+<div class="section" id="isosurfaces">
+<h4>等值面<a class="headerlink" href="#isosurfaces" title="Permalink to this headline">¶</a></h4>
+<p>在POV-Ray中，等表面是可以使用颜料或方程组合和变形的对象。</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>More details on <a class="reference external" href="http://wiki.povray.org/content/Reference:Isosurface">POV-Ray Wiki</a>.</p>
+</div>
+<dl class="simple">
+<dt>等值面盒</dt><dd><p>等值面盒</p>
+</dd>
+<dt>等值面球</dt><dd><p>等值面球</p>
+</dd>
+<dt>超环面 Supertorus</dt><dd><p>形状为环形的等表面，其变形参数等同于超椭圆体的参数。</p>
+</dd>
+</dl>
+<p>POV-Ray 3.7</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">MajorRadius</span></code>, <code class="docutils literal notranslate"><span class="pre">MinorRadius</span></code></dt><dd><p>均化半径</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">MajorControl</span></code> ， <code class="docutils literal notranslate"><span class="pre">MinorControl</span></code></dt><dd><p>控制超级托盘的圆度。使用[0, 1]范围内的数字。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">精度</span></code></dt><dd><p><code class="docutils literal notranslate"><span class="pre">精度</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">MaxGradient</span></code></dt><dd><p>最大梯度参数</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="macro-based-primitives">
+<h4>基本体<a class="headerlink" href="#macro-based-primitives" title="Permalink to this headline">¶</a></h4>
+<p>两个基元实际上是宏，在渲染时间之前从曲线生成网格：</p>
+<ul class="simple">
+<li><p>定义圆或多边形的顶点数。</p></li>
+<li><p>放样（Loft）</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="importing-pov-ray-files">
+<h2>导入 &amp; 导出文件<a class="headerlink" href="#importing-pov-ray-files" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>在同一 &quot;添加&quot; 菜单中，您还可以导入POV-Ray文件。</p></li>
+<li><p>或者，从顶栏菜单中单击 <span class="menuselection">文件‣导入</span> 。</p></li>
+<li><p>然后，您可以选择一个或多个文件。</p></li>
+</ol>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">类别</dt>
+<dd class="field-odd"><p>渲染</p>
+</dd>
+<dt class="field-even">描述:</dt>
+<dd class="field-even"><p>POV-Ray 3.7</p>
+</dd>
+<dt class="field-odd">位置</dt>
+<dd class="field-odd"><p><span class="menuselection">渲染 ‣引擎 ‣ POV-射线 3.7</span></p>
+</dd>
+<dt class="field-even">文档</dt>
+<dd class="field-even"><p>&quot;测量工具&quot; 文件夹</p>
+</dd>
+<dt class="field-odd">作者</dt>
+<dd class="field-odd"><p>Campbell Barton, Maurice Raybaud, Leonid Desyatkov, Bastien Montagne, Constantin Rahn, Silvio Falcinelli</p>
+</dd>
+<dt class="field-even">许可证</dt>
+<dd class="field-even"><p>通用公共图书馆</p>
+</dd>
+<dt class="field-odd">注意</dt>
+<dd class="field-odd"><p>此附加组件与Blender捆绑在一起。</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="render_freestyle_svg.html" class="btn btn-neutral float-right" title="Freestyle SVG导出器" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="copy_settings.html" class="btn btn-neutral float-left" title="复制渲染设置" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; <a href="../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">
+        Last updated on 06/19/2023.
+      </span>
+
+    </p>
+  </div>
+      <div class="footer-contribute">
+         <ul>
+            <li>
+               <a href="https://developer.blender.org/diffusion/BM/browse/trunk/blender_docs/manual/addons/render/povray.rst" class="fa fa-edit"> Edit Page</a>
+            </li>
+            <li>
+               <a href="https://developer.blender.org/maniphest/task/edit/form/default/?description=Pagename%3A%20%60addons/render/povray%60%0ABlender%20Version%3A%20%602.93%60%0ADocumentation%20Language%3A%20%60zh-hans%60%0A%5B%5B%20https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F2.93%2Faddons/render/povray.html%20%7C%20Permanent%20link%20%5D%5D%0A%0A%2A%2AShort%20description%20of%20error%2A%2A%0A%5BPlease%20fill%20out%20a%20short%20description%20of%20the%20error%20here%5D&project=PHID-PROJ-c4nvvrxuczix2326vlti" class="fa fa-bug"> Report Bug</a>
+            </li>
+         <ul>
+      </div>
+
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.93 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async='async' src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

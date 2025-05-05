@@ -1,0 +1,875 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>glTF 2.0 &mdash; Blender Manual</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/version_switch.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/addons/import_export/scene_gltf2.html" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/js/version_switch.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+    <link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+    <link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+    <link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="next" title="界面" href="../interface/index.html" />
+    <link rel="prev" title="Web3D X3D/VRML2" href="scene_x3d.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blender 2.93 Manual
+          
+
+          
+            
+            <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景&amp;物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻&amp;绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">运动跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">Files &amp; Data System</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">插件</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#add-ons-category-listings">插件类别列表</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../3d_view/index.html">3D 视图</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../add_curve/index.html">添加曲线</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../add_mesh/index.html">添加网格</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../camera/index.html">相机</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../development/index.html">开发</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">导入 - 导出</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="node_shaders_info.html">节点着色器的导入与导出</a></li>
+<li class="toctree-l4"><a class="reference internal" href="coat3D.html">3D-Coat 应用链接</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mesh_atomic.html">Atomic Blender (PDB/XYZ)插件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="anim_bvh.html">BioVision Motion Capture (BVH)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="scene_dxf.html">AutoCAD DXF</a></li>
+<li class="toctree-l4"><a class="reference internal" href="anim_camera.html">摄像机动画</a></li>
+<li class="toctree-l4"><a class="reference internal" href="paper_model.html">图纸模型</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pc2.html">点缓存（Pointcache（pc2））</a></li>
+<li class="toctree-l4"><a class="reference internal" href="scene_fbx.html">FBX</a></li>
+<li class="toctree-l4"><a class="reference internal" href="images_as_planes.html">图像为平面</a></li>
+<li class="toctree-l4"><a class="reference internal" href="palettes.html">导入调色板</a></li>
+<li class="toctree-l4"><a class="reference internal" href="shape_mdd.html">NewTek MDD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="anim_nuke_chan.html">纽克动画 (chan)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mesh_stl.html">STL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="curve_svg.html">可缩放矢量图形 (SVG)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mesh_ply.html">Stanford PLY</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mesh_uv_layout.html">UV布局</a></li>
+<li class="toctree-l4"><a class="reference internal" href="scene_obj.html">波峰 物体</a></li>
+<li class="toctree-l4"><a class="reference internal" href="scene_x3d.html">Web3D X3D/VRML2</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">glTF 2.0</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#usage">用法</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#meshes">网格</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#materials">材质</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#imported-materials">导入的材质</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#exported-materials">导出的材质</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#base-color">基础色</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#metallic-and-roughness">金属度与粗糙度</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#baked-ambient-occlusion">烘焙的环境光遮蔽</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#normal-map">法线贴图</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#emissive">发射</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#clearcoat">清漆</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#transmission">传递采样</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#double-sided-backface-culling">双面/背面剔除</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#blend-modes">混合模式</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#uv-mapping">UV 映射</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#factors">因子</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#example">例子</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="#exporting-a-shadeless-unlit-material">导出无阴影（不发光）材质</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#extensions">扩展（名）</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#third-party-gltf-extensions">第三方glTF扩展</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#custom-properties">自定义属性</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#animation">动画</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#file-format-variations">文件格式变体</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#gltf-binary-glb">glTF二进制（<code class="docutils literal notranslate"><span class="pre">.glb</span></code>）</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#gltf-separate-gltf-bin-textures">glTF分离式（<code class="docutils literal notranslate"><span class="pre">.gltf</span></code> + <code class="docutils literal notranslate"><span class="pre">.bin</span></code> + textures）</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#gltf-embedded-gltf">glTF嵌入式 (<code class="docutils literal notranslate"><span class="pre">.gltf</span></code>)</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#properties">属性</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#import">导入</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#export">导出</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#include">包括</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#transform">变换</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#geometry">几何数据（Geometry）</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="#compression">压缩</a></li>
+</ul>
+</li>
+<li class="toctree-l7"><a class="reference internal" href="#id1">动画</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="#id2">动画</a></li>
+<li class="toctree-l8"><a class="reference internal" href="#shape-keys">形态键</a></li>
+<li class="toctree-l8"><a class="reference internal" href="#skinning">蒙皮</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#contributing">贡献</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../interface/index.html">界面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lighting/index.html">光照</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../materials/index.html">材质</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/index.html">网格</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../node/index.html">节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../object/index.html">物体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../paint/index.html">绘制</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rigging/index.html">绑定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sequencer/index.html">序列容器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../system/index.html">系统</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../uv/index.html">UV</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../video_tools/index.html">视频工具</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">贡献文档</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 2.93 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">插件</a> &raquo;</li>
+        
+          <li><a href="index.html">导入 - 导出</a> &raquo;</li>
+        
+      <li>glTF 2.0</li>
+    
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="gltf-2-0">
+<h1>glTF 2.0<a class="headerlink" href="#gltf-2-0" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">类别</dt>
+<dd class="field-odd"><p>导入 - 导出</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">File ‣ 导入/导出 ‣ glTF 2.0 (.glb, .gltf)</span></p>
+</dd>
+</dl>
+</div>
+<div class="section" id="usage">
+<h2>用法<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>glTF™（GL传输格式）用于在 Web 和本机应用程序中传输和加载 3D 模型。glTF 减小了 3D 模型的大小以及解压缩和渲染这些模型所需的运行时处理。此格式通常用于网页上,并支持各种 3D 引擎,如 Unity3D、虚幻引擎 4 和Godot。</p>
+<p>此导入器/导出器支持以下glTF2.0功能：</p>
+<ul class="simple">
+<li><p>网格</p></li>
+<li><p>材质（Principled BSDF）和无阴影（无光照）</p></li>
+<li><p>纹理</p></li>
+<li><p>相机</p></li>
+<li><p>精确光源（点光，聚光和定向光源）</p></li>
+<li><p>延伸部分（列在下面）</p></li>
+<li><p>附加的 (定制属性)</p></li>
+<li><p>动画（关键帧，形态键及蒙皮）</p></li>
+</ul>
+</div>
+<div class="section" id="meshes">
+<h2>网格<a class="headerlink" href="#meshes" title="Permalink to this headline">¶</a></h2>
+<p>glTF的内部结构模拟了图形芯片在实时渲染时常用的内存缓冲区，这样资产可以交付到桌面、网页或移动终端，并以最少的处理进行迅速显示。 因此，当导出为glTF时，四边形和多边形会自动转换为三角形。 与Blender相比，不连续的UV和平面阴影边缘可能导致glTF中的顶点数适度增多，因为这样的顶点会被分开以导出。 同样，曲线和其他非网格数据不会保留，必须在导出之前转换为网格。</p>
+</div>
+<div class="section" id="materials">
+<h2>材质<a class="headerlink" href="#materials" title="Permalink to this headline">¶</a></h2>
+<p>glTF中的核心材质系统通过一下信息通道支持金属/粗糙 <abbr title="Physically Based Rendering">PBR</abbr> 工作流：</p>
+<ul class="simple">
+<li><p>基础色</p></li>
+<li><p>金属度</p></li>
+<li><p>粗糙度</p></li>
+<li><p>烘焙的环境光遮蔽</p></li>
+<li><p>法线图（切线空间，+Y向上）。</p></li>
+<li><p>发射</p></li>
+</ul>
+<p>Some additional material properties or types of materials can be expressed using glTF extensions:</p>
+<ul class="simple">
+<li><p>Clearcoat, Clearcoat Roughness, Clearcoat Normal (uses <code class="docutils literal notranslate"><span class="pre">KHR_materials_clearcoat</span></code>)</p></li>
+<li><p>Transmission (uses <code class="docutils literal notranslate"><span class="pre">KHR_materials_transmission</span></code>)</p></li>
+<li><p>&quot;Shadeless&quot; materials (uses <code class="docutils literal notranslate"><span class="pre">KHR_materials_unlit</span></code>)</p></li>
+</ul>
+<div class="figure align-default" id="id3">
+<img alt="../../_images/addons_import-export_scene-gltf2_material-channels.jpg" src="../../_images/addons_import-export_scene-gltf2_material-channels.jpg" />
+<p class="caption"><span class="caption-text">glTF 2.0核心格式中可用的各种图像贴图的示例。这个 <a class="reference external" href="https://github.com/KhronosGroup/glTF-Sample-Models/tree/master/2.0/WaterBottle">水瓶示例模型</a> 一起显示了各种贴图切片样本。</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="imported-materials">
+<h3>导入的材质<a class="headerlink" href="#imported-materials" title="Permalink to this headline">¶</a></h3>
+<p>glTF材质系统与Blender自己的材质不同。 导入glTF文件时，此插件将构造一组Blender节点，以尽可能接近地复制每个glTF材质。</p>
+<p>The importer supports Metal/Rough PBR (core glTF), Spec/Gloss PBR (<code class="docutils literal notranslate"><span class="pre">KHR_materials_pbrSpecularGlossiness</span></code>)
+and Shadeless (<code class="docutils literal notranslate"><span class="pre">KHR_materials_unlit</span></code>) materials.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>检查材质导入过程的结果，是查看可以导出到glTF的材质节点和设置类型的示例的好方法。</p>
+</div>
+</div>
+<div class="section" id="exported-materials">
+<h3>导出的材质<a class="headerlink" href="#exported-materials" title="Permalink to this headline">¶</a></h3>
+<p>这个导出器支持金属/粗糙PBR（核心glTF）和无阴影 (<code class="docutils literal notranslate"><span class="pre">KHR_materials_unlit</span></code>) 材质。它将基于它在Blender材质中识别的节点构建glTF材质。 材质导出过程处理如下描述的设置。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>当材质中使用图像纹理时，glTF要求格式图像为PNG或JPEG。 此插件将自动转换其他格式的图像，从而增加导出时间。</p>
+</div>
+<div class="section" id="base-color">
+<h4>基础色<a class="headerlink" href="#base-color" title="Permalink to this headline">¶</a></h4>
+<p>通过在Principled BSDF节点上查找基础色输入来确定glTF基色。 如果输入未连接，则输入的默认颜色（未连接插口旁边的颜色字段）将用作glTF材质的基色。</p>
+<div class="figure align-default" id="id4">
+<img alt="../../_images/addons_import-export_scene-gltf2_material-base-color-solid-green.png" src="../../_images/addons_import-export_scene-gltf2_material-base-color-solid-green.png" />
+<p class="caption"><span class="caption-text">可以在节点上直接指定纯色基础色。</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>如果发现图像纹理节点连接到基色输入，则该图像将用作glTF基础色。</p>
+<div class="figure align-default" id="id5">
+<img alt="../../_images/addons_import-export_scene-gltf2_material-base-color-image-hookup.png" src="../../_images/addons_import-export_scene-gltf2_material-base-color-image-hookup.png" />
+<p class="caption"><span class="caption-text">图像用作glTF基础色。</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="metallic-and-roughness">
+<h4>金属度与粗糙度<a class="headerlink" href="#metallic-and-roughness" title="Permalink to this headline">¶</a></h4>
+<p>这些值从Principled BSDF节点读取。 如果这两个输入都未连接，节点将显示滑块以控制它们各自的值在0.0和1.0之间，并且这些值将被复制到glTF中。</p>
+<p>当使用图像时，glTF期望金属度的值在蓝色 (<code class="docutils literal notranslate"><span class="pre">B</span></code>) 通道中编码，粗糙度在同一图像的绿色 (<code class="docutils literal notranslate"><span class="pre">G</span></code>) 通道中编码。 如果图像以不遵循此约定的方式连接到Blender节点，则插件可能会尝试在导出期间使图像适应正确的形式（导出时间增加）。</p>
+<p>在Blender节点树中，建议使用单独的RGB节点将通道与图像纹理节点分开，并将绿色 (<code class="docutils literal notranslate"><span class="pre">G</span></code>) 通道连接到粗糙度，将蓝色 (<code class="docutils literal notranslate"><span class="pre">B</span></code>) 通道连接到金属度。 glTF导出器会将此排列识别为与glTF标准匹配，这将允许它在导出期间把图像纹理简单地复制到glTF文件中。</p>
+<p>此图像纹理节点应将其 <em>颜色空间</em> 设置为非颜色。</p>
+<div class="figure align-default" id="id6">
+<img alt="../../_images/addons_import-export_scene-gltf2_material-metal-rough.png" src="../../_images/addons_import-export_scene-gltf2_material-metal-rough.png" />
+<p class="caption"><span class="caption-text">金属度/粗糙度图像以与glTF标准一致的方式连接，允许在导出的glTF文件中逐字使用。</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="baked-ambient-occlusion">
+<h4>烘焙的环境光遮蔽<a class="headerlink" href="#baked-ambient-occlusion" title="Permalink to this headline">¶</a></h4>
+<p>glTF is capable of storing a baked ambient occlusion map.
+Currently there is no arrangement of nodes that causes Blender
+to use such a map in exactly the same way as intended in glTF.
+However, if the exporter finds a custom node group by the name of <code class="docutils literal notranslate"><span class="pre">glTF</span> <span class="pre">Settings</span></code>, and
+finds an input named <code class="docutils literal notranslate"><span class="pre">Occlusion</span></code> on that node group,
+it will look for an Image Texture attached there to use as the occlusion map in glTF.
+The effect need not be shown in Blender, as Blender has other ways of showing ambient occlusion,
+but this method will allow the exporter to write an occlusion image to the glTF.
+This can be useful to real-time glTF viewers, particularly on platforms where there
+may not be spare power for computing such things at render time.</p>
+<div class="figure align-default" id="id7">
+<img alt="../../_images/addons_import-export_scene-gltf2_material-occlusion-only.png" src="../../_images/addons_import-export_scene-gltf2_material-occlusion-only.png" />
+<p class="caption"><span class="caption-text">预先烘焙的环境光遮蔽贴图，连接到一个不渲染但将导出到glTF的节点。</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>创建自定义节点组的最简单方法是导入包含遮挡贴图的现有glTF模型，例如 <a class="reference external" href="https://github.com/KhronosGroup/glTF-Sample-Models/tree/master/2.0/WaterBottle">水瓶</a> 或其他现有的模型。也可以使用手动创建的自定义节点组。</p>
+</div>
+<p>glTF将遮蔽存储在红色 (<code class="docutils literal notranslate"><span class="pre">R</span></code>) 通道中，允许它选择与粗糙度和金属度通道共享相同的图像。</p>
+<div class="figure align-default" id="id8">
+<img alt="../../_images/addons_import-export_scene-gltf2_material-orm-hookup.png" src="../../_images/addons_import-export_scene-gltf2_material-orm-hookup.png" />
+<p class="caption"><span class="caption-text">这种节点组合模仿了glTF将遮蔽，粗糙度和金属值打包成单个图像的方式。</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The Cycles render engine has a Bake panel that can be used to bake
+ambient occlusion maps. The resulting image can be saved and connected
+directly to the <code class="docutils literal notranslate"><span class="pre">glTF</span> <span class="pre">Settings</span></code> node.</p>
+</div>
+</div>
+<div class="section" id="normal-map">
+<h4>法线贴图<a class="headerlink" href="#normal-map" title="Permalink to this headline">¶</a></h4>
+<p>要在glTF中使用法线贴图，请将图像纹理节点的颜色输出连接到法线贴图节点的颜色输入，然后将法线贴图法线输出连接到Principled BSDF节点的法向输入。 此图像纹理节点应将其 <em>色彩空间</em> 属性设置为Non-Color。</p>
+<p>法线贴图节点必须保留其切线空间的默认属性，因为这是glTF当前支持的唯一类型的法线贴图。 可以在此节点上调整法线贴图的强度。 导出器不直接导出这些节点，但会使用它们来定位正确的图像，并将强度设置复制到glTF中。</p>
+<div class="figure align-default" id="id9">
+<img alt="../../_images/addons_import-export_scene-gltf2_material-normal.png" src="../../_images/addons_import-export_scene-gltf2_material-normal.png" />
+<p class="caption"><span class="caption-text">导出器会找到连接的法线贴图并将其复制到glTF文件。</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Cycles渲染引擎有一个烘焙面板，可用于从几乎任何其他法向量节点排列中烘焙切线空间法线贴图。 将Bake类型切换为Normal。 将此烘焙面板用于glTF时，请保留默认空间设置（空间：切向，R: +X, G: +Y, B: +Z）。 如上所述，可以保存生成的烘焙图像，并将其用于使用上述法线贴图节点的新材质，从而使其可以正确导出。</p>
+<p>参见： <a class="reference internal" href="../../render/cycles/baking.html"><span class="doc">Cycles渲染烘焙</span></a></p>
+</div>
+</div>
+<div class="section" id="emissive">
+<h4>发射<a class="headerlink" href="#emissive" title="Permalink to this headline">¶</a></h4>
+<p>一个图像纹理节点可以连接到原则性BSDF节点上的发射输入，以包括glTF材质的发射图。或者，图像纹理节点可以连接到一个发射着色器节点，并通过添加着色器节点与原则性BSDF节点的属性相结合。</p>
+<p>如果发光贴图在材料中是单独存在的，最好将基色默认设置为黑色，粗糙度默认设置为1.0。如果不需要其他通道，这样可以将它们的影响降到最低。</p>
+<div class="figure align-default" id="id10">
+<img alt="../../_images/addons_import-export_scene-gltf2_material-emissive.png" src="../../_images/addons_import-export_scene-gltf2_material-emissive.png" />
+<p class="caption"><span class="caption-text">支持这种安排是为了向后兼容。直接使用原则性的BSDF节点是比较简单的。</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="clearcoat">
+<h4>清漆<a class="headerlink" href="#clearcoat" title="Permalink to this headline">¶</a></h4>
+<p>When the <em>Clearcoat</em> input on the Principled BSDF node has a non-zero default value or
+Image Texture node connected, the <code class="docutils literal notranslate"><span class="pre">KHR_materials_clearcoat</span></code> glTF extension will be
+included in the export. This extension will also include a value or Image Texture
+from the <em>Clearcoat Roughness</em> input if available.</p>
+<p>如果使用图像纹理，glTF要求将清漆值写入红色 （<code class="docutils literal notranslate"><span class="pre">R</span></code>） 通道，而 <em>清漆粗糙度</em> 写入绿色 （<code class="docutils literal notranslate"><span class="pre">G</span></code>） 通道。如果连接的是单色图像，导出器会将它们重新映射到这些颜色通道。</p>
+<p><em>清漆法线</em> 输入接受与基础法线输入相同的输入，特别是一个带有+Y向上的切线空间法线贴图，以及一个用户定义的强度。这个输入可以重复使用基础材质正在使用的法线贴图，也可以分配它自己的法线贴图，或者可以不连接以获得光滑的涂层。</p>
+<p>所有用于清漆着色的图像纹理节点都应将其 <em>颜色空间</em> 设置为非彩色。</p>
+<div class="figure align-default" id="id11">
+<img alt="../../_images/addons_import-export_scene-gltf2_material-clearcoat.png" src="../../_images/addons_import-export_scene-gltf2_material-clearcoat.png" />
+<p class="caption"><span class="caption-text">一个复杂的清漆应用的例子，可以正确地输出到glTF。仅仅通过原则性的BSDF节点就可以应用更简单、更平滑的涂层。</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="transmission">
+<h4>传递采样<a class="headerlink" href="#transmission" title="Permalink to this headline">¶</a></h4>
+<p>When the Transmission input on the Principled BSDF node has a non-zero default value or
+Image Texture node connected, the <code class="docutils literal notranslate"><span class="pre">KHR_materials_transmission</span></code> glTF extension will be
+included in the export. When a texture is used, glTF stores the values in the red (<code class="docutils literal notranslate"><span class="pre">R</span></code>) channel.
+The <em>Color Space</em> should be set to Non-Color.</p>
+<p>透射与Alpha混合不同，因为透射允许全强度的镜面反射。在glTF中，alpha混合的目的是表示在指定的几何体中部分缺失的物理材料，比如医用纱布包。透射的目的是代表实体的物理材料，但允许非镜面反射的光线透过材料，比如玻璃。</p>
+<p>glTF不提供单独的 <code class="docutils literal notranslate"><span class="pre">传输粗糙度</span></code> ，但材料的基础粗糙度可以用来模糊传输，就像磨砂玻璃一样。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>通常情况下，透射型材质的alpha混合模式应该保持为 &quot;不透明&quot; ，也就是默认设置，除非该材质只是部分覆盖指定的几何体。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>在支持透射的实时引擎中，引擎中的各种技术限制可能会决定场景的哪些部分可以通过透射表面看到。特别是，透射性材料在其他透射性材料后面可能不可见。这些限制会影响基于物理的透射，但不会影响 α-混合 的非透射材料。</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>对于实时渲染引擎来说，传输的实现很复杂，而且对 <code class="docutils literal notranslate"><span class="pre">KHR_materials_transmission</span></code> glTF扩展的支持还不普遍。</p>
+</div>
+</div>
+<div class="section" id="double-sided-backface-culling">
+<h4>双面/背面剔除<a class="headerlink" href="#double-sided-backface-culling" title="Permalink to this headline">¶</a></h4>
+<p>对于只能看到正面的材质，在Eevee材质的 <em>设置</em> 面板中打开 <em>背面剔除</em> 。 使用其他引擎（Cycles，Workbench）时，您可以暂时切换到Eevee以配置此设置，然后切换回来。</p>
+<p>对于双面材料，请不要勾选此框。</p>
+<div class="figure align-default" id="id12">
+<img alt="../../_images/addons_import-export_scene-gltf2_material-backface-culling.png" src="../../_images/addons_import-export_scene-gltf2_material-backface-culling.png" />
+<p class="caption"><span class="caption-text">此设置反转控制glTF <code class="docutils literal notranslate"><span class="pre">Double</span> <span class="pre">Sided</span></code> 标志。</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="blend-modes">
+<h4>混合模式<a class="headerlink" href="#blend-modes" title="Permalink to this headline">¶</a></h4>
+<p>基础色输入可以选择性地提供alpha值。 glTF如何处理这些值取决于所选的混合模式。</p>
+<p>选择Eevee渲染引擎后，每种材质在材质设置面板上都有混合模式。 使用此设置可定义如何在glTF中处理基础色通道的Alpha值。 glTF支持三种设置：</p>
+<dl class="simple">
+<dt>不透明</dt><dd><p>忽略Alpha值（默认值）。</p>
+</dd>
+<dt>Alpha混合</dt><dd><p>较低的alpha值会导致与背景对象混合。</p>
+</dd>
+<dt>Alpha钳制</dt><dd><p>低于 &quot;剪切阈值&quot; 设置的Alpha值将导致部分材质根本不会被渲染。 其他一切都呈现为不透明。</p>
+</dd>
+</dl>
+<div class="figure align-default" id="id13">
+<img alt="../../_images/addons_import-export_scene-gltf2_material-alpha-blend.png" src="../../_images/addons_import-export_scene-gltf2_material-alpha-blend.png" />
+<p class="caption"><span class="caption-text">选择Eevee引擎后，材质的混合模式可配置。</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>请注意，实时引擎渲染透明度（或 <em>Alpha混合</em> 模式）很复杂，并且在导出后可能会以意想不到的方式运行。 尽量使用 <em>Alpha剪切（Alpha Clip）</em> 模式，或者将 <em>不透明</em> 多边形放在仅有 <em>Alpha混合</em> 多边形的单层后面。</p>
+</div>
+</div>
+<div class="section" id="uv-mapping">
+<h4>UV 映射<a class="headerlink" href="#uv-mapping" title="Permalink to this headline">¶</a></h4>
+<p>通过将UV贴图节点和映射节点连接到任何图像纹理节点，可以控制UV贴图选择和转换。</p>
+<p>映射节点中的设置使用名为 <code class="docutils literal notranslate"><span class="pre">KHR_texture_transform</span></code> 的glTF扩展名导出。 顶部有一个映射类型选择器。推荐使用 <em>点</em> 导出。也支持 <em>纹理</em> 和 <em>矢量</em> 。 支持的偏移量是：</p>
+<ul class="simple">
+<li><p><em>位置</em> - X和Y</p></li>
+<li><p><em>旋转</em>  - 仅限Z</p></li>
+<li><p><em>缩放</em>  -  X和Y</p></li>
+</ul>
+<p>对于 <em>纹理</em> 类型，<em>缩放</em> X和Y必须相等（均匀缩放）。</p>
+<div class="figure align-default" id="id14">
+<img alt="../../_images/addons_import-export_scene-gltf2_material-mapping.png" src="../../_images/addons_import-export_scene-gltf2_material-mapping.png" />
+<p class="caption"><span class="caption-text">刻意选择的UV贴图。</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>这些节点是可选的。 并非所有glTF阅读器都支持多个UV贴图或纹理变换。</p>
+</div>
+</div>
+<div class="section" id="factors">
+<h4>因子<a class="headerlink" href="#factors" title="Permalink to this headline">¶</a></h4>
+<p>任何图像纹理节点可以选择性地乘以恒定颜色或标量。 它们将被写为glTF文件中的因子，这些数字是与指定图像纹理相乘的数字。并不常见。</p>
+</div>
+<div class="section" id="example">
+<h4>例子<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h4>
+<p>如果需要，单一材质可以同时使用所有上述节点。 此图显示了一次性应用上述多个选项时的典型节点结构：</p>
+<div class="figure align-default" id="id15">
+<img alt="../../_images/addons_import-export_scene-gltf2_material-principled.png" src="../../_images/addons_import-export_scene-gltf2_material-principled.png" />
+<p class="caption"><span class="caption-text">具有发光纹理的Principled BSDF材质。</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="exporting-a-shadeless-unlit-material">
+<h3>导出无阴影（不发光）材质<a class="headerlink" href="#exporting-a-shadeless-unlit-material" title="Permalink to this headline">¶</a></h3>
+<p>要导出未亮起的材质，在相机光线中混合，并避免使用原理化BSDF节点。</p>
+<div class="figure align-default" id="id16">
+<img alt="../../_images/addons_import-export_scene-gltf2_material-unlit.png" src="../../_images/addons_import-export_scene-gltf2_material-unlit.png" />
+<p class="caption"><span class="caption-text">导出 <code class="docutils literal notranslate"><span class="pre">KHR_MATERIALS_UNLIT</span></code> 并在Blender中呈现无阴影的几个类似节点布置之一。</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="extensions">
+<h2>扩展（名）<a class="headerlink" href="#extensions" title="Permalink to this headline">¶</a></h2>
+<p>使用glTF扩展可以使用附加信息扩展核心glTF 2.0格式。 这允许文件格式保存在最初发布时非通用的细节。 并非所有的glTF阅读器都支持所有扩展，但有些是相当常见的。</p>
+<p>Certain Blender features can only be exported to glTF via these extensions.
+The following <a class="reference external" href="https://github.com/KhronosGroup/glTF/tree/master/extensions">glTF 2.0 extensions</a>
+are supported directly by this add-on:</p>
+<p class="rubric">导入</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">KHR_materials_pbrSpecularGlossiness</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KHR_lights_punctual</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KHR_materials_unlit</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KHR_texture_transform</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KHR_materials_clearcoat</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KHR_mesh_quantization</span></code></p></li>
+</ul>
+<p class="rubric">导出</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">KHR_draco_mesh_compression</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KHR_lights_punctual</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KHR_materials_clearcoat</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KHR_materials_transmission</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KHR_materials_unlit</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KHR_texture_transform</span></code></p></li>
+</ul>
+<div class="section" id="third-party-gltf-extensions">
+<h3>第三方glTF扩展<a class="headerlink" href="#third-party-gltf-extensions" title="Permalink to this headline">¶</a></h3>
+<p>It is possible for Python developers to add Blender support for additional glTF extensions by writing their
+own third-party add-on, without modifying this glTF add-on. For more information, <a class="reference external" href="https://github.com/KhronosGroup/glTF-Blender-IO/tree/master/example-addons/example_gltf_extension">see the example on GitHub</a> and if needed,
+<a class="reference external" href="https://github.com/KhronosGroup/glTF/blob/master/extensions/Prefixes.md">register an extension prefix</a>.</p>
+</div>
+</div>
+<div class="section" id="custom-properties">
+<h2>自定义属性<a class="headerlink" href="#custom-properties" title="Permalink to this headline">¶</a></h2>
+<p>自定义属性总是被导入的，如果在导出前选择了 <span class="menuselection">包含 ‣ 定制属性</span> 选项，就会从大多数对象中导出。这些属性存储在glTF文件中相应对象的 <code class="docutils literal notranslate"><span class="pre">额外的</span></code> 字段中。</p>
+<p>与glTF扩展不同，自定义属性（额外项）没有定义命名空间，可以用于任何用户特定或应用程序特定的目的。</p>
+</div>
+<div class="section" id="animation">
+<h2>动画<a class="headerlink" href="#animation" title="Permalink to this headline">¶</a></h2>
+<p>glTF allows multiple animations per file, with animations targeted to
+particular objects at time of export. To ensure that an animation is included,
+either (a) make it the active Action on the object, (b) create a single-strip NLA track,
+or (c) stash the action.</p>
+<p class="rubric">Supported</p>
+<p>Only certain types of animation are supported:</p>
+<ul class="simple">
+<li><p>Keyframe (translation, rotation, scale)</p></li>
+<li><p>形态键</p></li>
+<li><p>Armatures / skinning</p></li>
+</ul>
+<p>Animation of other properties, like lights or materials, will be ignored.</p>
+<p>An <em>NLA Strip animation</em> consists of multiple actions on multiple objects that
+should play together. To create an NLA strip animation with the name &quot;My Animation&quot;,
+push the action that should play each object onto an NLA track for
+that object with the name &quot;My Animation&quot;.</p>
+<div class="figure align-default" id="id17">
+<img alt="../../_images/addons_import-export_scene-gltf2_nla-strip-animation-example.png" src="../../_images/addons_import-export_scene-gltf2_nla-strip-animation-example.png" />
+<p class="caption"><span class="caption-text">Will be exported as an animation called &quot;My Animation&quot; with ConeAction
+playing on the Cone and CubeAction playing on the Cube.</span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
+</div>
+<p>NLA Strip animations will be exported if the <span class="menuselection">Animation ‣ Group by NLA Track</span>
+option is selected (on by default). All glTF animations are imported as NLA Strip animations.</p>
+<p>If option is disabled, Blender NLA strip actions will be ignored.
+Only active action of each objects will be taken into account, and merged into a single glTF animation.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>为了采样由驱动程序使用骨骼转换控制的形状关键动画，它们必须位于作为骨骼骨架直接子级的网格对象上。</p>
+</div>
+</div>
+<div class="section" id="file-format-variations">
+<h2>文件格式变体<a class="headerlink" href="#file-format-variations" title="Permalink to this headline">¶</a></h2>
+<p>glTF规范确定了数据存储的不同方式。 导入器可处理所有存储方式。 导出器将要求用户选择以下几种形式之一：</p>
+<div class="section" id="gltf-binary-glb">
+<h3>glTF二进制（<code class="docutils literal notranslate"><span class="pre">.glb</span></code>）<a class="headerlink" href="#gltf-binary-glb" title="Permalink to this headline">¶</a></h3>
+<p>这将生成一个 &quot;.glb&quot;文件，其中所有网格数据，图像纹理和相关信息都打包到一个二进制文件中。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>使用单个文件可以轻松地将模型共享或复制到其他系统和服务。</p>
+</div>
+</div>
+<div class="section" id="gltf-separate-gltf-bin-textures">
+<h3>glTF分离式（<code class="docutils literal notranslate"><span class="pre">.gltf</span></code> + <code class="docutils literal notranslate"><span class="pre">.bin</span></code> + textures）<a class="headerlink" href="#gltf-separate-gltf-bin-textures" title="Permalink to this headline">¶</a></h3>
+<p>这将生成一个基于JSON文本的描述整体结构的 <code class="docutils literal notranslate"><span class="pre">.gltf</span></code> 文件，一个包含网格和矢量数据的 <code class="docutils literal notranslate"><span class="pre">.bin</span></code> 文件，以及引用在 <code class="docutils literal notranslate"><span class="pre">.gltf</span></code> 文件中的多个可选的 <code class="docutils literal notranslate"><span class="pre">.png</span></code> 或 <code class="docutils literal notranslate"><span class="pre">.jpg</span></code> 文件。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>拥有各种单独的文件使用户在导出完成后，返回与编辑任何JSON或图像变得更加容易。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>请注意，共享此格式是需要将所有这些单独的文件作为一个群组共享。</p>
+</div>
+</div>
+<div class="section" id="gltf-embedded-gltf">
+<h3>glTF嵌入式 (<code class="docutils literal notranslate"><span class="pre">.gltf</span></code>)<a class="headerlink" href="#gltf-embedded-gltf" title="Permalink to this headline">¶</a></h3>
+<p>这将生成一个基于JSON文本的``.gltf``文件，其中所有网格数据和图像数据都在文件中进行编码（使用Base64）。 如果资产必须通过纯文本连接共享，则此格式很有用。</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>这是可用格式中效率最低的，仅在需要时使用。</p>
+</div>
+</div>
+</div>
+<div class="section" id="properties">
+<h2>属性<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="import">
+<h3>导入<a class="headerlink" href="#import" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>打包图像</dt><dd><p>打包所有图像到blend文件中。</p>
+</dd>
+<dt>着色</dt><dd><p>如何在导入期间计算法线。</p>
+</dd>
+<dt>猜测原始绑定姿态</dt><dd><p>确定 &quot;编辑&quot; 模式下骨骼（以及面板网格）的姿势。打开时，尝试猜测用于计算反向绑定矩阵的姿势。</p>
+</dd>
+<dt>骨骼方向</dt><dd><p>更改导入器用于决定放置骨骼提示的启发式。请注意，在使用不均匀缩放的模型中，命运设置可能会导致不准确。否则，这纯粹是美学。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="export">
+<h3>导出<a class="headerlink" href="#export" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>格式</dt><dd><p>参见： <a class="reference internal" href="#file-format-variations">文件格式变体</a>。</p>
+</dd>
+<dt>纹理</dt><dd><p>Folder to place texture files in. Relative to the gltf-file.</p>
+</dd>
+<dt>版权符号</dt><dd><p>该模型的法律权利和条件。</p>
+</dd>
+<dt>记住导出设置</dt><dd><p>将导出设置存储在blend文件中，以便下次打开文件时调用它们。</p>
+</dd>
+</dl>
+<div class="section" id="include">
+<h4>包括<a class="headerlink" href="#include" title="Permalink to this headline">¶</a></h4>
+<dl class="simple">
+<dt>选定的物体</dt><dd><p>仅导出选定的物体。</p>
+</dd>
+<dt>自定义属性</dt><dd><p>将自定义属性导出为glTF附加信息。</p>
+</dd>
+<dt>相机</dt><dd><p>导出相机。</p>
+</dd>
+<dt>精确灯光</dt><dd><p>导出定向光、点光和聚光。 使用 <code class="docutils literal notranslate"><span class="pre">KHR_lights_punctual</span></code> glTF扩展名。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="transform">
+<h4>变换<a class="headerlink" href="#transform" title="Permalink to this headline">¶</a></h4>
+<dl class="simple">
+<dt>Y 向上</dt><dd><p>使用glTF约定导出，+Y向上。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="geometry">
+<h4>几何数据（Geometry）<a class="headerlink" href="#geometry" title="Permalink to this headline">¶</a></h4>
+<dl class="simple">
+<dt>应用修改器</dt><dd><p>Apply modifiers (excluding armatures) to mesh objects.</p>
+</dd>
+<dt>UV</dt><dd><p>导出网格UV（纹理坐标）。</p>
+</dd>
+<dt>法向</dt><dd><p>导出网格顶点法向。</p>
+</dd>
+<dt>切向</dt><dd><p>导出网格顶点切向。</p>
+</dd>
+<dt>顶点颜色</dt><dd><p>Export vertex colors with meshes.</p>
+</dd>
+<dt>材质</dt><dd><p>Export materials.</p>
+</dd>
+<dt>图像</dt><dd><p>Output format for images. PNG is lossless and generally preferred, but JPEG might be preferable for
+web applications due to the smaller file size.</p>
+</dd>
+</dl>
+<div class="section" id="compression">
+<h5>压缩<a class="headerlink" href="#compression" title="Permalink to this headline">¶</a></h5>
+<p>使用Google Draco压缩网格。</p>
+<dl class="simple">
+<dt>压缩级别</dt><dd><p>压缩越高，编码和解码速度越慢。</p>
+</dd>
+<dt>量化位置</dt><dd><p>值越高，压缩率越高。</p>
+</dd>
+<dt>法线</dt><dd><p>值越高，压缩率越高。</p>
+</dd>
+<dt>纹理坐标</dt><dd><p>值越高，压缩率越高。</p>
+</dd>
+<dt>泛型</dt><dd><p>值越高，压缩率越高。</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="id1">
+<h4>动画<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<dl class="simple">
+<dt>Use Current Frame</dt><dd><p>Export the scene in the current animation frame.</p>
+</dd>
+</dl>
+<div class="section" id="id2">
+<h5>动画<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h5>
+<p>Exports active actions and NLA tracks as glTF animations.</p>
+<dl class="simple">
+<dt>限制回放范围</dt><dd><p>将动画剪辑到所选的播放范围。</p>
+</dd>
+<dt>采样率</dt><dd><p>评估动画值的频率（以帧为单位）。</p>
+</dd>
+<dt>Always Sample Animations</dt><dd><p>Apply sampling to all animations.</p>
+</dd>
+<dt>Group by NLA Track</dt><dd><p>Whether to export NLA strip animations.</p>
+</dd>
+<dt>Export Deformation Bones Only</dt><dd><p>Export deformation bones only (and needed bones for hierarchy).</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="shape-keys">
+<h5>形态键<a class="headerlink" href="#shape-keys" title="Permalink to this headline">¶</a></h5>
+<p>导出形态键（形变目标）。</p>
+<dl class="simple">
+<dt>形态键法向</dt><dd><p>使用形状键（形变目标）导出顶点法线。</p>
+</dd>
+<dt>形态键切向</dt><dd><p>使用形状键（变形目标）导出顶点切线。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="skinning">
+<h5>蒙皮<a class="headerlink" href="#skinning" title="Permalink to this headline">¶</a></h5>
+<p>Export skinning (armature) data.</p>
+<dl class="simple">
+<dt>包含全部骨骼影响</dt><dd><p>允许超过4个联合顶点的影响。模型在许多查看器中可能出现错误。</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="contributing">
+<h2>贡献<a class="headerlink" href="#contributing" title="Permalink to this headline">¶</a></h2>
+<p>该导入器/导出器是通过 <a class="reference external" href="https://github.com/KhronosGroup/glTF-Blender-IO">glTF-Blender-IO repository</a> 开发的，您可以在其中提交错误报告，提交功能请求或提供代码。</p>
+<p>关于glTF 2.0格式的讨论和开发，参见  <a class="reference external" href="https://github.com/KhronosGroup/glTF">glTF GitHub repository</a> ，欢迎提供反馈。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../interface/index.html" class="btn btn-neutral float-right" title="界面" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="scene_x3d.html" class="btn btn-neutral float-left" title="Web3D X3D/VRML2" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; <a href="../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">
+        Last updated on 06/19/2023.
+      </span>
+
+    </p>
+  </div>
+      <div class="footer-contribute">
+         <ul>
+            <li>
+               <a href="https://developer.blender.org/diffusion/BM/browse/trunk/blender_docs/manual/addons/import_export/scene_gltf2.rst" class="fa fa-edit"> Edit Page</a>
+            </li>
+            <li>
+               <a href="https://developer.blender.org/maniphest/task/edit/form/default/?description=Pagename%3A%20%60addons/import_export/scene_gltf2%60%0ABlender%20Version%3A%20%602.93%60%0ADocumentation%20Language%3A%20%60zh-hans%60%0A%5B%5B%20https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F2.93%2Faddons/import_export/scene_gltf2.html%20%7C%20Permanent%20link%20%5D%5D%0A%0A%2A%2AShort%20description%20of%20error%2A%2A%0A%5BPlease%20fill%20out%20a%20short%20description%20of%20the%20error%20here%5D&project=PHID-PROJ-c4nvvrxuczix2326vlti" class="fa fa-bug"> Report Bug</a>
+            </li>
+         <ul>
+      </div>
+
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.93 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async='async' src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

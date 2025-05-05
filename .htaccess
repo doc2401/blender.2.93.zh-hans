@@ -1,0 +1,3 @@
+
+ErrorDocument 404 /manual/zh-hans/2.93/404.html
+RedirectMatch \"^/manual/zh-hans/2.93/addons/import_export/io_(.*)\" \"/manual/zh-hans/2.93/addons/import_export/$1\"

@@ -1,0 +1,442 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Carver &mdash; Blender Manual</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/version_switch.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/addons/object/carver.html" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/js/version_switch.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+    <link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+    <link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+    <link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="next" title="Cell Fracture" href="cell_fracture.html" />
+    <link rel="prev" title="Bool Tool" href="bool_tools.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blender 2.93 Manual
+          
+
+          
+            
+            <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景&amp;物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻&amp;绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">运动跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">Files &amp; Data System</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">插件</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#add-ons-category-listings">插件类别列表</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../3d_view/index.html">3D 视图</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../add_curve/index.html">添加曲线</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../add_mesh/index.html">添加网格</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../camera/index.html">相机</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../development/index.html">开发</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../import_export/index.html">导入 - 导出</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../interface/index.html">界面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lighting/index.html">光照</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../materials/index.html">材质</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/index.html">网格</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../node/index.html">节点</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">物体</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="bool_tools.html">Bool Tool</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Carver</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#activation">激活</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#description">描述:</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#basic-boolean-operations">基本布尔运算</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#profile-brush">配置笔刷（Profile Brush）</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="cell_fracture.html">Cell Fracture</a></li>
+<li class="toctree-l4"><a class="reference internal" href="greasepencil_tools.html">蜡笔工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="color_rules.html">Object Color Rules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="edit_linked_library.html">Edit Linked Library</a></li>
+<li class="toctree-l4"><a class="reference internal" href="oscurart_tools.html">Oscurart Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="scatter_objects.html">Scatter Objects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="skinify.html">Skinify Rig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="align_tools.html">Align Tools</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../paint/index.html">绘制</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rigging/index.html">绑定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sequencer/index.html">序列容器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../system/index.html">系统</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../uv/index.html">UV</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../video_tools/index.html">视频工具</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">贡献文档</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 2.93 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">插件</a> &raquo;</li>
+        
+          <li><a href="index.html">物体</a> &raquo;</li>
+        
+      <li>Carver</li>
+    
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="carver">
+<h1>Carver<a class="headerlink" href="#carver" title="Permalink to this headline">¶</a></h1>
+<p>直接在3D视口中剪切和布尔对象。</p>
+<div class="section" id="activation">
+<h2>激活<a class="headerlink" href="#activation" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>打开Blender并转到 &quot;首选项&quot; ，然后转到 &quot;附加组件&quot; 选项卡。</p></li>
+<li><p>选择 物体 然后选择 Carver 以启用插件。</p></li>
+</ul>
+</div>
+<div class="section" id="description">
+<h2>描述:<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>如果你在要切割的物体上有一个活动的倒角，它将会自动更新，也会自动更新将被创建的物体。</p>
+<p>开始时，选择一个或多个物体，根据物体的数量，插件会调整到这个数量。一个物体，可以切割（基本操作），使用默认的模式。多个物体，也可以切割，使用模式，最后选择的物体作为 <code class="docutils literal notranslate"><span class="pre">笔刷</span></code>。如果你进入 <em>轮廓笔刷（Profile Brush）</em> 模式。它对所有选定的物体都有效，所以你可以同时切割两个物体或对所有物体应用 <code class="docutils literal notranslate"><span class="pre">笔刷</span></code>。</p>
+<p>对于基本的布尔运算，该插件在正交视图上更准确。对于其他操作，你可以用想用的视图。</p>
+<ul class="simple">
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">X</kbd></kbd> 调用插件。</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">RMB</kbd> 退出。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Z</kbd></kbd> 撤消（没有限制，因此请注意不要重载它）。</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">H</kbd> 当屏幕足够大的时可以显示帮助。</p></li>
+</ul>
+<div class="section" id="basic-boolean-operations">
+<h3>基本布尔运算<a class="headerlink" href="#basic-boolean-operations" title="Permalink to this headline">¶</a></h3>
+<p>当你开始运行插件时，此模式是启动的。</p>
+<dl>
+<dt>重新布尔(Rebool) <kbd class="kbd docutils literal notranslate">Shift</kbd></dt><dd><p>按住 <kbd class="kbd docutils literal notranslate">Shift</kbd> 可以进行重新布尔。</p>
+</dd>
+<dt>全部移动(Move All) <kbd class="kbd docutils literal notranslate">Alt</kbd></dt><dd><p>允许你移动切割。</p>
+</dd>
+<dt>光标深度(Cursor Depth) <kbd class="kbd docutils literal notranslate">D</kbd></dt><dd><p>要把光标的位置作为深度。</p>
+</dd>
+<dt>移动光标(Move Cursor) <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">LMB</kbd></kbd></dt><dd><p>你可以用 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">LMB</kbd></kbd> 移动光标。</p>
+</dd>
+<dt>工具类型(Tool Type) <kbd class="kbd docutils literal notranslate">空格键</kbd> 工具类型</dt><dd><p>改变工具。</p>
+<dl>
+<dt>矩形（Rectangle）</dt><dd><p><em>矩形</em> 工具。单击，移动，然后再次单击以确认操作。</p>
+</dd>
+<dt>线形</dt><dd><p>多边形切割的 <em>线</em> 工具。它还允许你对一个或多个物体进行分切。点击起始点，移动到所需的终点，然后按 <kbd class="kbd docutils literal notranslate">空格键</kbd> 确认切割。</p>
+<p>按住 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> ，可以进行增量移动。</p>
+</dd>
+<dt>圆形</dt><dd><p>在 <em>Circle</em> 工具中，点击然后移动即可改变半径（纵轴）或旋转（横轴）。</p>
+<dl class="simple">
+<dt>细分 <kbd class="kbd docutils literal notranslate">W</kbd> , <kbd class="kbd docutils literal notranslate">X</kbd></dt><dd><p>允许改变圆的细分。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt>创建几何体(Create Geometry) <kbd class="kbd docutils literal notranslate">C</kbd></dt><dd><p>切换到创建模式。它作为上面的功能的快捷方式。确认后，插件就会停止并选择创建的物体。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="profile-brush">
+<h3>配置笔刷（Profile Brush）<a class="headerlink" href="#profile-brush" title="Permalink to this headline">¶</a></h3>
+<p>在配置模式下，默认显示平面物体。你可以用 <code class="docutils literal notranslate"><span class="pre">ProfilCreate.py</span></code> 文件添加你自己的物体，这个文件将在之后解释（待完成）。</p>
+<p><kbd class="kbd docutils literal notranslate">B</kbd> 在基本的布尔操作中，可以进入这个模式。如果你把鼠标移到对象上，你会看到你可以使用的模式的概述，并在右下方有一个预览。</p>
+<dl class="simple">
+<dt>重新布尔(Rebool) <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">空格键</kbd></kbd></dt><dd><p>用来重新布尔。</p>
+</dd>
+<dt>复制(Duplicate) <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">空格键</kbd></kbd></dt><dd><p>创建物体。</p>
+</dd>
+<dt>缩放 <kbd class="kbd docutils literal notranslate">S</kbd></dt><dd><p>待补充。</p>
+</dd>
+<dt>旋转(Rotatio) <kbd class="kbd docutils literal notranslate">LMB</kbd></dt><dd><p>按住 <kbd class="kbd docutils literal notranslate">LMB</kbd> 并移动鼠标进行旋转。</p>
+</dd>
+<dt>步进角度(Step Angle) <kbd class="kbd docutils literal notranslate">Ctrl</kbd></dt><dd><p>按住 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 键，每次旋转45度。</p>
+</dd>
+<dt>工具类型(Tool Type) <kbd class="kbd docutils literal notranslate">W</kbd> , <kbd class="kbd docutils literal notranslate">X</kbd></dt><dd><p>改变工具类型。</p>
+</dd>
+<dt>实例化(Instantiate) <kbd class="kbd docutils literal notranslate">L</kbd></dt><dd><p>对于复制物体的情况（按住 <kbd class="kbd docutils literal notranslate">Alt</kbd> ）。</p>
+</dd>
+<dt>厚度(Thickness) <kbd class="kbd docutils literal notranslate">D</kbd></dt><dd><p>要改变图案的厚度，将鼠标在水平轴上移动。</p>
+</dd>
+<dt>轴锁定(Axis Locking) <kbd class="kbd docutils literal notranslate">Ctrl</kbd></dt><dd><p>按住 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 到约束轴。</p>
+</dd>
+<dt>笔刷类型(Brush Type) <kbd class="kbd docutils literal notranslate">T</kbd></dt><dd><dl class="simple">
+<dt>差集</dt><dd><p>制造差集。</p>
+</dd>
+<dt>并集</dt><dd><p>做布尔并集（对多个物体不起作用）。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">类别</dt>
+<dd class="field-odd"><p>物体</p>
+</dd>
+<dt class="field-even">描述:</dt>
+<dd class="field-even"><p>多种工具来雕刻或创造物体。</p>
+</dd>
+<dt class="field-odd">位置</dt>
+<dd class="field-odd"><p>3D视图 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">X</kbd></kbd></p>
+</dd>
+<dt class="field-even">文档</dt>
+<dd class="field-even"><p>object_carver  目录</p>
+</dd>
+<dt class="field-odd">作者</dt>
+<dd class="field-odd"><p>Pixivore, Cedric LEPILLER, Ted Milker, Clarkx</p>
+</dd>
+<dt class="field-even">许可证</dt>
+<dd class="field-even"><p>通用公共图书馆</p>
+</dd>
+<dt class="field-odd">注意</dt>
+<dd class="field-odd"><p>此附加组件与Blender捆绑在一起。</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="cell_fracture.html" class="btn btn-neutral float-right" title="Cell Fracture" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="bool_tools.html" class="btn btn-neutral float-left" title="Bool Tool" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; <a href="../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">
+        Last updated on 06/19/2023.
+      </span>
+
+    </p>
+  </div>
+      <div class="footer-contribute">
+         <ul>
+            <li>
+               <a href="https://developer.blender.org/diffusion/BM/browse/trunk/blender_docs/manual/addons/object/carver.rst" class="fa fa-edit"> Edit Page</a>
+            </li>
+            <li>
+               <a href="https://developer.blender.org/maniphest/task/edit/form/default/?description=Pagename%3A%20%60addons/object/carver%60%0ABlender%20Version%3A%20%602.93%60%0ADocumentation%20Language%3A%20%60zh-hans%60%0A%5B%5B%20https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F2.93%2Faddons/object/carver.html%20%7C%20Permanent%20link%20%5D%5D%0A%0A%2A%2AShort%20description%20of%20error%2A%2A%0A%5BPlease%20fill%20out%20a%20short%20description%20of%20the%20error%20here%5D&project=PHID-PROJ-c4nvvrxuczix2326vlti" class="fa fa-bug"> Report Bug</a>
+            </li>
+         <ul>
+      </div>
+
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.93 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async='async' src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

@@ -1,0 +1,406 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>修改器 &mdash; Blender Manual</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/version_switch.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/video_editing/sequencer/sidebar/modifiers.html" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/js/version_switch.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+    <link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+    <link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+    <link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../../copyright.html" />
+    <link rel="next" title="缓存" href="cache.html" />
+    <link rel="prev" title="片段" href="strip.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Blender 2.93 Manual
+          
+
+          
+            
+            <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景&amp;物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻&amp;绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">运动跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">视频编辑</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">序列容器</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../toolbar/tools.html">工具栏</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../navigating.html">导航</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../strips/index.html">片段</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../selecting.html">选择</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../editing.html">编辑</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../meta.html">复合片段</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">侧栏</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="strip.html">片段</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">修改器</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#common-options">通用选项</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#input-mask-type">Input Mask Type</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#types">类型</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#color-balance-modifier">色彩校正节点。</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#curves-modifier">曲线</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hue-correct-modifier">色相校正修改器</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#bright-contrast-modifier">如果波形没填满画面，你可能需要使用明度/比度修改器，直到它填满整个画面（对比度自动调节）。</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#mask-modifier">遮罩修改器</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#white-balance-modifier">白平衡修改器</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#tone-map-modifier">色调映射节点</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="cache.html">缓存</a></li>
+<li class="toctree-l4"><a class="reference internal" href="proxy.html">代理</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../preview/index.html">预览</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">Files &amp; Data System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">贡献文档</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 2.93 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">视频编辑</a> &raquo;</li>
+        
+          <li><a href="../index.html">序列容器</a> &raquo;</li>
+        
+          <li><a href="index.html">侧栏</a> &raquo;</li>
+        
+      <li>修改器</li>
+    
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="index-0"></span><div class="section" id="modifiers">
+<span id="bpy-types-sequencemodifier"></span><span id="bpy-types-whitebalancemodifier"></span><span id="bpy-types-huecorrectmodifier"></span><span id="bpy-types-curvesmodifier"></span><span id="bpy-types-colorbalancemodifier"></span><span id="bpy-types-brightcontrastmodifier"></span><span id="index-1"></span><h1>修改器<a class="headerlink" href="#modifiers" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板</dt>
+<dd class="field-odd"><p><span class="menuselection">侧栏 ‣ 修改器 ‣ 修改器</span></p>
+</dd>
+</dl>
+</div>
+<div class="figure align-right">
+<img alt="../../../_images/video-editing_sequencer_sidebar_modifiers_panel.png" src="../../../_images/video-editing_sequencer_sidebar_modifiers_panel.png" />
+</div>
+<p>修改器用于对图像进行调整，如对比度，亮度，饱和度，色彩平衡和应用遮罩。</p>
+<p>你可以将这些修改器直接添加到选定的片段上，也可以在 &quot;调整图层&quot; 效果片段中使用它，这允许你将这些修改器同时应用到多个片段上。</p>
+<dl class="simple">
+<dt>使用线性修改器</dt><dd><p>计算线性空间中的修改器而不是序列空间。</p>
+</dd>
+<dt>复制到选定片段</dt><dd><p>允许你将修改器复制到选定的片段。这有两种方法来实现，你可以替换旧的修改器或追加/添加到以前的修改器。</p>
+</dd>
+</dl>
+<div class="section" id="common-options">
+<h2>通用选项<a class="headerlink" href="#common-options" title="Permalink to this headline">¶</a></h2>
+<p>每个修改器顶部都有几个按钮：</p>
+<dl class="simple">
+<dt>禁用（眼睛图标）</dt><dd><p>禁用修改器。用于比较图像，非常有用，需要/无需修改图像。</p>
+</dd>
+<dt>移动（上/下箭头图标）</dt><dd><p>接下来的两个按钮用于更改堆栈中修改器的位置。</p>
+</dd>
+<dt>删除 <code class="docutils literal notranslate"><span class="pre">X</span></code></dt><dd><p>交叉是从堆栈中删除修改器。</p>
+</dd>
+</dl>
+<div class="section" id="input-mask-type">
+<h3>Input Mask Type<a class="headerlink" href="#input-mask-type" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>片段</dt><dd><p>Use this to apply the modification on the whole image, or to use another strip's image (with alpha channel)
+for masking the modifier (and only this modifier), by choosing it in the &quot;Mask&quot; select menu.</p>
+</dd>
+<dt>遮罩</dt><dd><p>This allows you to choose a Mask created in the Mask editor
+which will limit the modification to the masked image's zones.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="types">
+<h2>类型<a class="headerlink" href="#types" title="Permalink to this headline">¶</a></h2>
+<p>目前，支持以下修改器：</p>
+<div class="section" id="color-balance-modifier">
+<span id="index-2"></span><h3>色彩校正节点。<a class="headerlink" href="#color-balance-modifier" title="Permalink to this headline">¶</a></h3>
+<p>Color balance adjustments, through Lift, Gamma, and Gain.</p>
+<p>This modifier works the same as the <a class="reference internal" href="../../../compositing/types/color/color_balance.html"><span class="doc">Color Balance Node</span></a>.</p>
+</div>
+<div class="section" id="curves-modifier">
+<span id="index-3"></span><h3>曲线<a class="headerlink" href="#curves-modifier" title="Permalink to this headline">¶</a></h3>
+<p>颜色和RGB曲线。</p>
+<p>该修改器与 <a class="reference internal" href="../../../compositing/types/color/rgb_curves.html"><span class="doc">曲线节点</span></a> 的作用相同。</p>
+</div>
+<div class="section" id="hue-correct-modifier">
+<span id="index-4"></span><h3>色相校正修改器<a class="headerlink" href="#hue-correct-modifier" title="Permalink to this headline">¶</a></h3>
+<p>HSV多点曲线。</p>
+<p>该修改器与 <a class="reference internal" href="../../../compositing/types/color/hue_correct.html"><span class="doc">曲线节点</span></a> 的作用相同。</p>
+</div>
+<div class="section" id="bright-contrast-modifier">
+<span id="index-5"></span><h3>如果波形没填满画面，你可能需要使用明度/比度修改器，直到它填满整个画面（对比度自动调节）。<a class="headerlink" href="#bright-contrast-modifier" title="Permalink to this headline">¶</a></h3>
+<p>调整修改器输入的亮度和对比度。</p>
+</div>
+<div class="section" id="mask-modifier">
+<span id="index-6"></span><h3>遮罩修改器<a class="headerlink" href="#mask-modifier" title="Permalink to this headline">¶</a></h3>
+<p>用它来遮罩下面堆栈中的其他修改器。</p>
+<p>例如，要仅校正图像的某个区域的亮度，可以通过在堆栈中 &quot;明亮/对比度&quot;修改器之前放置 &quot;遮罩&quot; 修改器来过滤它。你可以选择使用在 &quot;遮罩&quot; 编辑器中创建的遮罩，或者使用另一个片段作为遮罩（该片段的图像必须具有Alpha通道）。该遮罩将应用于堆栈中其下方的所有其他修改器。</p>
+</div>
+<div class="section" id="white-balance-modifier">
+<span id="index-7"></span><h3>白平衡修改器<a class="headerlink" href="#white-balance-modifier" title="Permalink to this headline">¶</a></h3>
+<p>通过选择白色来用它来调节白平衡。</p>
+</div>
+<div class="section" id="tone-map-modifier">
+<span id="index-8"></span><h3>色调映射节点<a class="headerlink" href="#tone-map-modifier" title="Permalink to this headline">¶</a></h3>
+<p>用于将一组颜色映射到另一组颜色，以便在具有更有限的动态范围的媒介中接近高动态范围图像的外观。</p>
+<p>该修改器与 <a class="reference internal" href="../../../compositing/types/color/tone_map.html"><span class="doc">色调映射节点</span></a> 的作用相同。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="cache.html" class="btn btn-neutral float-right" title="缓存" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="strip.html" class="btn btn-neutral float-left" title="片段" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; <a href="../../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">
+        Last updated on 06/19/2023.
+      </span>
+
+    </p>
+  </div>
+      <div class="footer-contribute">
+         <ul>
+            <li>
+               <a href="https://developer.blender.org/diffusion/BM/browse/trunk/blender_docs/manual/video_editing/sequencer/sidebar/modifiers.rst" class="fa fa-edit"> Edit Page</a>
+            </li>
+            <li>
+               <a href="https://developer.blender.org/maniphest/task/edit/form/default/?description=Pagename%3A%20%60video_editing/sequencer/sidebar/modifiers%60%0ABlender%20Version%3A%20%602.93%60%0ADocumentation%20Language%3A%20%60zh-hans%60%0A%5B%5B%20https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F2.93%2Fvideo_editing/sequencer/sidebar/modifiers.html%20%7C%20Permanent%20link%20%5D%5D%0A%0A%2A%2AShort%20description%20of%20error%2A%2A%0A%5BPlease%20fill%20out%20a%20short%20description%20of%20the%20error%20here%5D&project=PHID-PROJ-c4nvvrxuczix2326vlti" class="fa fa-bug"> Report Bug</a>
+            </li>
+         <ul>
+      </div>
+
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.93 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async='async' src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

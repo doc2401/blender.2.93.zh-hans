@@ -1,0 +1,1004 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>BlenderKit &mdash; Blender Manual</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/version_switch.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/addons/3d_view/blenderkit.html" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/js/version_switch.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+    <link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+    <link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+    <link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="next" title="数学视觉控制台" href="math_vis_console.html" />
+    <link rel="prev" title="3D 导航" href="3d_navigation.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blender 2.93 Manual
+          
+
+          
+            
+            <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景&amp;物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻&amp;绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">运动跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">Files &amp; Data System</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">插件</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#add-ons-category-listings">插件类别列表</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">3D 视图</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="3d_navigation.html">3D 导航</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">BlenderKit</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#activation">激活</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#account-and-login">Account and Login</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#basic-usage">基础用法</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#interface">界面</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#assetbar">Assetbar</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#blenderkit-profile-panel">BlenderKit Profile Panel</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#blenderkit-login-panel">BlenderKit Login Panel</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#find-and-upload-assets-panel">Find and Upload Assets Panel</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#search-and-download">Search and Download</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#models-search-options">Models Search Options</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#categories">Categories</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#import-method">Import Method</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#materials-search-options">Materials Search Options</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#id1">Categories</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#import-settings">Import Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="#upload">上传</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#common-options">通用选项</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#models-only-options">Models Only Options</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#materials-only-options">Materials Only Options</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="#selected-model-name-panel">Selected Model/Name Panel</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#preferences">偏好设置</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#tutorials">Tutorials</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="math_vis_console.html">数学视觉控制台</a></li>
+<li class="toctree-l4"><a class="reference internal" href="measureit.html">测量</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stored_views.html">已保存的视图</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vr_scene_inspection.html">VR Scene Inspection</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../add_curve/index.html">添加曲线</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../add_mesh/index.html">添加网格</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../camera/index.html">相机</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../development/index.html">开发</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../import_export/index.html">导入 - 导出</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../interface/index.html">界面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lighting/index.html">光照</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../materials/index.html">材质</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/index.html">网格</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../node/index.html">节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../object/index.html">物体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../paint/index.html">绘制</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rigging/index.html">绑定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sequencer/index.html">序列容器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../system/index.html">系统</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../uv/index.html">UV</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../video_tools/index.html">视频工具</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">贡献文档</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 2.93 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">插件</a> &raquo;</li>
+        
+          <li><a href="index.html">3D 视图</a> &raquo;</li>
+        
+      <li>BlenderKit</li>
+    
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="blenderkit">
+<h1>BlenderKit<a class="headerlink" href="#blenderkit" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://www.blenderkit.com/">BlenderKit</a> is an online database of materials, brushes, and 3D models
+which you can search, download, upload and rate directly from the add-on.</p>
+<div class="section" id="activation">
+<h2>激活<a class="headerlink" href="#activation" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>打开Blender并转到 &quot;首选项&quot; ，然后转到 &quot;附加组件&quot; 选项卡。</p></li>
+<li><p>Click 3D View then BlenderKit Asset Library to enable the script.</p></li>
+</ul>
+<div class="section" id="account-and-login">
+<h3>Account and Login<a class="headerlink" href="#account-and-login" title="Permalink to this headline">¶</a></h3>
+<p>Click on the sign-up button to create a new account and activate it by pressing <em>Log in</em>
+directly in BlenderKit settings. It will direct you to log in through our website.</p>
+</div>
+</div>
+<div class="section" id="basic-usage">
+<h2>基础用法<a class="headerlink" href="#basic-usage" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>Type a search term into the search field.</p>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../../_images/addons_3d-view_blenderkit_search-sidebar.jpg"><img alt="../../_images/addons_3d-view_blenderkit_search-sidebar.jpg" src="../../_images/addons_3d-view_blenderkit_search-sidebar.jpg" style="width: 300px;" /></a>
+</div>
+</li>
+<li><p>The result are shown in the Assetbar.</p>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../../_images/addons_3d-view_blenderkit_assetbar.jpg"><img alt="../../_images/addons_3d-view_blenderkit_assetbar.jpg" src="../../_images/addons_3d-view_blenderkit_assetbar.jpg" style="width: 300px;" /></a>
+</div>
+</li>
+<li><p>Drag-and-drop the material or model into your scene.</p>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../../_images/addons_3d-view_blenderkit_drag-drop.jpg"><img alt="../../_images/addons_3d-view_blenderkit_drag-drop.jpg" src="../../_images/addons_3d-view_blenderkit_drag-drop.jpg" style="width: 300px;" /></a>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="interface">
+<h2>界面<a class="headerlink" href="#interface" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="assetbar">
+<span id="bpy-ops-view3d-blenderkit-asset-bar"></span><span id="bpy-ops-scene-blenderkit-download"></span><h3>Assetbar<a class="headerlink" href="#assetbar" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板</dt>
+<dd class="field-odd"><p><span class="menuselection">Assetbar</span></p>
+</dd>
+</dl>
+</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/addons_3d-view_blenderkit_assetbar.jpg"><img alt="../../_images/addons_3d-view_blenderkit_assetbar.jpg" src="../../_images/addons_3d-view_blenderkit_assetbar.jpg" style="width: 600px;" /></a>
+</div>
+<p>The Assetbar shows search results and allows you to interact with them.
+It pops up when the search results are retrieved from the server.
+The Assetbar can be shown or hidden by clicking the toggle with the eye icon next to the search field.</p>
+<p>Actions that can be performed in the Assetbar:</p>
+<ul>
+<li><p>Drag and dropping an object or material directly into the scene.</p></li>
+<li><p>Click on an item to link/append it to the scene.</p></li>
+<li><p>Open the context menu of an item for further interaction:</p>
+<dl class="simple">
+<dt>Open Authors Website</dt><dd><p>Opens the link that the author has specified in a web browser.</p>
+</dd>
+<dt>Show Assets by Author</dt><dd><p>Shows all assets uploaded by the author of the selected 3D model.</p>
+</dd>
+<dt>Replace Active Models</dt><dd><p>Replace all selected assets with the last selected asset (active).
+If you use this option from the context menu, the target asset is downloaded and replaces selected assets.</p>
+</dd>
+</dl>
+</li>
+<li><p>Use the <kbd class="kbd docutils literal notranslate">Wheel</kbd> to scroll the results.</p></li>
+<li><p>Click arrows on the side of the Assetbar for a jump to the next or previous page.</p></li>
+</ul>
+</div>
+<div class="section" id="blenderkit-profile-panel">
+<h3>BlenderKit Profile Panel<a class="headerlink" href="#blenderkit-profile-panel" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板</dt>
+<dd class="field-odd"><p><span class="menuselection">Sidebar ‣ BlenderKit ‣ BlenderKit Profile</span></p>
+</dd>
+</dl>
+</div>
+<div class="figure align-right">
+<a class="reference internal image-reference" href="../../_images/addons_3d-view_blenderkit_sidebar-search-bkprofile.jpg"><img alt="../../_images/addons_3d-view_blenderkit_sidebar-search-bkprofile.jpg" src="../../_images/addons_3d-view_blenderkit_sidebar-search-bkprofile.jpg" style="width: 300px;" /></a>
+</div>
+<p>This panel shows your login information and information about your public and private remaining storage.</p>
+<dl class="simple">
+<dt>See My Uploads</dt><dd><p>Open the BlenderKit website and show a list of your assets.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="blenderkit-login-panel">
+<h3>BlenderKit Login Panel<a class="headerlink" href="#blenderkit-login-panel" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板</dt>
+<dd class="field-odd"><p><span class="menuselection">Sidebar ‣ BlenderKit ‣ BlenderKit Login</span></p>
+</dd>
+</dl>
+</div>
+<div class="figure align-right">
+<a class="reference internal image-reference" href="../../_images/addons_3d-view_blenderkit_sidebar-search-login.jpg"><img alt="../../_images/addons_3d-view_blenderkit_sidebar-search-login.jpg" src="../../_images/addons_3d-view_blenderkit_sidebar-search-login.jpg" style="width: 300px;" /></a>
+</div>
+<dl class="simple" id="bpy-ops-wm-blenderkit-login">
+<dt>Log In</dt><dd><p>Log in online on BlenderKit webpage.</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-ops-wm-blenderkit-logout">
+<dt>Log Out</dt><dd><p>Log out from BlenderKit.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="find-and-upload-assets-panel">
+<h3>Find and Upload Assets Panel<a class="headerlink" href="#find-and-upload-assets-panel" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板</dt>
+<dd class="field-odd"><p><span class="menuselection">Sidebar ‣ BlenderKit ‣ Find and Upload</span></p>
+</dd>
+</dl>
+</div>
+<div class="figure align-right">
+<a class="reference internal image-reference" href="../../_images/addons_3d-view_blenderkit_search-sidebar.jpg"><img alt="../../_images/addons_3d-view_blenderkit_search-sidebar.jpg" src="../../_images/addons_3d-view_blenderkit_search-sidebar.jpg" style="width: 300px;" /></a>
+</div>
+<p>The main panel enables you to Search or Upload all supported asset types.</p>
+<dl class="simple">
+<dt>Search/Upload</dt><dd><p>Switch the main panel between the Search and Upload tabs.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="search-and-download">
+<h3>Search and Download<a class="headerlink" href="#search-and-download" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板</dt>
+<dd class="field-odd"><p><span class="menuselection">Sidebar ‣ BlenderKit ‣ Find and Upload ‣ Search</span></p>
+</dd>
+</dl>
+</div>
+<div class="figure align-right">
+<a class="reference internal image-reference" href="../../_images/addons_3d-view_blenderkit_sidebar-search-common.jpg"><img alt="../../_images/addons_3d-view_blenderkit_sidebar-search-common.jpg" src="../../_images/addons_3d-view_blenderkit_sidebar-search-common.jpg" style="width: 300px;" /></a>
+</div>
+<dl class="simple">
+<dt>Models/Materials/Brushes</dt><dd><p>Switch between asset types available in BlenderKit.</p>
+</dd>
+</dl>
+<p>These controls are common for all asset types:</p>
+<dl class="simple" id="bpy-ops-view3d-blenderkit-search">
+<dt>查找</dt><dd><p>Search assets by name.</p>
+</dd>
+<dt>Show (eye icon) <kbd class="kbd docutils literal notranslate">;</kbd></dt><dd><p>Show/hide the Assetbar viewport overlay.</p>
+</dd>
+<dt>样式</dt><dd><p>Search filter limiting the results (realistic, painted, polygonal, and other).</p>
+</dd>
+</dl>
+<div class="section" id="models-search-options">
+<h4>Models Search Options<a class="headerlink" href="#models-search-options" title="Permalink to this headline">¶</a></h4>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板</dt>
+<dd class="field-odd"><p><span class="menuselection">Sidebar ‣ BlenderKit ‣ Find and Upload ‣ Search ‣ Models</span></p>
+</dd>
+</dl>
+</div>
+<dl class="simple" id="bpy-data-scenes-blenderkit-models-own-only">
+<dt>My Assets</dt><dd><p>Search only for your 3D models.</p>
+</dd>
+</dl>
+<dl id="bpy-data-scenes-blenderkit-models-free-only">
+<dt>Free Only</dt><dd><p>Show only free models. This option is available only for models, since all Materials and all Brushes are free.</p>
+</dd>
+<dt>Search Filters:</dt><dd><dl id="bpy-data-scenes-blenderkit-models-search-condition">
+<dt>条件</dt><dd><p>Condition of the object.</p>
+<p>New, Used, Old, Desolate</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-data-scenes-blenderkit-models-search-design-year">
+<dt>Designed In (min - max)</dt><dd><p>When the object was approximately designed in terms of <em>year</em>.
+Can be used for parallel worlds or future <abbr title="Science Fiction">sci-fi</abbr> dates
+(search for sci-fi assets by entering 2100 as minimum year).</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-data-scenes-blenderkit-models-search-polycount">
+<dt>Poly Count In (min - max)</dt><dd><p>Use the poly count of 3D object for filtering.</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-data-scenes-blenderkit-models-search-texture-resolution">
+<dt>Texture Resolution (min - max)</dt><dd><p>Limit search to the texture resolutions in a range.</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-data-scenes-blenderkit-models-search-file-size">
+<dt>File Size (min - max)</dt><dd><p>Limit search file size. This uses the basic file size of the original file.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="categories">
+<h4>Categories<a class="headerlink" href="#categories" title="Permalink to this headline">¶</a></h4>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板</dt>
+<dd class="field-odd"><p><span class="menuselection">Sidebar ‣ BlenderKit ‣ Find and Upload ‣ Search ‣ Models ‣ Categories</span></p>
+</dd>
+</dl>
+</div>
+<p>Category panel enables direct browsing of BlenderKit categories.</p>
+<dl class="simple" id="bpy-ops-view3d-blenderkit-set-category">
+<dt>Set Category <code class="docutils literal notranslate"><span class="pre">&gt;&gt;</span></code></dt><dd><p>Visit subcategory.</p>
+</dd>
+<dt>Return <code class="docutils literal notranslate"><span class="pre">↲</span></code></dt><dd><p>Return to parent category.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="import-method">
+<h4>Import Method<a class="headerlink" href="#import-method" title="Permalink to this headline">¶</a></h4>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板</dt>
+<dd class="field-odd"><p><span class="menuselection">Sidebar ‣ BlenderKit ‣ Find and Upload ‣ Search ‣ Models ‣ Import settings</span></p>
+</dd>
+</dl>
+</div>
+<div class="figure align-right">
+<a class="reference internal image-reference" href="../../_images/addons_3d-view_blenderkit_sidebar-search-models-importsettings-only.jpg"><img alt="../../_images/addons_3d-view_blenderkit_sidebar-search-models-importsettings-only.jpg" src="../../_images/addons_3d-view_blenderkit_sidebar-search-models-importsettings-only.jpg" style="width: 300px;" /></a>
+</div>
+<dl class="simple" id="bpy-data-scenes-blenderkit-models-link-method">
+<dt>关联</dt><dd><p>Link 3D model into Blender scene. Linked models are saved in original files.
+To edit them, you need to open the model in the subdirectory of your project: -- assets/models.
+Linking helps to keep file size low.</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-data-scenes-blenderkit-models-append-method">
+<dt>追加</dt><dd><p>Append 3D model into Blender scene. Appended objects are included and editable in your scene.</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-data-scenes-blenderkit-models-randomize-rotation">
+<dt>旋转随机化</dt><dd><p>Randomize the rotation of the model around the Z axis during placement in the Blender scene.</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-data-scenes-blenderkit-models-perpendicular-snap">
+<dt>Perpendicular Snap</dt><dd><p>Limit snapping if the angle is close to perpendicular angles to become exactly perpendicular.
+Useful for placing lamps on curved ceilings, or placing trees on slopes, or similar cases.</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-data-scenes-blenderkit-models-perpendicular-snap-treshold">
+<dt>阈值</dt><dd><p>Limit perpendicular snap.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="materials-search-options">
+<h4>Materials Search Options<a class="headerlink" href="#materials-search-options" title="Permalink to this headline">¶</a></h4>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板</dt>
+<dd class="field-odd"><p><span class="menuselection">Sidebar ‣ BlenderKit ‣ Find and Upload ‣ Search ‣ Materials</span></p>
+</dd>
+</dl>
+</div>
+<p>Search filters:</p>
+<dl class="simple" id="bpy-data-scenes-blenderkit-mat-search-procedural">
+<dt>Procedural/Texture Based/Both</dt><dd><p>Limit search to only procedural or texture based materials.</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-data-scenes-blenderkit-mat-search-texture-resolution">
+<dt>Texture Resolution</dt><dd><p>Limit search with resolution of the texture.</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-data-scenes-blenderkit-mat-search-file-size">
+<dt>File Size</dt><dd><p>Limit search with file size.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="id1">
+<h4>Categories<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板</dt>
+<dd class="field-odd"><p><span class="menuselection">Sidebar ‣ BlenderKit ‣ Find and Upload ‣ Search ‣ Materials ‣ Categories</span></p>
+</dd>
+</dl>
+</div>
+<p>Same as the model search.</p>
+<dl class="simple">
+<dt>Set Category <code class="docutils literal notranslate"><span class="pre">&gt;&gt;</span></code></dt><dd><p>Visit subcategory.</p>
+</dd>
+<dt>Return <code class="docutils literal notranslate"><span class="pre">↲</span></code></dt><dd><p>Return to parent category.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="import-settings">
+<h4>Import Settings<a class="headerlink" href="#import-settings" title="Permalink to this headline">¶</a></h4>
+<dl class="simple" id="bpy-data-scenes-blenderkit-mat-automap">
+<dt>Auto-Map</dt><dd><p>Add cube mapping UV to the object after drag-and-drop.
+This allows most materials to be applied instantly to any mesh.
+BlenderKit generates a new UV map called 'automap' and doesn't replace your previous UV maps.
+It also resets the texture space of the target object to (1, 1, 1)
+which enables most procedural materials to have correct scaling.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="upload">
+<h3>上传<a class="headerlink" href="#upload" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>Models/Materials/Brushes</dt><dd><p>Switch between asset types which are available to upload in BlenderKit.</p>
+</dd>
+</dl>
+<div class="section" id="common-options">
+<h4>通用选项<a class="headerlink" href="#common-options" title="Permalink to this headline">¶</a></h4>
+<div class="figure align-right">
+<a class="reference internal image-reference" href="../../_images/addons_3d-view_blenderkit_sidebar-upload-model-public-design.jpg"><img alt="../../_images/addons_3d-view_blenderkit_sidebar-upload-model-public-design.jpg" src="../../_images/addons_3d-view_blenderkit_sidebar-upload-model-public-design.jpg" style="width: 300px;" /></a>
+</div>
+<dl class="simple">
+<dt>Hide Asset Preview</dt><dd><p>Show/Hide asset preview, which shows how the asset will approximately look for people searching the database.</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-ops-wm-url-open">
+<dt>Read Upload Instructions</dt><dd><p>Open the <a class="reference external" href="https://www.blenderkit.com/docs/upload-tutorials/">Upload manual</a> on the BlenderKit website.
+Read the manuals for <a class="reference external" href="https://www.blenderkit.com/docs/upload/">models</a>,
+<a class="reference external" href="https://www.blenderkit.com/docs/uploading-material/">materials</a>,
+and <a class="reference external" href="https://www.blenderkit.com/docs/uploading-brush/">brushes</a> on the website.</p>
+</dd>
+<dt>上传</dt><dd><p>Upload or re-upload the 3D model.
+In the operator you can choose if you want to update the file.
+If both file and thumbnail are deactivated, only the metadata get updated.</p>
+</dd>
+<dt>类别</dt><dd><p>The main category to place the model into.</p>
+</dd>
+<dt>Subcategory</dt><dd><p>The subcategory to place the model into.</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-data-materials-blenderkit-is-private">
+<dt>Private/Public</dt><dd><p>Set the assets privacy. Assets marked as Public will be automatically submitted into
+the <a class="reference external" href="https://www.blenderkit.com/docs/validation-status">Validation</a> process.
+Private assets will be hidden to the public and are limited in quantity by a quota.</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-data-materials-blenderkit-license">
+<dt>许可证</dt><dd><p>BlenderKit offers two <a class="reference external" href="https://www.blenderkit.com/docs/licenses">licenses</a> for the assets.
+Both licenses allow for commercial and non-commercial use.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Royalty free</dt>
+<dd class="field-odd"><p>Royalty-free commercial license</p>
+</dd>
+<dt class="field-even">Creative Commons Zero</dt>
+<dd class="field-even"><p>Creative Commons Zero</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="figure align-right">
+<a class="reference internal image-reference" href="../../_images/addons_3d-view_blenderkit_thumbnail-generator.jpg"><img alt="../../_images/addons_3d-view_blenderkit_thumbnail-generator.jpg" src="../../_images/addons_3d-view_blenderkit_thumbnail-generator.jpg" style="width: 300px;" /></a>
+</div>
+<dl class="simple" id="bpy-data-materials-blenderkit-name">
+<dt>名称</dt><dd><p>Name of your asset.</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-data-materials-blenderkit-thumbnail">
+<dt>Thumbnail</dt><dd><p>The path to the preview image (square, at least 512×512 px, JPG image).</p>
+</dd>
+<dt>Generate Thumbnail</dt><dd><p>Automatically generate a thumbnail for the 3D model assets.</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-data-materials-blenderkit-description">
+<dt>描述:</dt><dd><p>Describe the properties of the object in detail. Do not include obvious technical specifications.</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-data-materials-blenderkit-tags">
+<dt>标签</dt><dd><p>List of tags, separated by commas. Include at least three tags.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="models-only-options">
+<h4>Models Only Options<a class="headerlink" href="#models-only-options" title="Permalink to this headline">¶</a></h4>
+<dl class="simple" id="bpy-objects-blenderkit-style">
+<dt>样式</dt><dd><p>Define the visual style of the asset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Realistic</dt>
+<dd class="field-odd"><p>Photo-realistic model</p>
+</dd>
+<dt class="field-even">Painterly</dt>
+<dd class="field-even"><p>Hand-painted with visible strokes</p>
+</dd>
+<dt class="field-odd">Mostly</dt>
+<dd class="field-odd"><p>For games</p>
+</dd>
+<dt class="field-even">Low-poly art</dt>
+<dd class="field-even"><p>Do not mix up with poly count!</p>
+</dd>
+<dt class="field-odd">Anime</dt>
+<dd class="field-odd"><p>Anime style</p>
+</dd>
+<dt class="field-even">二维矢量</dt>
+<dd class="field-even"><p>2D vector graphics</p>
+</dd>
+<dt class="field-odd">3D graphics</dt>
+<dd class="field-odd"><p>3D graphics</p>
+</dd>
+<dt class="field-even">其他</dt>
+<dd class="field-even"><p>Other style</p>
+</dd>
+<dt class="field-odd">任意</dt>
+<dd class="field-odd"><p>Any style</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="simple" id="bpy-objects-blenderkit-production-level">
+<dt>Production Level</dt><dd><p>Production state of the asset. Also templates should be actually finished,
+just the nature of it can be a template, like a thumbnail scene,
+finished mesh topology as start for modeling or similar:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Finished</dt>
+<dd class="field-odd"><p>For the public database, the asset should always be ready for rendering.
+Assets without materials aren't accepted into the public database.</p>
+</dd>
+<dt class="field-even">Template</dt>
+<dd class="field-even"><p>Templates are models that have general usability and have a clear description of how
+the asset is supposed to work. An example can be a beverage can with a prepared texture slot.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl id="bpy-objects-blenderkit-condition">
+<dt>条件</dt><dd><p>Condition of the object.</p>
+<p>New, Used, Old, Desolate</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-objects-blenderkit-is-free">
+<dt>Free for Everyone</dt><dd><p>You consent to that you want to release this asset as free for everyone,
+under the license specified in the license field.</p>
+</dd>
+</dl>
+<dl id="bpy-objects-blenderkit-pbr">
+<dt>PBR Compatible</dt><dd><p>The asset meets the <a class="reference external" href="https://www.blenderkit.com/docs/pure-pbr-assetes">PBR standard</a>.</p>
+</dd>
+<dt>Design Properties:</dt><dd><dl class="simple" id="bpy-objects-blenderkit-manufacturer">
+<dt>Manufacturer</dt><dd><p>The company making the design piece or product.</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-objects-blenderkit-designer">
+<dt>Designer</dt><dd><p>Author of the original design piece depicted.
+Usually not you -- fill in your name and personal statement in your profile on BlenderKit webpage.</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-objects-blenderkit-designer-collection">
+<dt>Design Collection</dt><dd><p>Fill if this piece is part of a real-world design collection.</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-objects-blenderkit-design-variant">
+<dt>Variant</dt><dd><p>Color or material variant of the product.</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-objects-blenderkit-use-design-year">
+<dt>Design Year</dt><dd><p>Time when the item was designed.
+It can also be used for living creatures and other objects,
+for example, for a dinosaur you can set it to something like 240 million years.</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-objects-blenderkit-work-hours">
+<dt>Work Hours</dt><dd><p>How long it has taken you to finish the asset? This value isn't used in
+the BlenderKit scoring mechanism, but serves as comparison for administrators on
+how the <a class="reference external" href="https://www.blenderkit.com/docs/rating">rating system performs</a>.</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-objects-blenderkit-adult">
+<dt>Adult Content</dt><dd><p>Mark adult content.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="materials-only-options">
+<h4>Materials Only Options<a class="headerlink" href="#materials-only-options" title="Permalink to this headline">¶</a></h4>
+<div class="figure align-right">
+<a class="reference internal image-reference" href="../../_images/addons_3d-view_blenderkit_sidebar-upload-material.jpg"><img alt="../../_images/addons_3d-view_blenderkit_sidebar-upload-material.jpg" src="../../_images/addons_3d-view_blenderkit_sidebar-upload-material.jpg" style="width: 300px;" /></a>
+</div>
+<dl class="simple" id="bpy-data-materials-blenderkit-pbr">
+<dt>Pure PBR Compatible</dt><dd><p>The asset is meets the <a class="reference external" href="https://www.blenderkit.com/docs/pure-pbr-assetes">PBR standard</a>.
+This means only image textures are used with no procedural textures,
+no color correction, and only PBR shaders are used.</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-data-materials-blenderkit-uv">
+<dt>Needs UV</dt><dd><p>Requires a UV set.</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-data-materials-blenderkit-animated">
+<dt>播放动画</dt><dd><p>The material is animated.</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-data-materials-blenderkit-texture-size-meters">
+<dt>Texture Size in Meters</dt><dd><p>If the material uses textures, this value sets the length of one side of the texture.
+This value is very important so that the materials apply with correct scale.</p>
+</dd>
+<dt>Thumbnail</dt><dd><p>Path to the thumbnail (512×512 px sized JPG image).
+Needs always to be the image generated with the BlenderKit thumbnail generator or with the same look.
+Only exceptions are special effects like fire.</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-ops-object-blenderkit-material-thumbnail">
+<dt>Render Thumbnail with Cycles</dt><dd><p>Generate a thumbnail in the background. Use only this tool for thumbnails.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="selected-model-name-panel">
+<h3>Selected Model/Name Panel<a class="headerlink" href="#selected-model-name-panel" title="Permalink to this headline">¶</a></h3>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板</dt>
+<dd class="field-odd"><p><span class="menuselection">Sidebar ‣ BlenderKit ‣ Selected model</span></p>
+</dd>
+</dl>
+</div>
+<p>This panel is shown if you select a 3D model downloaded from BlenderKit.
+The name of the model appears below.</p>
+<dl class="simple">
+<dt>Bring to Scene</dt><dd><p>Bring the linked object hierarchy to a scene and make it editable.
+This is similar as if you would originally append the asset.</p>
+</dd>
+<dt>Ratings</dt><dd><p>You can rate an asset by giving it stars (with a maximum of 10).</p>
+</dd>
+<dt>Work Hours</dt><dd><p>Estimate how many hour you saved thanks to this asset.
+Rating helps BlenderKit distribute rewards to authors,
+and thus it is very important for us that you rate assets and do it in a fair manner.</p>
+</dd>
+<dt>Asset tools:</dt><dd><dl class="simple">
+<dt>Open Authors Website</dt><dd><p>Opens the link that the author has specified in a web browser.</p>
+</dd>
+<dt>Show Assets by Author</dt><dd><p>Shows all assets uploaded by the author of the selected 3D model.</p>
+</dd>
+<dt>Replace Active Models</dt><dd><p>Replace all selected assets with the last selected asset (active).
+If you use this option from the context menu,
+the target asset is downloaded and replaces selected assets.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>The same options are available in the Assetbar context menu.</p>
+<dl class="simple">
+<dt>Management Tools:</dt><dd><dl class="simple">
+<dt>删除</dt><dd><p>Change asset status.</p>
+</dd>
+</dl>
+</dd>
+<dt>Downloads:</dt><dd><p>This panel is visible when running downloads.
+You can cancel downloading of assets by pressing the <code class="docutils literal notranslate"><span class="pre">X</span></code> button.
+This cancels the download and deletes the file on your computer.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="preferences">
+<h2>偏好设置<a class="headerlink" href="#preferences" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/addons_3d-view_blenderkit_preference-open.jpg"><img alt="../../_images/addons_3d-view_blenderkit_preference-open.jpg" src="../../_images/addons_3d-view_blenderkit_preference-open.jpg" style="width: 600px;" /></a>
+</div>
+<dl class="simple">
+<dt>Show Assetbar when Starting Blender</dt><dd><p>Shows Assetbar after the Blender startup.</p>
+</dd>
+<dt>Log Out</dt><dd><p>Log out from BlenderKit.</p>
+</dd>
+<dt>Your API Key</dt><dd><p>The BlenderKit API Key stores your API key that is automatically retrieved
+when you log in to the service and is used to connect to BlenderKit server.
+Don't change this value manually.</p>
+</dd>
+<dt>Global Files Directory</dt><dd><p>Global storage for your asset files. Set this up on a hard drive where you have enough space to store the assets.</p>
+</dd>
+<dt>Project Assets Subdirectory</dt><dd><p>Name of the subdirectory where your assets will be stored.
+For each blend-file where you use BlenderKit assets, a subdirectory will be created in the same folder.
+This enables you to compress the whole directory and transfer it to a render farm or another workstation.</p>
+</dd>
+<dt>Use Directories:</dt><dd><p>Which directories will be used for storing download data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">全局的</dt>
+<dd class="field-odd"><p>Store downloaded files only in a global directory. This saves drive space by storing assets only in one place.
+You have to pack your project carefully when transferring it to another computer,
+since the assets won't be in the subfolder of the current project.</p>
+</dd>
+<dt class="field-even">本地</dt>
+<dd class="field-even"><p>Store downloaded files only in a local directory.
+This option can uses more bandwidth when you reuse assets in different projects,
+since the add-on won't find assets that are already in different folders.
+However, it enables you to pack your projects easily.</p>
+</dd>
+<dt class="field-odd">Global and Subdirectory</dt>
+<dd class="field-odd"><p>Use both previously mentioned methods.</p>
+</dd>
+</dl>
+</dd>
+<dt>Use GPU for Thumbnails Rendering</dt><dd><p>By default the CPU is used so that the user can continue their work
+while the thumbnail is rendered in the background.</p>
+</dd>
+<dt>Asset Thumbnail Size</dt><dd><p>Size of the asset thumbnails in the Assetbar.</p>
+</dd>
+<dt>Max Assetbar Rows</dt><dd><p>Number of rows in the Assetbar.</p>
+</dd>
+<dt>Show Tips when Starting Blender</dt><dd><p>Show tips when starting Blender.</p>
+</dd>
+<dt>Show BlenderKit Search in 3D Header</dt><dd><p>Show an extra search field in the header of the 3D Viewport.
+This enables a quick access to the search when the Sidebar is hidden.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="tutorials">
+<h2>Tutorials<a class="headerlink" href="#tutorials" title="Permalink to this headline">¶</a></h2>
+<div class="youtube_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/pSay3yaBWV0" style="border: 0; height: 311px; width: 500px">
+</iframe></div><div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">类别</dt>
+<dd class="field-odd"><p>添加网格</p>
+</dd>
+<dt class="field-even">描述:</dt>
+<dd class="field-even"><p>Online Blenderkit Library, materials, models, brushes and more.</p>
+</dd>
+<dt class="field-odd">位置</dt>
+<dd class="field-odd"><p><span class="menuselection">3D Viewport ‣ Sidebar ‣ Blenderkit</span></p>
+</dd>
+<dt class="field-even">文档</dt>
+<dd class="field-even"><p>blenderkit folder</p>
+</dd>
+<dt class="field-odd">作者</dt>
+<dd class="field-odd"><p>Vilem Duha, Petr Dlouhy</p>
+</dd>
+<dt class="field-even">保持</dt>
+<dd class="field-even"><p>Vilem Duha</p>
+</dd>
+<dt class="field-odd">许可证</dt>
+<dd class="field-odd"><p>通用公共图书馆</p>
+</dd>
+<dt class="field-even">支持级别</dt>
+<dd class="field-even"><p>社区</p>
+</dd>
+<dt class="field-odd">注意</dt>
+<dd class="field-odd"><p>此附加组件与Blender捆绑在一起。</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="math_vis_console.html" class="btn btn-neutral float-right" title="数学视觉控制台" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="3d_navigation.html" class="btn btn-neutral float-left" title="3D 导航" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; <a href="../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">
+        Last updated on 06/19/2023.
+      </span>
+
+    </p>
+  </div>
+      <div class="footer-contribute">
+         <ul>
+            <li>
+               <a href="https://developer.blender.org/diffusion/BM/browse/trunk/blender_docs/manual/addons/3d_view/blenderkit.rst" class="fa fa-edit"> Edit Page</a>
+            </li>
+            <li>
+               <a href="https://developer.blender.org/maniphest/task/edit/form/default/?description=Pagename%3A%20%60addons/3d_view/blenderkit%60%0ABlender%20Version%3A%20%602.93%60%0ADocumentation%20Language%3A%20%60zh-hans%60%0A%5B%5B%20https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F2.93%2Faddons/3d_view/blenderkit.html%20%7C%20Permanent%20link%20%5D%5D%0A%0A%2A%2AShort%20description%20of%20error%2A%2A%0A%5BPlease%20fill%20out%20a%20short%20description%20of%20the%20error%20here%5D&project=PHID-PROJ-c4nvvrxuczix2326vlti" class="fa fa-bug"> Report Bug</a>
+            </li>
+         <ul>
+      </div>
+
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.93 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async='async' src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>

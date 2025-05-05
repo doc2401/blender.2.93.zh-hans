@@ -1,0 +1,523 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>图纸模型 &mdash; Blender Manual</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/version_switch.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/addons/import_export/paper_model.html" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/js/version_switch.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+    <link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+    <link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+    <link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+    <link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+    <link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+    <link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+    <link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+    <link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+    <link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+    <link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+    <link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+    <link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+    <link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+    <link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+    <link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+    <link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+    <link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+    <link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+    <link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="next" title="点缓存（Pointcache（pc2））" href="pc2.html" />
+    <link rel="prev" title="摄像机动画" href="anim_camera.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blender 2.93 Manual
+          
+
+          
+            
+            <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景&amp;物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻&amp;绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">运动跟踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">Files &amp; Data System</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">插件</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#add-ons-category-listings">插件类别列表</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../3d_view/index.html">3D 视图</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../add_curve/index.html">添加曲线</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../add_mesh/index.html">添加网格</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../camera/index.html">相机</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../development/index.html">开发</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">导入 - 导出</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="node_shaders_info.html">节点着色器的导入与导出</a></li>
+<li class="toctree-l4"><a class="reference internal" href="coat3D.html">3D-Coat 应用链接</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mesh_atomic.html">Atomic Blender (PDB/XYZ)插件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="anim_bvh.html">BioVision Motion Capture (BVH)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="scene_dxf.html">AutoCAD DXF</a></li>
+<li class="toctree-l4"><a class="reference internal" href="anim_camera.html">摄像机动画</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">图纸模型</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#usage">用法</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#exporting-textured-meshes">纹理导出纹理风格</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#how-to-read-the-net">怎样读取网络</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#how-to-print-the-net">如何打印网络</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#placing-marks-on-the-net">边标记和面标记</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#settings">设置</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#paper-model-islands">图纸模型的孤岛</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#unfold">展开</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="#properties">属性</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#document-settings">文档设置</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#colors-and-style">颜色和样式</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#technical-details">技术细节</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#id1">展开</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#positioning-the-nets-on-pages">在页面上定位网状物</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="pc2.html">点缓存（Pointcache（pc2））</a></li>
+<li class="toctree-l4"><a class="reference internal" href="scene_fbx.html">FBX</a></li>
+<li class="toctree-l4"><a class="reference internal" href="images_as_planes.html">图像为平面</a></li>
+<li class="toctree-l4"><a class="reference internal" href="palettes.html">导入调色板</a></li>
+<li class="toctree-l4"><a class="reference internal" href="shape_mdd.html">NewTek MDD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="anim_nuke_chan.html">纽克动画 (chan)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mesh_stl.html">STL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="curve_svg.html">可缩放矢量图形 (SVG)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mesh_ply.html">Stanford PLY</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mesh_uv_layout.html">UV布局</a></li>
+<li class="toctree-l4"><a class="reference internal" href="scene_obj.html">波峰 物体</a></li>
+<li class="toctree-l4"><a class="reference internal" href="scene_x3d.html">Web3D X3D/VRML2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="scene_gltf2.html">glTF 2.0</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../interface/index.html">界面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lighting/index.html">光照</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../materials/index.html">材质</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/index.html">网格</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../node/index.html">节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../object/index.html">物体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../paint/index.html">绘制</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rigging/index.html">绑定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sequencer/index.html">序列容器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../system/index.html">系统</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../uv/index.html">UV</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../video_tools/index.html">视频工具</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">贡献文档</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 2.93 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">插件</a> &raquo;</li>
+        
+          <li><a href="index.html">导入 - 导出</a> &raquo;</li>
+        
+      <li>图纸模型</li>
+    
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="paper-model">
+<h1>图纸模型<a class="headerlink" href="#paper-model" title="Permalink to this headline">¶</a></h1>
+<div class="refbox admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">类别</dt>
+<dd class="field-odd"><p>导入 - 导出</p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">文件 ‣ 导出 ‣ 纸张模型（.pdf/.svg）</span></p>
+</dd>
+<dt class="field-odd">面板</dt>
+<dd class="field-odd"><p><span class="menuselection">属性‣网格‣纸模型岛</span></p>
+</dd>
+<dt class="field-even">菜单</dt>
+<dd class="field-even"><p><span class="menuselection">网格 ‣ 展开</span></p>
+</dd>
+</dl>
+</div>
+<p>此加载项生成给定网格的平板网。它创建适合直接打印和纸张建模的PDF或SVG文件。主要目标是对整个流程实现最大限度的自动化。还支持将模型的纹理烘焙到输出文档中等常见任务。</p>
+<div class="section" id="usage">
+<h2>用法<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>要避免最终出现问题，请切换到对象模式。然后，选择要导出的网格，使其成为活动的网格。如果您想快速获得结果，只需从 :menuselection:'文件 --&gt; 导出` 菜单执行此加载项。它将要求提供文件名，并自动执行所有其他操作。所有相关设置位于左下角。下文将更详细地叙述这些问题。</p>
+<p>如果你对生成的网不满意，你可以手动编辑它。为此，你必须先执行 <em>展开</em> 工具（属性中的Mesh标签）。为了压平网格，将被切割的边必须被标记为编辑模式的接缝。你可以使用 <em>清除缝合边</em> 和 <em>标记缝合边</em> 工具来组织它们，或者使用对象模式中的 <em>清除所有缝合边</em> 帮助按钮来从头开始。当你导出模型时，它将使用所有给定的接缝，并在必要时增加一些切割。</p>
+<p>你也可以调用 <em>展开</em> 工具来预览网的情况。它将在面板中列出所制作的网的所有孤岛，如果你在工具的设置中启用，它还将创建一个显示孤岛的UV布局。请注意，在这个阶段，孤岛的位置并没有被计算出来，所以它们都只是相互重叠在一起的。你可以使用Blender的 <em>打包孤岛</em> 工具来安排它们。</p>
+<p>有几种拓扑结构在Blender中是可以实现的，但在纸上现实中是不可能的。</p>
+<ul class="simple">
+<li><p>不是完全平坦的多边面（除三角形外的一切）。</p></li>
+<li><p>零长边（两个顶点正好在同一位置，并由一条边连接）。</p></li>
+<li><p>零面积的面（通常它们的顶点都位于直线上）。</p></li>
+</ul>
+<p>如果检测到这些情况中的任何一种，该插件将抛出一个错误信息，并且不会输出。错误信息会指导你如何解决这些问题。</p>
+<div class="section" id="exporting-textured-meshes">
+<h3>纹理导出纹理风格<a class="headerlink" href="#exporting-textured-meshes" title="Permalink to this headline">¶</a></h3>
+<p>要输出带有手绘纹理的模型，你必须解开模型，绘制图像并将其分配给模型，以便在渲染时产生效果。你可以使用任何你喜欢的工具来完成这些任务。这个插件的作用很简单，它在 <em>纹理</em> 模式下使用烘焙。</p>
+<p>切换到对象模式，取消选择除要导出的对象外的任何对象。然后执行 <em>导出纸张模型</em> ，在文件浏览器中将 <em>材质</em> 选择器切换到 <em>从材质</em> 。</p>
+<p>如果你选择导出一个SVG文件，你会得到几个如何附加图片的选项。所有的选项在 <a class="reference internal" href="#properties">属性</a> 中都有详细的解释。</p>
+<p>产生的纹理不依赖于任何场景设置，除了给定的材质，另一方面，所有的设置在做完导出后应该是完整的。</p>
+</div>
+<div class="section" id="how-to-read-the-net">
+<h3>怎样读取网络<a class="headerlink" href="#how-to-read-the-net" title="Permalink to this headline">¶</a></h3>
+<p>文件的大部分外观可以在导出时定制（见下文）。然而，默认的风格应该是纸质模型爱好者所熟悉的：虚线代表向外折叠，虚线代表向内折叠（即形成凹形）。网的每一部分的边界都用实线呈现。粘连的标签有一个灰色的填充颜色，以便与网的其他部分区分开来。</p>
+<p>A label is written on a tab when its target edge might not be clear.
+Specifically, the label is omitted if the edge will be sticked to the same place as its both neighbors or
+if one of these is the target itself.
+The format of labels is <code class="docutils literal notranslate"><span class="pre">island_abbreviation:</span> <span class="pre">edge_number</span></code>.
+Island abbreviation is written in square brackets under the corresponding island, before to its full-length name.
+Edge number is written as a triangle arrow next to that target edge, outside the net.</p>
+<p>如果 <em>创建标签</em> 被禁用，同样的格式将用于网内每个相关边缘的标签。这种方法是为用坚硬和/或厚重的材料建模而设计的，对于这些材料来说，粘贴标签是很没有意义的。如果 <em>创建数字</em> 被禁用，标签将被省略；这对高度详细的模型可能是必要的。</p>
+</div>
+<div class="section" id="how-to-print-the-net">
+<h3>如何打印网络<a class="headerlink" href="#how-to-print-the-net" title="Permalink to this headline">¶</a></h3>
+<p>PDF文件几乎可以在任何地方直接打印。然而，如果你需要用手来改变网，事情就变得很困难。</p>
+<p>如果你选择SVG格式，你可以在Inkscape等矢量图形编辑器中编辑导出的文件。你可能想做的一个原因是手动打包孤岛，节省纸张。另一个原因是，标签和数字常常使模型周围变得很杂乱，用手去掉一些标签会很有帮助。</p>
+<p>如果打印的文件在页面边缘被裁剪，这意味着你应该在导出时增加 <em>边距</em> 设置。</p>
+</div>
+<div class="section" id="placing-marks-on-the-net">
+<h3>边标记和面标记<a class="headerlink" href="#placing-marks-on-the-net" title="Permalink to this headline">¶</a></h3>
+<p>带有自由式标记的边缘（ <span class="menuselection">边 ‣ 标记Freestyle边</span> ）将以用户定义的颜色和绘图风格在网上突出显示。这在用于平坦的边缘时尤其有帮助，因为平坦的边缘通常根本就不会被画出来。如果你用 <em>刀</em> 工具画一个形状，然后把一些边缘标记为自由式边缘，你可以在模型上做一个简单的线图。</p>
+<p>当使用在折叠边缘时，高光部分将被画在折叠线的下面。所以你可能要改变 <em>自由线</em> 的画法，使其更宽，而不是黑色，这样才能保持线条的可辨识度。</p>
+</div>
+</div>
+<div class="section" id="settings">
+<h2>设置<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="paper-model-islands">
+<h3>图纸模型的孤岛<a class="headerlink" href="#paper-model-islands" title="Permalink to this headline">¶</a></h3>
+<p>网格标签中的 <em>纸面模型孤岛</em> 标签提供了两个按钮，可以方便地调用 <em>展开</em> 和 <em>导出纸面模型</em> 工具。它还提供了用于标记和清除接缝的按钮，这取决于上下文，以及实验性的功能 <em>限制孤岛大小</em> 。</p>
+<p>Once the <em>Unfold</em> tool is called, the model is split into flattened parts and
+these are presented in a list called <em>Islands</em> below.
+The list allows you to change the label of each island.
+If <em>Create Numbers</em> is enabled during export, abbreviations of these labels will be used to
+describe which tab should be sticked to which island.
+After running the <em>Unfold</em> tool, these island labels are recalculated so
+that as many faces as possible remain under the same label.</p>
+<p>如果你选择一个孤岛并启用 <em>高亮所选孤岛</em> 按钮（并且你展开的网格是活动的），该孤岛将在三维视口中以橙色高亮显示。使用下面的滑块，你可以改变高亮部分的不透明度。</p>
+<div class="section" id="unfold">
+<h4>展开<a class="headerlink" href="#unfold" title="Permalink to this headline">¶</a></h4>
+<p>从上面开始的第一个选项是 <em>创建UV映射</em> 。如果启用，将生成一个新的UV图来显示所有的孤岛。然而，他们的位置在输出过程的这个时候还没有计算出来，所以他们都只是被放在左下角。这个选项在手工编辑切割线的时候很有用。你可以使用 <em>展开</em> 工具，得到类似的结果。</p>
+<p>该工具有三个滑块，它们都可以调整边缘切割的优先级（即： <em>面角凸</em> ， <em>面角凹</em> ， <em>边缘长度</em> ）。一个高的值使具有相应属性的边缘有更大的机会被切割。正因为如此，通常最好将边缘长度设置为一个负值，让长的边缘保持连接。随机修改这些值通常可能有助于减少网中的岛屿数量。关于这些值的含义，请阅读 <a class="reference internal" href="#technical-details">技术细节</a>  中的展开部分。</p>
+</div>
+</div>
+<div class="section" id="properties">
+<h3>属性<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h3>
+<p>当开始导出时，插件会默默地展开网格（不标记任何接缝），并将所有面分割成岛，这对于复杂的网格可能需要几秒钟。然后，会显示一个文件浏览器。对于SVG格式，你选择的文件名会有一个 <code class="docutils literal notranslate"><span class="pre">_page&lt;number&gt;.svg</span></code> 的后缀，即使只需要一个页面。</p>
+<p>该导出器的设置显示在文件浏览器的左下角。</p>
+<dl>
+<dt>预设</dt><dd><p><em>预设</em> 菜单允许快速保存和调用它下面的所有设置，包括模型比例和颜色风格。</p>
+</dd>
+<dt>模型比例</dt><dd><p>模型比例可以用来缩放整个网。如果你想拥有一个1:72比例的模型，只需将其设置为72。这也是一个重要的选项，因为附加组件产生的岛往往比页面大。</p>
+<p>默认情况下，这个值被设置为即使是最大的岛屿也能容纳在页面上。如果设置为1，真实模型将具有与虚拟模型相同的尺寸。</p>
+</dd>
+<dt>创建 UV 映射</dt><dd><p>与 <em>展开</em> 工具的类似名称的选项具有类似的效果，但不一样。它将创建一个新的UV图，准确地反映所有模型的岛屿的位置。不幸的是，所有页面的岛屿都被放在彼此的上面，而且很可能无法将它们区分开来。</p>
+</dd>
+</dl>
+<div class="section" id="document-settings">
+<h4>文档设置<a class="headerlink" href="#document-settings" title="Permalink to this headline">¶</a></h4>
+<p>与输出文件的格式密切相关的设置在文件设置子面板中。</p>
+<dl>
+<dt>格式</dt><dd><p>第一个选择器在PDF和SVG文件格式之间切换。</p>
+</dd>
+<dt>页面大小</dt><dd><p>下面的另一个选择器允许你快速选择最常见的纸张尺寸之一。如果你需要其他东西，请选择 <em>用户定义</em> 并手动设置尺寸。</p>
+</dd>
+<dt>页边距</dt><dd><p>使得以精确比例导出模型更容易（如果你把 <em>模型比例</em> 滑块设置为1）。</p>
+<p>你可以把它设置为你的打印机的不可打印边界的宽度，以使生成的SVG文档无需进一步缩放就可以打印。然而，导出按比例的模型仍然是困难的，因为该插件不能自动分割过大的岛。</p>
+</dd>
+<dt>DPI</dt><dd><p>下一个值是 <em>DPI</em> ，它定义了网的整体分辨率。也就是说，不仅是烘培图像的分辨率（如果有的话），还有线条的粗细。</p>
+</dd>
+<dt>创建标签 Create Tabs</dt><dd><p>控制是否创建粘性标签。例如，如果你想用胶带粘住模型，就不要选这个。</p>
+</dd>
+<dt>创建一个数字</dt><dd><p>Adds numbers to some edge pairs that are supposed to be sticked together.
+These numbers are excluded if the correct destination is easy to guess from the neighboring edges.
+In more complex models, they may overlap a lot with each other and with the net itself.
+Disabling this option may help solve such issues.
+If <em>Create Tabs</em> is disabled, the numbers will be rendered inside of the net.</p>
+</dd>
+<dt>标签和文字大小 Tabs and Text Size</dt><dd><p>设置岛周围的粘性标签的最大宽度。每个标签的实际尺寸被调整为最多为相应边缘长度的一半。在一些特殊情况下，标签会被做成不与真实面重叠，但它还不能可靠地工作。如果 <em>创建标签</em> 被禁用，这个滑块控制边缘上数字的大小。</p>
+</dd>
+<dt>隐藏边角度</dt><dd><p>折叠角度低于隐藏边缘角度的边缘将完全不被绘制。在输出光滑表面（如圆柱体）时，增加这个值可能会产生更好的效果：它将省去许多不必要的线条。在某些特殊情况下，降低这个数值可能会有帮助。</p>
+</dd>
+<dt>纹理</dt><dd><p><em>纹理</em> 选择菜单列出了用于导出纹理网格的选项。</p>
+<dl class="simple">
+<dt>没有纹理</dt><dd><p>只是在白色背景上创建网（这曾被称为 &quot;纯网&quot; ）。其余的选项会调用纹理烘焙，因此会明显地慢一些。</p>
+</dd>
+<dt>从材质 From Materials</dt><dd><p>导出分配给模型的每个面在其活动材料中的图像。</p>
+</dd>
+<dt>完全渲染，选择为活动</dt><dd><p>对应于各自的 <em>Bake Type</em> 选项。它们都渲染所有的材料和照明。 <em>完整渲染</em> 只渲染模型，而 <em>选定为活动</em> 则将附近的其他选定对象投射到模型上。它可能有助于程序化地创建毛皮或树叶等图案。</p>
+</dd>
+</dl>
+</dd>
+<dt>图像</dt><dd><p>在 <em>图像</em> 选择菜单中，你可以选择如何在SVG文件中包含烘焙的图像。如果你想在SVG编辑器中编辑网的布局，选择 <em>链接</em> 或 <em>嵌入</em> 。</p>
+<dl class="simple">
+<dt>图像内嵌</dt><dd><p>创建独立的SVG文件，使其更大但可移植。</p>
+</dd>
+<dt>单一链接（Single Linked）</dt><dd><p>留下来主要是为了兼容的原因。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="colors-and-style">
+<h4>颜色和样式<a class="headerlink" href="#colors-and-style" title="Permalink to this headline">¶</a></h4>
+<p>与绘图风格相关的选项被打包在 <em>颜色和风格</em> 子面板中。它们应该是不言自明的。</p>
+</div>
+</div>
+</div>
+<div class="section" id="technical-details">
+<h2>技术细节<a class="headerlink" href="#technical-details" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>展开<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>首先，该算法为每条边分配一个 &quot;优先级&quot; ，取决于其角度和长度。优先级较高的边在最终的网中更有可能被切割开来。较短的边有较高的优先级（它们更容易粘在一起），而且角度也更尖锐（这使得网在视觉上更容易理解）。</p>
+<p>如果脸部的法线互相对着，就会形成一个凹陷的角度。这样的角度甚至有更高的优先级，这应该是对典型模型的帮助。如果一些面部法线被翻转，算法总是假设它们之间的角度是凸的。</p>
+<p>如果有两个以上的面被一条边连接起来，其中两个被指定为主要面，其他的都必须被胶合。主要面的选择要使它们形成尽可能小的角度。</p>
+<p>角度与长度的实际优先效果可能会使产生的网发生非常大的变化。对于一些基本模型来说，默认值是通过试验和错误选择的，但对于其他模型来说可能是一个不好的选择。如果你想调整它们， <em>展开</em> 工具允许你这样做：它们是该工具的三个唯一设置。</p>
+<p>切割算法从所有分离的面开始，试图将它们连接起来，形成更大的岛屿，按连接边的优先级排序。如果所形成的岛屿的某些面会重叠，则取消该操作，并继续进行另一条边的运算。如果一些顶点或边最终足够接近对方，它们就会被合并。在这个过程中，每条边正好被访问一次。</p>
+<p>重叠检查基本上是线段相交的 Bentley-Ottmann 算法，适用于产生的岛的边界。为了处理一些特殊情况，该算法会自动在一个稍快的版本和一个更强大的版本之间切换。另一个检查是用来检测边界是否与所产生的岛的一个顶点相交 -- 这种情况必须被明确地测试，因为它们不需要引起任何相交的线段。</p>
+</div>
+<div class="section" id="positioning-the-nets-on-pages">
+<h3>在页面上定位网状物<a class="headerlink" href="#positioning-the-nets-on-pages" title="Permalink to this headline">¶</a></h3>
+<p>因为网状物不仅仅是由真实的面组成，还包括周围的胶合标签，所以它们不能被Blender内部工具（ <em>打包孤岛</em> ）定位。因此，必须要写一个独立的算法。</p>
+<p>为了极大地简化过程，所有的网都被打包成（尽可能小的）边界矩形。然后，这些矩形按大小排序（先是最大的），按照这个顺序，算法试图将它们放在一个页面上。为左下角测试的位置是由一个 n × n 的网格给出的，该网格由已经定位的所有岛屿的角组成。通过检查与每个岛的边界矩形的重叠，一个位置被接受或拒绝。</p>
+<p>当有任何剩余的岛屿不能被放置到页面上时，就会创建一个新的自由页面。</p>
+<p>这种算法应该能可靠地工作，而且相当快。然而，如果边界矩形包含很多自由空间，它显然是低效的。此外，包装在很大程度上取决于处理岛屿的顺序，这绝不是最佳的。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="pc2.html" class="btn btn-neutral float-right" title="点缓存（Pointcache（pc2））" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="anim_camera.html" class="btn btn-neutral float-left" title="摄像机动画" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; <a href="../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">
+        Last updated on 06/19/2023.
+      </span>
+
+    </p>
+  </div>
+      <div class="footer-contribute">
+         <ul>
+            <li>
+               <a href="https://developer.blender.org/diffusion/BM/browse/trunk/blender_docs/manual/addons/import_export/paper_model.rst" class="fa fa-edit"> Edit Page</a>
+            </li>
+            <li>
+               <a href="https://developer.blender.org/maniphest/task/edit/form/default/?description=Pagename%3A%20%60addons/import_export/paper_model%60%0ABlender%20Version%3A%20%602.93%60%0ADocumentation%20Language%3A%20%60zh-hans%60%0A%5B%5B%20https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F2.93%2Faddons/import_export/paper_model.html%20%7C%20Permanent%20link%20%5D%5D%0A%0A%2A%2AShort%20description%20of%20error%2A%2A%0A%5BPlease%20fill%20out%20a%20short%20description%20of%20the%20error%20here%5D&project=PHID-PROJ-c4nvvrxuczix2326vlti" class="fa fa-bug"> Report Bug</a>
+            </li>
+         <ul>
+      </div>
+
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+<ul id="versionwrap" role="presentation">
+   <li style="float:left" role="presentation">
+		<span id="version-dropdown" class="version-btn" tabindex="0" role="button" aria-label="versions selector" aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+		2.93 
+		</span>
+		<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+   <li style="float:right" role="presentation">
+		<span id="lang-dropdown" class="version-btn" tabindex="0" role="button"  aria-label="language selector" aria-haspopup="true" aria-controls="version-langlist">
+			 zh-hans 
+		</span>
+		<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-dropdown" aria-hidden="true">
+			<li role="presentation">Loading...</li>
+		</ul>
+	</li>
+</ul>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1418081-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async='async' src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>
